@@ -1,0 +1,33 @@
+# System
+.DS_Store
+Thumbs.db
+*.log
+
+# Secrets / environment
+.env
+.env.local
+.env.*.local
+*.pem
+credentials.json
+service-account.json
+
+# Dependencies
+node_modules/
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Local QA / build artifacts
+_qa/
+.vercel/
+# stray QA screenshots at repo root (underscore-prefixed, not site assets)
+/_*.png
+
+# Large raw media (kept local only, too big for git)
+*.m4a
+*.mp4
+*.wav
+
+# Raw transcript dumps (intermediate; cleaned .md versions are tracked)
+*_raw.json

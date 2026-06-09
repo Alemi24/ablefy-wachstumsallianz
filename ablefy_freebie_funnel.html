@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta name="description" content="Beantworte drei Fragen und erhalte den Markt-Report plus einen Skalierungs-Leitfaden für deine Stufe.">
+<!-- OG: beim Deploy assets/og-image.jpg + og:url auf absolute URL (https://DOMAIN/...) umstellen -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="ablefy Markt-Report — Wo steht dein Business wirklich?">
+<meta property="og:description" content="Beantworte drei Fragen und erhalte den Markt-Report plus einen Skalierungs-Leitfaden für deine Stufe.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ablefy Markt-Report — Wo steht dein Business wirklich?">
+<meta name="twitter:description" content="Beantworte drei Fragen und erhalte den Markt-Report plus einen Skalierungs-Leitfaden für deine Stufe.">
+<meta name="twitter:image" content="assets/og-image.jpg">
+<title>ablefy Markt-Report — Wo steht dein Business wirklich?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Hanken+Grotesk:wght@300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/design-system/ablefy.css">
+<link rel="stylesheet" href="assets/design-system/ablefy-components.css">
+<style>
+  html,body{ margin:0; background:var(--paper); }
+  .ab .logo img{ height:30px; width:auto; display:block; }
+  .ab .step{ display:flex; gap:16px; align-items:flex-start; }
+  .ab .step .n{ width:40px;height:40px;border-radius:12px;background:var(--ink);color:var(--spring);display:grid;place-items:center;font-weight:800;flex:0 0 auto; }
+  /* quiz */
+  .ab .quizbox{ background:var(--paper-3); border:1px solid var(--line); border-radius:var(--r-xl); box-shadow:var(--shadow-lg); padding:48px; max-width:760px; margin:0 auto; }
+  .ab .qbar{ height:6px; background:var(--sand); border-radius:var(--r-pill); overflow:hidden; margin-bottom:30px; }
+  .ab .qbar i{ display:block; height:100%; background:var(--spring); border-radius:var(--r-pill); transition:width .3s ease; }
+  .ab .qstep{ font-size:13px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--muted-2); margin-bottom:12px; }
+  .ab .qq{ font-family:var(--display); font-weight:500; font-size:34px; letter-spacing:-.01em; line-height:1.1; margin-bottom:26px; }
+  .ab .opts{ display:grid; gap:12px; }
+  .ab .opt{ text-align:left; padding:18px 20px; border-radius:var(--r-md); border:1px solid var(--line); background:var(--paper-2); font-size:16.5px; font-weight:600; color:var(--ink); display:flex; align-items:center; gap:14px; transition:all .15s ease; }
+  .ab .opt:hover{ border-color:var(--ink); transform:translateY(-1px); box-shadow:var(--shadow-sm); }
+  .ab .opt .box{ width:22px;height:22px;border-radius:7px;border:2px solid var(--line); flex:0 0 auto; }
+  .ab .opt:hover .box{ border-color:var(--spring-deep); background:var(--mint-soft); }
+  /* result */
+  .ab .result{ display:none; }
+  .ab .result.on{ display:block; }
+  .ab .quiz.off{ display:none; }
+  .ab .tier-badge{ display:inline-flex; align-items:center; gap:8px; padding:8px 16px; border-radius:var(--r-pill); background:var(--spring); color:var(--forest); font-weight:700; font-size:14px; }
+  .ab .gift{ display:flex; gap:18px; align-items:flex-start; padding:24px; border-radius:var(--r-lg); background:var(--paper-2); border:1px solid var(--line-2); margin-top:22px; }
+  .ab .gift .ic{ width:52px;height:52px;border-radius:14px;background:var(--spring);color:var(--forest);display:grid;place-items:center;flex:0 0 auto;font-size:22px; }
+  .ab .field{ width:100%; padding:14px 16px; border-radius:12px; border:1px solid var(--line); background:#fff; color:var(--ink); font:inherit; font-size:15px; }
+  @media(max-width:980px){
+    .ab .section{ padding:60px 24px; } .ab .nav{ padding:18px 24px; }
+    .ab .nav-links{ display:none; } .ab .quizbox{ padding:30px; }
+    .ab .qq{ font-size:26px; } .ab h1.display{ font-size:48px !important; }
+    .ab .splitw{ grid-template-columns:1fr !important; }
+  }
+</style>
+</head>
+<body>
+<div class="ab ab-page">
+
+  <div style="border-bottom:1px solid var(--line);padding:11px 64px;background:var(--paper-2)"><a href="index.html" style="color:var(--muted);font-size:13.5px;font-weight:700;display:inline-flex;align-items:center;gap:7px">&#8592; Zurück zur Übersicht</a></div>
+  <div class="nav">
+    <div class="logo"><img src="assets/ablefy-logo.svg" alt="ablefy"></div>
+    <div class="nav-links"><a href="#warum">Warum</a><a href="#ablauf">So funktioniert es</a></div>
+    <div class="nav-right"><button class="btn btn-spring" onclick="document.getElementById('quiz').scrollIntoView({behavior:'smooth'})">Quiz starten</button></div>
+  </div>
+
+  <!-- HERO -->
+  <div style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:46px 64px 70px">
+    <span class="chip" style="margin-bottom:26px"><span class="dot"></span>Kostenloser ablefy Markt-Report</span>
+    <h1 class="display" style="font-size:84px;max-width:16ch">Wo steht dein Business <em>wirklich</em>?</h1>
+    <p class="lede" style="max-width:58ch;text-align:center;margin-top:26px;font-size:21px">ablefy verarbeitet Transaktionen von über 80.000 Unternehmen im deutschsprachigen Raum. Beantworte drei Fragen und erhalte den Markt-Report plus einen Skalierungs-Leitfaden, der genau auf deine Stufe passt.</p>
+    <div style="display:flex;gap:14px;margin-top:34px">
+      <button class="btn btn-primary btn-lg" onclick="document.getElementById('quiz').scrollIntoView({behavior:'smooth'})">Quiz starten <span class="ar">→</span></button>
+    </div>
+    <div class="mock-row" style="gap:14px;margin-top:26px;color:var(--muted);font-size:14px;font-weight:600;flex-wrap:wrap;justify-content:center">
+      <span class="dot"></span>Kostenlos<span class="dot"></span>In 60 Sekunden<span class="dot"></span>Sofort zum Download
+    </div>
+  </div>
+
+  <!-- ORIENT -->
+  <div class="section" style="padding-top:10px;padding-bottom:0"><div class="wrap" style="display:flex;justify-content:center">
+    <div class="orient" style="max-width:860px">
+      <div class="ol">Worum es hier geht</div>
+      <p>In drei kurzen Fragen findest du heraus, wo dein Business steht, und bekommst den passenden Leitfaden.</p>
+      <ul>
+        <li><b>Das Quiz</b>, drei einfache Fragen</li>
+        <li><b>Dein Report und Leitfaden</b>, genau auf deine Stufe</li>
+        <li><b>Ein kostenloses Gespräch</b>, das an deinem Engpass ansetzt</li>
+      </ul>
+    </div>
+  </div></div>
+
+  <!-- WARUM -->
+  <div style="background:var(--sand);padding:64px" id="warum">
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom:40px"><h2 class="display" style="font-size:46px">Daten, die der Markt nicht <em>faken</em> kann</h2><p>Die stärkste Grundlage für bessere Marketing-Entscheidungen sind echte Zahlen, und genau die hat ablefy.</p></div>
+      <div class="feat-grid">
+        <div class="feat" style="background:var(--paper-3)"><div class="feat-ico">◷</div><h3>80.000+ Unternehmen</h3><p>Der Report stützt sich auf das reale Transaktionsverhalten von zehntausenden digitalen Unternehmen.</p></div>
+        <div class="feat" style="background:var(--paper-3)"><div class="feat-ico spring">↗</div><h3>Nach Stufe sortiert</h3><p>Wir zeigen, woran Unternehmen in deiner Umsatzstufe wirklich hängen bleiben und was die nächste Stufe öffnet.</p></div>
+        <div class="feat" style="background:var(--paper-3)"><div class="feat-ico">◆</div><h3>Auf deinen Engpass</h3><p>Statt allgemeiner Tipps bekommst du einen Leitfaden, der genau deinen größten Engpass adressiert.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUIZ -->
+  <div class="section" id="quiz">
+    <div class="wrap">
+      <div class="quizbox">
+        <!-- QUIZ STATE -->
+        <div class="quiz" id="quizPanel">
+          <div class="qbar"><i id="qfill" style="width:33%"></i></div>
+          <div class="qstep" id="qstep">Frage 1 von 3</div>
+          <div class="qq" id="qq"></div>
+          <div class="opts" id="opts"></div>
+        </div>
+        <!-- RESULT STATE -->
+        <div class="result" id="resultPanel">
+          <div class="tier-badge" id="tierBadge"></div>
+          <h2 class="display" id="tierTitle" style="font-size:38px;margin:18px 0 10px"></h2>
+          <p style="color:var(--muted);font-size:17px;max-width:54ch" id="tierText"></p>
+
+          <div class="gift">
+            <div class="ic">↓</div>
+            <div>
+              <div style="font-weight:700;font-size:17px" id="giftTitle"></div>
+              <p style="color:var(--muted);font-size:15px;margin-top:4px">Dein persönlicher Leitfaden inklusive Bonus-Vorlagen, kostenlos zum Download.</p>
+            </div>
+          </div>
+
+          <div class="splitw" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px">
+            <input class="field" placeholder="Dein Vorname">
+            <input class="field" placeholder="Deine E-Mail">
+          </div>
+          <button class="btn btn-primary btn-lg" style="width:100%;justify-content:center;margin-top:14px">Report und Leitfaden sichern <span class="ar">→</span></button>
+
+          <div style="margin-top:30px;padding-top:26px;border-top:1px solid var(--line);display:flex;gap:18px;align-items:center">
+            <div style="width:60px;height:60px;border-radius:14px;background:var(--forest);color:var(--spring);display:grid;place-items:center;flex:0 0 auto;font-size:22px">▶</div>
+            <div>
+              <div style="font-weight:700;font-size:16px">Dazu ein kurzes Video von Özkan</div>
+              <p style="color:var(--muted);font-size:14.5px;margin-top:2px">Er lädt dich zu einer kostenlosen Beratung ein, die genau an deinem Engpass ansetzt.</p>
+            </div>
+          </div>
+          <button class="btn btn-ghost" style="margin-top:18px" onclick="resetQuiz()">Quiz neu starten</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABLAUF -->
+  <div class="section" style="padding-top:0" id="ablauf">
+    <div class="wrap">
+      <div class="sec-head"><h2 class="display">So funktioniert es</h2><p>Drei Schritte vom Quiz zur passenden Lösung für dein Wachstum.</p></div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:30px;max-width:1000px;margin:0 auto">
+        <div class="step"><div class="n">1</div><div><div style="font-weight:700;font-size:17px;margin-bottom:5px">Quiz beantworten</div><p style="color:var(--muted);font-size:15px">Drei Fragen zu Branche, Umsatzstufe und größtem Engpass.</p></div></div>
+        <div class="step"><div class="n">2</div><div><div style="font-weight:700;font-size:17px;margin-bottom:5px">Report und Leitfaden</div><p style="color:var(--muted);font-size:15px">Der Markt-Report plus ein Leitfaden, der auf deine Stufe passt.</p></div></div>
+        <div class="step"><div class="n">3</div><div><div style="font-weight:700;font-size:17px;margin-bottom:5px">Kostenlose Beratung</div><p style="color:var(--muted);font-size:15px">Ein Gespräch, das genau an deinem Engpass ansetzt.</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="wrap">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center">
+        <img src="assets/ablefy-logo-white.svg" alt="ablefy" style="height:24px">
+        <span style="color:var(--on-forest-mut);font-size:13.5px">© 2026 ablefy · Impressum · Datenschutz · AGB</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function(){
+  const questions = [
+    { key:'branche', q:'In welcher Branche bist du unterwegs?',
+      opts:['Coaching und Beratung','Online-Kurse und Academy','Agentur oder Dienstleistung','Digitale Produkte','Etwas anderes'] },
+    { key:'umsatz', q:'Wie hoch ist dein aktueller Monatsumsatz?',
+      opts:['0 bis 10.000 €','10.000 bis 100.000 €','100.000 € bis 1 Million','Mehr als 1 Million'] },
+    { key:'engpass', q:'Was ist gerade dein größter Engpass?',
+      opts:['Zu wenige Leads','Schwache Conversion','Team und Prozesse','Sauber skalieren'] },
+  ];
+  const tiers = {
+    0:{ badge:'Stufe 1 · Fundament', title:'Dein Fundament-Leitfaden: von 0 auf 10k',
+        text:'In deiner Stufe entscheidet ein sauberes Fundament über das Tempo. Der Leitfaden zeigt, wie du Angebot, Checkout und erste Automatisierung so aufsetzt, dass Wachstum überhaupt möglich wird.',
+        gift:'Leitfaden „Von 0 auf 10k" plus Setup-Checkliste' },
+    1:{ badge:'Stufe 2 · Skalierung', title:'Dein Skalierungs-Leitfaden: von 10k auf 100k',
+        text:'Ab dieser Stufe bricht dein Prozess an den bekannten Stellen, also bei Angeboten, Provisionen und Tools. Der Leitfaden zeigt, wie du diese Bruchstellen schließt und planbar auf 100k zugehst.',
+        gift:'Leitfaden „Von 10k auf 100k" plus Provisions-Vorlage' },
+    2:{ badge:'Stufe 3 · Wachstum', title:'Dein Wachstums-Leitfaden: von 100k auf 1 Million',
+        text:'Auf diesem Level zählt Infrastruktur. Der Leitfaden zeigt, wie du Team, Zahlungen und Reporting in ein System bringst und damit endlos skalierst, ohne dass die Verwaltung mitwächst.',
+        gift:'Leitfaden „Von 100k auf 1 Million" plus Skalierungs-Framework' },
+  };
+  let step=0; const answers={};
+  const qq=document.getElementById('qq'), opts=document.getElementById('opts'),
+        qstep=document.getElementById('qstep'), qfill=document.getElementById('qfill'),
+        quizPanel=document.getElementById('quizPanel'), resultPanel=document.getElementById('resultPanel');
+
+  function render(){
+    const cur=questions[step];
+    qstep.textContent='Frage '+(step+1)+' von '+questions.length;
+    qfill.style.width=Math.round((step)/questions.length*100+1)+'%';
+    qq.textContent=cur.q;
+    opts.innerHTML='';
+    cur.opts.forEach((o,i)=>{
+      const b=document.createElement('button');
+      b.className='opt'; b.innerHTML='<span class="box"></span>'+o;
+      b.onclick=()=>choose(cur.key,i);
+      opts.appendChild(b);
+    });
+  }
+  function choose(key,i){
+    answers[key]=i;
+    if(step<questions.length-1){ step++; render(); }
+    else showResult();
+  }
+  function tierFromUmsatz(i){ return i>=2?2:i; } // 0->1, 1->2, 2&3->3
+  function showResult(){
+    qfill.style.width='100%';
+    const t=tiers[tierFromUmsatz(answers.umsatz??0)];
+    document.getElementById('tierBadge').textContent=t.badge;
+    document.getElementById('tierTitle').textContent=t.title;
+    document.getElementById('tierText').textContent=t.text;
+    document.getElementById('giftTitle').textContent=t.gift;
+    quizPanel.classList.add('off'); resultPanel.classList.add('on');
+  }
+  window.resetQuiz=function(){ step=0; for(const k in answers) delete answers[k];
+    quizPanel.classList.remove('off'); resultPanel.classList.remove('on'); render(); };
+  render();
+})();
+</script>
+</body>
+</html>

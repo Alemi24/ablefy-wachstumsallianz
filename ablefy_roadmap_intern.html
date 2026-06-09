@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta name="description" content="Unser Betriebssystem, die Phasen mit Ownern und der laufende Takt.">
+<!-- OG: beim Deploy assets/og-image.jpg + og:url auf absolute URL (https://DOMAIN/...) umstellen -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Marketing-Roadmap (Intern) — ablefy">
+<meta property="og:description" content="Unser Betriebssystem, die Phasen mit Ownern und der laufende Takt.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Marketing-Roadmap (Intern) — ablefy">
+<meta name="twitter:description" content="Unser Betriebssystem, die Phasen mit Ownern und der laufende Takt.">
+<meta name="twitter:image" content="assets/og-image.jpg">
+<title>ablefy — Marketing-Roadmap (Intern)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Hanken+Grotesk:wght@300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/design-system/ablefy.css">
+<link rel="stylesheet" href="assets/design-system/ablefy-components.css">
+<style>
+  html,body{ margin:0; background:var(--paper); }
+  .ab .logo img{ height:30px; width:auto; display:block; }
+  .ab .partners{ display:inline-flex; align-items:center; gap:13px; }
+  .ab .partners img.sb{ height:24px; } .ab .partners img.at7{ height:38px; }
+  .ab .partners img.at7.dark{ filter:none; }
+  .ab .partners .x{ color:var(--muted-2); font-weight:300; }
+  .ab .flow{ display:flex; flex-wrap:wrap; margin-top:34px; border:1px solid var(--line); border-radius:var(--r-lg); overflow:hidden; background:var(--paper-2); }
+  .ab .flow .st{ flex:1 1 0; min-width:160px; padding:24px 22px; border-right:1px solid var(--line); }
+  .ab .flow .st:last-child{ border-right:none; }
+  .ab .flow .s{ font-family:var(--display); font-weight:600; color:var(--spring-deep); font-size:15px; }
+  .ab .flow .t{ font-weight:700; margin:8px 0 6px; font-size:15.5px; }
+  .ab .flow .d{ color:var(--muted); font-size:13.5px; line-height:1.5; }
+  .ab .phase{ border:1px solid var(--line-2); border-radius:var(--r-lg); margin-top:18px; overflow:hidden; box-shadow:var(--shadow-sm); }
+  .ab .phase .head{ display:flex; align-items:center; gap:16px; padding:22px 26px; background:var(--paper-2); border-bottom:1px solid var(--line-2); }
+  .ab .phase .badge{ font-family:var(--sans); font-weight:800; font-size:12px; letter-spacing:.04em; color:var(--forest); background:var(--spring); padding:6px 11px; border-radius:var(--r-pill); white-space:nowrap; }
+  .ab .phase .head h3{ font-family:var(--display); font-weight:500; font-size:21px; }
+  .ab .phase .head .when{ margin-left:auto; font-size:12.5px; color:var(--muted-2); letter-spacing:.05em; text-transform:uppercase; white-space:nowrap; font-weight:600; }
+  .ab .phase .body{ padding:6px 26px 18px; }
+  .ab .task{ display:grid; grid-template-columns:1fr 170px; gap:16px; align-items:center; padding:15px 0; border-top:1px solid var(--line-2); }
+  .ab .task:first-child{ border-top:none; }
+  .ab .task .tt{ font-size:15px; color:var(--muted); } .ab .task .tt b{ color:var(--ink); font-weight:700; }
+  .ab .owner{ justify-self:end; font-size:11.5px; letter-spacing:.04em; text-transform:uppercase; font-weight:700; border-radius:var(--r-pill); padding:6px 12px; white-space:nowrap; }
+  .ab .owner.sb{ color:#0086b3; background:#e3f7ff; border:1px solid #b8ecff; }
+  .ab .owner.at7{ color:var(--muted); background:var(--paper-3); border:1px solid var(--line); }
+  .ab .owner.al{ color:var(--spring-deep); background:var(--mint-soft); border:1px solid var(--mint); }
+  .ab .legend{ display:flex; flex-wrap:wrap; gap:14px; margin-top:24px; }
+  .ab .legend span{ font-size:12px; letter-spacing:.04em; text-transform:uppercase; color:var(--muted); display:inline-flex; align-items:center; gap:7px; font-weight:600; }
+  .ab .legend i{ width:11px; height:11px; border-radius:3px; display:inline-block; }
+  .ab .forestbox{ background:radial-gradient(120% 140% at 0% 0%, var(--forest-2), var(--forest)); border-radius:var(--r-xl); padding:44px; color:var(--on-forest); position:relative; overflow:hidden; }
+  .ab .forestbox .display{ color:var(--on-forest); }
+  ul.clean{ list-style:none; padding:0; margin:14px 0 0; display:grid; gap:9px; }
+  ul.clean li{ position:relative; padding-left:24px; color:var(--on-forest-mut); font-size:15px; }
+  ul.clean li::before{ content:""; position:absolute; left:0; top:8px; width:7px; height:7px; border-radius:2px; background:var(--spring); }
+  @media(max-width:980px){
+    .ab .section{ padding:58px 26px; } .ab .nav{ padding:18px 26px; } .ab .nav-right{ display:none; }
+    .ab .feat-grid{ grid-template-columns:1fr; } .ab .task{ grid-template-columns:1fr; } .ab .owner{ justify-self:start; }
+    .ab h1.display{ font-size:46px !important; }
+  }
+</style>
+</head>
+<body>
+<div class="ab ab-page">
+
+  <div class="nav">
+    <div class="logo"><img src="assets/ablefy-logo.svg" alt="ablefy"></div>
+    <span class="eyebrow" style="margin:0">Intern · Marketing-Roadmap</span>
+    <div class="nav-right partners"><img class="sb" src="assets/sb-logo-wordmark.svg" alt="Social Brands"><span class="x">×</span><img class="at7" src="assets/at7-logo-dark.png" alt="AT7 Media"></div>
+  </div>
+
+  <!-- HERO -->
+  <div class="section" style="padding-bottom:40px">
+    <div class="wrap">
+      <span class="eyebrow">Operating System fürs Marketing</span>
+      <h1 class="display" style="font-size:76px;max-width:16ch;margin-top:18px">Die Roadmap, die das Team auf <em>Kurs</em> hält</h1>
+      <p class="lede" style="max-width:64ch;margin-top:22px;font-size:20px">Ein Dokument für uns Marketer. Es legt fest, wie wir arbeiten, was in welcher Phase entsteht und wer was bis wann liefert. Alle sind sich einig, was zu tun ist, hier steht das Wie in Ausführung und Qualität.</p>
+      <div class="orient">
+        <div class="ol">So ist die Roadmap aufgebaut</div>
+        <p>Von oben nach unten: erst wie wir arbeiten, dann was wann passiert und am Ende der feste Takt.</p>
+        <ul>
+          <li><b>Das Betriebssystem</b>, also unser Weg von der Idee zur Umsetzung</li>
+          <li><b>Die Phasen</b> mit klaren Aufgaben und Verantwortlichen</li>
+          <li><b>Die Dauer-Engine und der Takt</b>, der laufend für Ergebnisse sorgt</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- OPERATING MODEL -->
+  <div style="background:var(--sand);padding:80px 64px">
+    <div class="wrap">
+      <span class="eyebrow">01 · Unser Betriebssystem</span>
+      <h2 class="display" style="font-size:46px;margin-top:16px">Erst die Vision. Dann die Vollpalette. Dann die <em>Entscheidung</em></h2>
+      <div class="flow">
+        <div class="st"><div class="s">01</div><div class="t">Vision setzen</div><div class="d">Ziel und Kernaussage stehen vor allem anderen.</div></div>
+        <div class="st"><div class="s">02</div><div class="t">Alles anfordern</div><div class="d">Jedes Team liefert die volle Palette aus Research, Pains und Cases.</div></div>
+        <div class="st"><div class="s">03</div><div class="t">Auswählen</div><div class="d">Produkt-, Segment- oder marktspezifisch entscheiden, was zählt.</div></div>
+        <div class="st"><div class="s">04</div><div class="t">Jobs verteilen</div><div class="d">Hinter jede Maßnahme kommt eine Person und eine Deadline.</div></div>
+        <div class="st"><div class="s">05</div><div class="t">PM trackt</div><div class="d">Patricia verwaltet, hakt nach und liefert Ergebnisse zurück.</div></div>
+      </div>
+      <div class="feat-grid" style="grid-template-columns:1fr 1fr;margin-top:36px">
+        <div class="feat" style="background:var(--paper-3)"><h3 class="serif">Der Marketing-Advokat</h3><p>Heute schaut jeder aus seiner Perspektive auf Informationen. Wir besetzen die Rolle, die als Einzige aus der Marketingbrille schaut und mit Partnern auf Augenhöhe spart.</p></div>
+        <div class="feat" style="background:var(--paper-3)"><h3 class="serif">Die Content-Datenbank</h3><p>Eine gepflegte Basis aus 100 Schmerzen und 100 Wünschen des Zielkunden. Jeder Pain bricht in Sub-Pains herunter und speist laufend den Content.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASES -->
+  <div class="section">
+    <div class="wrap">
+      <span class="eyebrow">02 · Die Phasen</span>
+      <h2 class="display" style="font-size:48px;margin-top:16px">Was wann entsteht. Und wer <em>liefert</em></h2>
+      <div class="legend">
+        <span><i style="background:#00ccff"></i>Social Brands</span>
+        <span><i style="background:#8A968D"></i>AT7 Media</span>
+        <span><i style="background:#19E37C"></i>Allianz</span>
+      </div>
+
+      <div class="phase">
+        <div class="head"><span class="badge">PHASE 0</span><h3>Den Deal gewinnen</h3><span class="when">Jetzt · vor Vertrag</span></div>
+        <div class="body">
+          <div class="task"><div class="tt"><b>Deal-Hub und Client-Briefing für Özkan</b> fertigstellen, Status quo, Probleme, Plan und Deal an einem Ort.</div><span class="owner al">Allianz</span></div>
+          <div class="task"><div class="tt"><b>Sales-OS-Seite</b> als Beweis-Asset, Standard heute neben Standard morgen.</div><span class="owner al">Allianz</span></div>
+          <div class="task"><div class="tt"><b>Pitch schärfen</b> mit 70k Retainer, Performance-Komponente und Freebie-Funnel.</div><span class="owner at7">AT7 + SB</span></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="head"><span class="badge">FUNDAMENT</span><h3>Asset-Collection nach der Zusage</h3><span class="when">~14 Tage nach Vertrag</span></div>
+        <div class="body">
+          <div class="task"><div class="tt"><b>Brand-Assets sammeln</b>, alle Marken-Informationen zentral an einem Ort.</div><span class="owner al">Allianz</span></div>
+          <div class="task"><div class="tt"><b>Content parallel produzieren</b>, damit ab Tag eins Material bereitliegt.</div><span class="owner sb">Social Brands</span></div>
+          <div class="task"><div class="tt"><b>Startklar nach rund 14 Tagen</b>, sobald Vertrag und Zahlung stehen.</div><span class="owner al">Allianz</span></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="head"><span class="badge">PHASE 1</span><h3>Fundament optimieren und Sales-OS-Seite</h3><span class="when">Nach Asset-Collection</span></div>
+        <div class="body">
+          <div class="task"><div class="tt"><b>Socials und Lead-Landingpages optimieren</b>, alles mit Bezug zur Leadgenerierung zuerst.</div><span class="owner al">Allianz</span></div>
+          <div class="task"><div class="tt"><b>Outcome-Copy</b>, jede Sektion auf das Ergebnis getextet, Feature nur als Beweis.</div><span class="owner at7">AT7 Copy</span></div>
+          <div class="task"><div class="tt"><b>Build und QA</b>, umsetzen, mobil prüfen, Tracking sauber, übergeben.</div><span class="owner at7">AT7 Build</span></div>
+          <div class="task"><div class="tt"><b>Organisch validieren</b>, damit die späteren Anzeigen auf echten Daten laufen.</div><span class="owner sb">Social Brands</span></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="head"><span class="badge">PHASE 2</span><h3>Özkan als Stimme der Branche</h3><span class="when">Ab Kick-off, laufend</span></div>
+        <div class="body">
+          <div class="task"><div class="tt"><b>Content-Engine</b>, drei Short-Form-Inhalte pro Tag aus der Content-Datenbank.</div><span class="owner sb">Social Brands</span></div>
+          <div class="task"><div class="tt"><b>Kanäle</b>, YouTube Long-Form, LinkedIn Founder-Voice und Instagram Personal Brand.</div><span class="owner sb">Social Brands</span></div>
+          <div class="task"><div class="tt"><b>Story und Werte</b>, die Gastro-Story und der elfjährige Aufbau als Kern.</div><span class="owner sb">Social Brands</span></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="head"><span class="badge">PHASE 3</span><h3>Planbarer Lead-Fluss über einen Funnel</h3><span class="when">Nach Phase 1</span></div>
+        <div class="body">
+          <div class="task"><div class="tt"><b>Freebie und Quiz</b>, Markt-Report und Leitfäden in drei Stufen, von 0 auf 10, von 10 auf 100 und von 100 auf eine Million.</div><span class="owner al">Allianz</span></div>
+          <div class="task"><div class="tt"><b>Standalone-Landingpage</b> mit Quiz und einem Beratungsgespräch als Ziel.</div><span class="owner at7">AT7 Media</span></div>
+          <div class="task"><div class="tt"><b>Paid Ads</b>, rund 10.000 bis 15.000 € pro Monat auf den Funnel.</div><span class="owner at7">AT7 Performance</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAUER-ENGINE -->
+  <div style="background:var(--sand);padding:80px 64px">
+    <div class="wrap">
+      <span class="eyebrow">03 · Die Dauer-Engine</span>
+      <h2 class="display" style="font-size:46px;margin-top:16px">Was permanent <em>mitläuft</em></h2>
+      <div class="feat-grid" style="grid-template-columns:1fr 1fr;margin-top:34px">
+        <div class="feat" style="background:var(--paper-3)"><div class="feat-ico spring">◆</div><h3>ablefy Services Line</h3><p>Ein Dashboard auf der Plattform, über das Kunden Reels, Websites und Videoproduktionen bestellen, abgearbeitet vom gemeinsamen Team. Dazu wöchentliche Webinare an die 80.000 Kunden.</p></div>
+        <div class="feat" style="background:var(--paper-3)"><div class="feat-ico">⚡</div><h3>Feature-Drops</h3><p>Jedes neue ablefy-Feature wird zur eigenen Marketing-Welle aus Konzept, Landingpage, Video und Performance-Push.</p></div>
+        <div class="feat" style="background:var(--paper-3)"><div class="feat-ico spring">◎</div><h3>Aura × ablefy</h3><p>Die Partnerschaft mit Aura und Darren Lee als eigene Kampagne, problemorientiert statt plakativ und von Gründer zu Gründer gedacht.</p></div>
+        <div class="feat" style="background:var(--paper-3)"><div class="feat-ico">◷</div><h3>Quartals-Events</h3><p>Von der Mastermind bis zum Summit, Konzept, Produktion und Activation aus einer Hand als Hebel zur Kundenaktivierung.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KI-SYSTEM -->
+  <div class="section">
+    <div class="wrap">
+      <div class="forestbox">
+        <div class="blob" style="width:340px;height:340px;background:var(--spring);opacity:.16;top:-110px;right:-70px;filter:blur(10px)"></div>
+        <span class="eyebrow" style="color:var(--spring);position:relative">04 · Durchgängig</span>
+        <h2 class="display" style="font-size:42px;margin-top:14px;position:relative">Das <em>KI-System</em> im Hintergrund</h2>
+        <p class="lede" style="color:var(--on-forest-mut);margin-top:16px;max-width:72ch;position:relative">Während wir die Phasen umsetzen, bauen wir ein vollständig KI-gestütztes System, das alle Informationen, Marken-Assets und Produkte an einem Ort hält und das Marketing schlank macht. Wir nutzen es bei Social Brands und AT7 Media und geben ablefy Zugriff darauf, damit das Team auch in-house effizienter arbeitet.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUALITY -->
+  <div class="section" style="padding-top:0">
+    <div class="wrap">
+      <span class="eyebrow">05 · Standard und Takt</span>
+      <h2 class="display" style="font-size:44px;margin-top:16px">Alle wissen das Was. Der Unterschied ist das <em>Wie</em></h2>
+      <div class="feat-grid" style="grid-template-columns:repeat(4,1fr);margin-top:34px">
+        <div class="feat"><h3 class="serif" style="font-size:20px">Qualität zuerst</h3><p>Lieber einmal exzellent als achtmal mittelmäßig.</p></div>
+        <div class="feat"><h3 class="serif" style="font-size:20px">Schnelle Calls</h3><p>Fachlich reden, schnell entscheiden und nicht lange herumreden.</p></div>
+        <div class="feat"><h3 class="serif" style="font-size:20px">Fester Takt</h3><p>Klare Deadlines und eine PM, die nachhält.</p></div>
+        <div class="feat"><h3 class="serif" style="font-size:20px">Beispiele zeigen</h3><p>Entscheidungen fallen an konkreten Beispielen statt an grauer Theorie.</p></div>
+      </div>
+      <div class="feat-grid" style="grid-template-columns:1fr 1fr;margin-top:22px">
+        <div class="card" style="padding:28px"><h3 class="serif" style="font-size:20px;margin-bottom:14px">Echte Meilensteine</h3>
+          <div style="display:grid;gap:10px;font-size:15px;color:var(--muted)">
+            <div><b style="color:var(--ink)">1. Juli 2026</b> · Kick-off mit Leon, Alessandro, Özkan und Kernteam</div>
+            <div><b style="color:var(--ink)">15. Juli 2026</b> · Tracking und Wissensbank produktiv</div>
+            <div><b style="color:var(--ink)">1. August 2026</b> · erste Welle live mit Personal Brand, Performance und Funnel</div>
+            <div><b style="color:var(--ink)">Herbst 2026</b> · erstes Event mit ablefy</div>
+          </div>
+        </div>
+        <div class="card" style="padding:28px"><h3 class="serif" style="font-size:20px;margin-bottom:14px">Laufender Takt</h3>
+          <div style="display:grid;gap:10px;font-size:15px;color:var(--muted)">
+            <div><b style="color:var(--ink)">Täglich</b> · drei Inhalte pro Tag und laufende Anzeigen</div>
+            <div><b style="color:var(--ink)">Alle zwei Wochen</b> · Check-in mit ablefy</div>
+            <div><b style="color:var(--ink)">Alle drei Monate</b> · Quartals-Review der Zahlen und Aktionsplan, dazu Events, Content-Drehs und neue Produkte</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="wrap">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center">
+        <img src="assets/ablefy-logo-white.svg" alt="ablefy" style="height:24px">
+        <span class="partners"><img class="sb" src="assets/sb-logo-wordmark-white.svg" alt="Social Brands"><span class="x">×</span><img class="at7" src="assets/at7-logo-white.png" alt="AT7 Media"></span>
+        <span style="color:var(--on-forest-mut);font-size:13.5px">Intern · Marketing-Roadmap</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

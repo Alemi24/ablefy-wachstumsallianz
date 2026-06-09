@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta name="description" content="Warum dein Marketing unter Wert verkauft, was wir bereits gebaut haben und wie wir ablefy in zwei Jahren zur stärksten Marke der Branche machen.">
+<!-- OG: beim Deploy assets/og-image.jpg + og:url auf absolute URL (https://DOMAIN/...) umstellen -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Wachstumsallianz für ablefy — Für Özkan Akkilic">
+<meta property="og:description" content="Warum dein Marketing unter Wert verkauft, was wir bereits gebaut haben und wie wir ablefy in zwei Jahren zur stärksten Marke der Branche machen.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wachstumsallianz für ablefy — Für Özkan Akkilic">
+<meta name="twitter:description" content="Warum dein Marketing unter Wert verkauft, was wir bereits gebaut haben und wie wir ablefy in zwei Jahren zur stärksten Marke der Branche machen.">
+<meta name="twitter:image" content="assets/og-image.jpg">
+<title>Für Özkan Akkilic — Wachstumsallianz für ablefy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Hanken+Grotesk:wght@300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/design-system/ablefy.css">
+<link rel="stylesheet" href="assets/design-system/ablefy-components.css">
+<!-- CALENDLY: alle Buttons mit href="#book" auf den Calendly-Link umstellen, sobald er vorliegt -->
+<style>
+  html,body{ margin:0; background:var(--paper); scroll-behavior:smooth; }
+  .ab .logo img{ height:30px; width:auto; display:block; }
+  .ab .partners{ display:inline-flex; align-items:center; gap:13px; }
+  .ab .partners img.sb{ height:24px; } .ab .partners img.at7{ height:38px; }
+  .ab .partners img.at7.dark{ filter:none; }
+  .ab .partners .x{ color:var(--muted-2); font-weight:300; }
+  .ab .pains{ display:grid; gap:0; margin-top:34px; border:1px solid var(--line); border-radius:var(--r-lg); overflow:hidden; background:var(--paper-2); }
+  .ab .pain{ display:flex; gap:18px; align-items:flex-start; padding:24px 28px; border-top:1px solid var(--line); }
+  .ab .pain:first-child{ border-top:none; }
+  .ab .pain .ic{ width:34px;height:34px;border-radius:10px;background:var(--ink);color:var(--spring);display:grid;place-items:center;flex:0 0 auto;font-weight:800; }
+  .ab .pain .tt{ font-size:18px; font-weight:600; color:var(--ink); }
+  .ab .pain .ss{ color:var(--muted); font-size:15px; margin-top:3px; }
+  .ab .flow{ display:flex; flex-wrap:wrap; margin-top:34px; border:1px solid var(--line); border-radius:var(--r-lg); overflow:hidden; background:var(--paper-2); }
+  .ab .flow .st{ flex:1 1 0; min-width:180px; padding:26px 24px; border-right:1px solid var(--line); }
+  .ab .flow .st:last-child{ border-right:none; }
+  .ab .flow .s{ font-family:var(--display); font-weight:600; color:var(--spring-deep); font-size:15px; }
+  .ab .flow .t{ font-weight:700; margin:8px 0 6px; font-size:16px; }
+  .ab .flow .d{ color:var(--muted); font-size:14px; line-height:1.5; }
+  .ab .hubgrid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:34px; }
+  .ab .hubcard{ background:var(--paper-2); border:1px solid var(--line-2); border-radius:var(--r-lg); overflow:hidden; box-shadow:var(--shadow-sm); transition:transform .2s ease, box-shadow .2s ease; display:flex; flex-direction:column; color:var(--ink); }
+  .ab .hubcard:hover{ transform:translateY(-5px); box-shadow:var(--shadow-md); }
+  .ab .hubcard .thumb{ aspect-ratio:16/9; overflow:hidden; border-bottom:1px solid var(--line-2); background:var(--sand); }
+  .ab .hubcard .thumb img{ width:100%; height:100%; object-fit:cover; object-position:top center; }
+  .ab .hubcard .body{ padding:22px; display:flex; flex-direction:column; flex:1; }
+  .ab .hubcard .cat{ font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--spring-deep); font-weight:700; }
+  .ab .hubcard h3{ font-family:var(--display); font-weight:500; font-size:20px; margin:7px 0; }
+  .ab .hubcard p{ color:var(--muted); font-size:14px; line-height:1.55; flex:1; }
+  .ab .hubcard .open{ margin-top:14px; font-weight:700; color:var(--ink); font-size:14px; display:inline-flex; gap:7px; align-items:center; }
+  .ab .hubcard:hover .open .ar{ transform:translateX(4px); } .ab .hubcard .open .ar{ transition:transform .2s; }
+  .ab .proofwrap{ display:grid; grid-template-columns:1.1fr 1fr; gap:48px; align-items:center; margin-top:36px; }
+  .ab .proofshot{ border-radius:var(--r-lg); overflow:hidden; border:1px solid var(--line-2); box-shadow:var(--shadow-lg); }
+  .ab .proofshot img{ width:100%; display:block; }
+  .ab .forestbox{ background:radial-gradient(120% 140% at 0% 0%, var(--forest-2), var(--forest)); border-radius:var(--r-xl); padding:56px; color:var(--on-forest); position:relative; overflow:hidden; }
+  .ab .forestbox .display{ color:var(--on-forest); }
+  .ab .stickycta{ position:fixed; bottom:22px; left:50%; transform:translateX(-50%); z-index:50; }
+  .ab .stickycta .btn{ box-shadow:0 14px 40px -10px rgba(10,42,30,.6); }
+  /* founders */
+  .ab .founders{ display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:34px; }
+  .ab .fcard{ background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.12); border-radius:var(--r-lg); overflow:hidden; }
+  .ab .fcard .ph{ height:300px; overflow:hidden; background:var(--ink); }
+  .ab .fcard .ph img{ width:100%; height:100%; object-fit:cover; object-position:center top; }
+  .ab .fcard .fb{ padding:26px 28px 28px; }
+  .ab .fcard .fr{ display:flex; gap:22px; margin-top:16px; flex-wrap:wrap; }
+  .ab .fcard .fr .n{ font-family:var(--display); font-weight:500; font-size:22px; color:var(--spring); line-height:1; }
+  .ab .fcard .fr .l{ font-size:12px; color:var(--on-forest-mut); font-weight:600; margin-top:4px; }
+  /* logo strip */
+  .ab .logostrip{ display:flex; flex-wrap:wrap; align-items:center; gap:30px 46px; margin-top:22px; }
+  .ab .logostrip img{ height:32px; width:auto; opacity:.6; filter:grayscale(1); transition:opacity .15s; }
+  .ab .logostrip img:hover{ opacity:1; }
+  /* vision goals */
+  .ab .vgoals{ display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:36px; }
+  .ab .vgoal{ display:flex; gap:18px; align-items:flex-start; background:var(--paper-2); border:1px solid var(--line-2); border-radius:var(--r-lg); padding:26px 28px; box-shadow:var(--shadow-sm); }
+  .ab .vgoal .vn{ font-family:var(--display); font-weight:500; font-size:30px; color:var(--spring-deep); line-height:1; flex:0 0 auto; min-width:30px; }
+  .ab .vgoal .vt{ font-weight:700; font-size:18px; }
+  .ab .vgoal .vs{ color:var(--muted); font-size:14.5px; margin-top:4px; line-height:1.5; }
+  /* disclaimer */
+  .ab .disc{ display:flex; gap:14px; align-items:flex-start; background:var(--mint-soft); border:1px solid var(--mint); border-radius:var(--r-md); padding:18px 20px; margin-top:26px; }
+  .ab .disc .di{ font-weight:800; color:var(--spring-deep); flex:0 0 auto; }
+  .ab .disc p{ color:var(--forest); font-size:13.5px; line-height:1.6; }
+  /* step tag on gallery cards */
+  .ab .steptag{ display:inline-block; font-size:10.5px; letter-spacing:.09em; text-transform:uppercase; color:var(--spring-deep); background:var(--mint-soft); border:1px solid var(--mint); border-radius:var(--r-pill); padding:4px 11px; font-weight:700; }
+  @media(max-width:980px){
+    .ab .section{ padding:54px 24px; } .ab .nav{ padding:18px 24px; } .ab .nav-links{ display:none; }
+    .ab .hubgrid{ grid-template-columns:1fr; } .ab .proofwrap{ grid-template-columns:1fr; gap:28px; }
+    .ab .flow .st{ flex:1 1 100%; border-right:none; border-bottom:1px solid var(--line); }
+    .ab h1.display{ font-size:46px !important; } .ab .forestbox{ padding:34px; }
+  }
+  @media(min-width:981px) and (max-width:1240px){ .ab .hubgrid{ grid-template-columns:repeat(2,1fr); } }
+</style>
+</head>
+<body>
+<div class="ab ab-page">
+
+  <div class="nav">
+    <div class="logo"><img src="assets/ablefy-logo.svg" alt="ablefy"></div>
+    <div class="nav-links"><a href="#frust">Die Lage</a><a href="#plan">Der Plan</a><a href="#beweis">Arbeitsprobe</a><a href="#leistung">Leistung</a></div>
+    <div class="nav-right"><a href="#book" class="btn btn-spring">Termin buchen</a></div>
+  </div>
+
+  <!-- HERO -->
+  <div style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:54px 64px 84px;position:relative;overflow:hidden">
+    <div class="blob" style="width:480px;height:480px;background:var(--spring);opacity:.10;top:-120px;left:50%;transform:translateX(-50%);filter:blur(12px)"></div>
+    <span class="chip" style="margin-bottom:24px;position:relative"><span class="dot"></span>Für Özkan Akkilic · persönlich und vertraulich</span>
+    <h1 class="display" style="font-size:80px;max-width:17ch;position:relative">Du hast das beste Produkt gebaut. Lass uns die Welt sehen lassen, wie <em>gut</em> es ist.</h1>
+    <p class="lede" style="max-width:60ch;text-align:center;margin-top:26px;font-size:21px;position:relative">Diese Seite ist kein Pitch von der Stange. Sie zeigt dir in wenigen Minuten, warum dein Marketing heute unter Wert verkauft, was wir bereits für dich gebaut haben und wie wir ablefy in zwei Jahren zur stärksten Marke der Branche machen.</p>
+    <div style="display:flex;gap:14px;margin-top:34px;flex-wrap:wrap;justify-content:center;position:relative">
+      <a href="#book" class="btn btn-primary btn-lg">Lass uns sprechen <span class="ar">→</span></a>
+      <a href="#beweis" class="btn btn-ghost btn-lg">Was wir gebaut haben</a>
+    </div>
+    <div class="partners" style="margin-top:34px;position:relative">
+      <img class="sb" src="assets/sb-logo-wordmark.svg" alt="Social Brands"><span class="x">×</span><img class="at7" src="assets/at7-logo-dark.png" alt="AT7 Media">
+    </div>
+  </div>
+
+  <!-- ORIENT -->
+  <div class="section" style="padding-top:0;padding-bottom:6px"><div class="wrap" style="display:flex;justify-content:center">
+    <div class="orient" style="max-width:860px">
+      <div class="ol">Worum es hier geht</div>
+      <p>Diese Seite führt dich in sechs einfachen Schritten durch alles, was wir für ablefy vorbereitet haben.</p>
+      <ul>
+        <li><b>1 · Wo ablefy heute steht</b></li>
+        <li><b>2 · Wie wir das ändern</b></li>
+        <li><b>3 · Eine Arbeitsprobe von uns</b></li>
+        <li><b>4 · Wer dahintersteht</b></li>
+        <li><b>5 · Was wir liefern</b></li>
+        <li><b>6 · Dein nächster Schritt</b></li>
+      </ul>
+    </div>
+  </div></div>
+
+  <!-- FRUSTRATION -->
+  <div style="background:var(--sand);padding:90px 64px" id="frust">
+    <div class="wrap">
+      <span class="eyebrow">Schritt 1 · Wo ablefy heute steht</span>
+      <h2 class="display" style="font-size:52px;margin-top:16px">Kommt dir das <em>bekannt</em> vor?</h2>
+      <p class="lede" style="max-width:62ch;margin-top:18px">Du kennst diese Situation besser als jeder andere, denn du lebst sie jeden Tag. Genau hier setzen wir an.</p>
+      <div class="pains">
+        <div class="pain"><span class="ic">1</span><div><div class="tt">Du willst, doch dein Team setzt es nicht um.</div><div class="ss">Die Ideen sind da, die Umsetzung bleibt aus, und am Ende machst du vieles selbst.</div></div></div>
+        <div class="pain"><span class="ic">2</span><div><div class="tt">Dein Produkt löst zehn Probleme auf einmal, doch auf der Website steht nur Technik.</div><div class="ss">Was der Kunde wirklich gewinnt, liest er nirgends.</div></div></div>
+        <div class="pain"><span class="ic">3</span><div><div class="tt">Bis ein Asset fertig und profitabel ist, vergehen Wochen oder Monate.</div><div class="ss">Das Marketing ist zu komplex und braucht Menschen, die diese Komplexität wirklich beherrschen.</div></div></div>
+        <div class="pain"><span class="ic">4</span><div><div class="tt">Deine Person ist dein größter Hebel und liegt trotzdem brach.</div><div class="ss">Elf Jahre Aufbau, eine starke Story und rund 5.000 Follower, wo Hunderttausende möglich sind.</div></div></div>
+        <div class="pain"><span class="ic">5</span><div><div class="tt">Du gehst in die nächste Finanzierungsrunde und musst anders auftreten.</div><div class="ss">Nach außen sichtbar, gefragt und als Marke erkennbar, nicht nur als Technologie im Hintergrund.</div></div></div>
+      </div>
+      <p class="lede" style="max-width:62ch;margin-top:26px">All das sind Marketingprobleme und damit lösbar. Genau dafür sind wir da.</p>
+    </div>
+  </div>
+
+  <!-- INSIGHT -->
+  <div class="section dark" style="padding-top:90px;padding-bottom:90px">
+    <div class="wrap">
+      <span class="eyebrow" style="color:var(--spring)">Schritt 2 · Wie wir das ändern</span>
+      <h2 class="display" style="font-size:62px;margin-top:18px;color:var(--on-forest)">Der Markt kauft <em>Ergebnisse</em>.<br>Das Feature ist nur der Beweis.</h2>
+      <p class="lede" style="color:var(--on-forest-mut);margin-top:20px;max-width:66ch">ablefy ist durch Technologie gewachsen und nicht durch Marketing. Das ist deine größte Stärke und zugleich die Lücke, die wir schließen. Deine Seiten erklären, was die Software tut. Wir drehen jede Aussage um, sodass das Ergebnis vorne steht und das Feature darunter zum Beweis wird. So entsteht beim Leser sofort der Gedanke, dass dies die beste Lösung im Markt ist.</p>
+    </div>
+  </div>
+
+  <!-- PLAN -->
+  <div style="background:var(--sand);padding:90px 64px" id="plan">
+    <div class="wrap">
+      <span class="eyebrow">Der Plan, sobald du Ja sagst</span>
+      <h2 class="display" style="font-size:50px;margin-top:16px">Erst das Fundament. Dann die <em>Reichweite</em></h2>
+      <p class="lede" style="max-width:64ch;margin-top:18px">Traffic allein bringt nichts, solange das Fundament fehlt. Deshalb bauen wir zuerst die Basis und schalten Reichweite erst dazu, wenn sie trägt.</p>
+      <div class="flow">
+        <div class="st"><div class="s">01 · Fundament</div><div class="t">Asset-Collection</div><div class="d">Rund 14 Tage nach Vertrag sammeln wir alle Marken-Assets und produzieren parallel schon Content.</div></div>
+        <div class="st"><div class="s">02 · Aufbau</div><div class="t">Optimieren und vorbereiten</div><div class="d">Socials und Landingpages optimieren, Paid-Seiten bauen und Messaging organisch validieren.</div></div>
+        <div class="st"><div class="s">03 · Betrieb</div><div class="t">Ads, Content, Backend</div><div class="d">Drei Inhalte pro Tag, laufende Anzeigen und ein Check-in mit dir alle zwei Wochen.</div></div>
+        <div class="st"><div class="s">04 · Quartal</div><div class="t">Review und Ausblick</div><div class="d">Alle drei Monate die Zahlen, ein Aktionsplan sowie Events, Drehs und neue Produkte.</div></div>
+      </div>
+      <div style="display:flex;gap:14px;margin-top:30px;flex-wrap:wrap">
+        <a href="ablefy_pitch_wachstumsallianz.html#roadmap" target="_blank" class="btn btn-ghost">Den vollständigen Fahrplan ansehen <span class="ar">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- VISION -->
+  <div class="section" id="vision">
+    <div class="wrap">
+      <span class="eyebrow">Die Vision</span>
+      <h2 class="display" style="font-size:52px;margin-top:16px">Aus der besten Plattform wird die stärkste <em>Marke</em></h2>
+      <p class="lede" style="max-width:66ch;margin-top:18px">Wir denken in dem großen Sprung von Plattform zu Marke und nicht in ein paar Prozent mehr Reichweite. Konkret heißt das vier klare Ziele, an denen wir uns messen lassen.</p>
+      <div class="vgoals">
+        <div class="vgoal"><span class="vn">01</span><div><div class="vt">100.000 Instagram-Follower in 12 Monaten</div><div class="vs">Von rund 5.000 auf sechsstellig, mit einem System statt mit Zufall.</div></div></div>
+        <div class="vgoal"><span class="vn">02</span><div><div class="vt">Millionen organische Views</div><div class="vs">Reichweite, die jeden Monat verlässlich neue Menschen erreicht.</div></div></div>
+        <div class="vgoal"><span class="vn">03</span><div><div class="vt">Deutlich mehr Kunden</div><div class="vs">Ein planbarer Lead-Fluss, der die Verkaufszahlen spürbar nach oben zieht.</div></div></div>
+        <div class="vgoal"><span class="vn">04</span><div><div class="vt">Die Autoritätsmarke Nummer eins</div><div class="vs">Für alles rund um Wissen und den Verkauf digitaler Produkte im deutschsprachigen Raum.</div></div></div>
+      </div>
+      <div style="display:flex;gap:14px;margin-top:32px;flex-wrap:wrap">
+        <a href="ablefy_zukunft_kollaborationen.html" target="_blank" class="btn btn-ghost">Das ganze Ökosystem ansehen <span class="ar">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 3: ARBEITSPROBE -->
+  <div class="section" id="beweis">
+    <div class="wrap">
+      <span class="eyebrow">Schritt 3 · Eine Arbeitsprobe von uns</span>
+      <h2 class="display" style="font-size:52px;margin-top:16px">Andere schicken einen Pitch. Wir haben schon <em>gebaut</em></h2>
+      <p class="lede" style="max-width:64ch;margin-top:18px">Damit du nicht raten musst, wie das aussieht, haben wir unsere neue Sprache direkt auf deine Sales-Seite angewendet. Klick hinein, der Unterschied ist in Sekunden klar.</p>
+      <div class="proofwrap">
+        <a href="ablefy_sales_os_landingpage.html" target="_blank" class="proofshot"><img src="assets/thumbs/ablefy_sales_os_landingpage.jpg" alt="Sales OS Landingpage"></a>
+        <div>
+          <h3 class="serif" style="font-size:28px;margin-bottom:12px">So sieht deine Sales-Seite aus, sobald wir sie anfassen</h3>
+          <p class="lede" style="max-width:46ch">Dieselbe Funktion, eine völlig andere Wirkung. Auf Ergebnisse getextet, klar strukturiert und in deinem Design.</p>
+          <p style="font-family:var(--display);font-size:24px;color:var(--ink);margin-top:24px;line-height:1.3">Wir liefern in Tagen, wofür andere Jahre brauchen.</p>
+          <div style="display:flex;gap:30px;margin-top:22px">
+            <div><div class="serif" style="font-size:30px;color:var(--spring-deep)">2 Mrd.</div><div class="mini" style="font-weight:600;color:var(--muted)">generierte Views</div></div>
+            <div><div class="serif" style="font-size:30px;color:var(--spring-deep)">5 Mio.</div><div class="mini" style="font-weight:600;color:var(--muted)">Follower aufgebaut</div></div>
+            <div><div class="serif" style="font-size:30px;color:var(--spring-deep)">100+ Mio. €</div><div class="mini" style="font-weight:600;color:var(--muted)">Kundenumsatz</div></div>
+          </div>
+          <div style="display:flex;gap:12px;margin-top:26px;flex-wrap:wrap">
+            <a href="ablefy_sales_os_landingpage.html" target="_blank" class="btn btn-primary btn-lg">Die Sales-Seite ansehen <span class="ar">→</span></a>
+            <a href="ablefy_freebie_funnel.html" target="_blank" class="btn btn-ghost btn-lg">Beispiel: Leads gewinnen <span class="ar">→</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="disc">
+        <span class="di">Hinweis</span>
+        <p>Diese Seite ist ein erster Entwurf mit noch grober Datenlage und nicht die fertige Live-Version. Für die finale Seite brauchen wir die Detailinformationen aus deinem Team oder von dir direkt. Sie zeigt die Richtung und die Qualität, nicht den Endstand.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEAM -->
+  <div class="section dark" style="padding-top:84px;padding-bottom:84px">
+    <div class="wrap">
+      <span class="eyebrow" style="color:var(--spring)">Schritt 4 · Wer dahintersteht</span>
+      <h2 class="display" style="font-size:50px;margin-top:16px;color:var(--on-forest)">Du hast von uns gehört, <em>was wir denken</em></h2>
+      <p class="lede" style="color:var(--on-forest-mut);margin-top:18px;max-width:66ch">Jetzt siehst du auch die Menschen dahinter. Wir sind jung, motiviert und geben zwei Jahre lang volle Energie für ablefy. Es gilt ein einfacher Satz: Wir helfen dir, du hilfst uns.</p>
+      <div class="founders">
+        <div class="fcard">
+          <div class="ph"><img src="assets/people/alessandro.png" alt="Alessandro Minneci"></div>
+          <div class="fb">
+            <h3 class="serif" style="color:var(--on-forest);font-size:24px">Alessandro Minneci</h3>
+            <div style="color:var(--spring);font-weight:700;font-size:13.5px;margin-top:2px">CEO Social Brands · Personal Brand &amp; Organic</div>
+            <p style="color:var(--on-forest-mut);font-size:14.5px;margin-top:12px;line-height:1.6">Baut deine Personal Brand und den organischen Aufbau mit psychologisch fundiertem Storytelling.</p>
+            <div class="fr">
+              <div><div class="n">2 Mrd.</div><div class="l">generierte Views</div></div>
+              <div><div class="n">5 Mio.</div><div class="l">Follower aufgebaut</div></div>
+              <div><div class="n">100+ Mio. €</div><div class="l">Kundenumsatz</div></div>
+            </div>
+            <a href="https://socialbrands.io" target="_blank" rel="noopener" class="btn btn-onforest" style="margin-top:22px">socialbrands.io <span class="ar">→</span></a>
+          </div>
+        </div>
+        <div class="fcard">
+          <div class="ph"><img src="assets/people/leon.jpg" alt="Leon Scheinecker"></div>
+          <div class="fb">
+            <h3 class="serif" style="color:var(--on-forest);font-size:24px">Leon Scheinecker</h3>
+            <div style="color:var(--spring);font-weight:700;font-size:13.5px;margin-top:2px">CEO AT7 Media · Funnel, Performance &amp; Video</div>
+            <p style="color:var(--on-forest-mut);font-size:14.5px;margin-top:12px;line-height:1.6">Baut Sales-Funnel, Performance und Videoproduktion mit eigenem Studio und eigener Crew.</p>
+            <div class="fr">
+              <div><div class="n">Studio</div><div class="l">und eigene Crew</div></div>
+              <div><div class="n">Funnel</div><div class="l">und Performance</div></div>
+              <div><div class="n">Datatrack</div><div class="l">Finance-Ökosystem</div></div>
+            </div>
+            <a href="https://at7media.com" target="_blank" rel="noopener" class="btn btn-onforest" style="margin-top:22px">at7media.com <span class="ar">→</span></a>
+          </div>
+        </div>
+      </div>
+      <p style="color:var(--on-forest-mut);font-size:15px;margin-top:22px">Ergänzt um Claus Mitterböck als Senior-Sales-Advisor, ehemaliger Geschäftsführer von Libro Österreich, der die Vertriebsprozesse schärft.</p>
+    </div>
+  </div>
+
+  <!-- CLIENT LOGOS -->
+  <div style="padding:60px 64px">
+    <div class="wrap" style="text-align:center">
+      <p style="color:var(--muted-2);font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:6px">Marken und Unternehmer, mit denen wir gearbeitet haben</p>
+      <div class="logostrip" style="justify-content:center">
+        <img src="assets/logos/weltwoche.svg" alt="Die Weltwoche">
+        <img src="assets/logos/hkcm.svg" alt="HKCM">
+        <img src="assets/logos/hofmann.png" alt="Markus Hofmann">
+        <img src="assets/logos/krall-bubeck.png" alt="Krall und Bubeck">
+        <img src="assets/logos/rethaber.png" alt="Tobias Rethaber">
+        <img src="assets/logos/gold-revolution.png" alt="Gold Revolution">
+        <img src="assets/logos/mitutoyo.png" alt="Mitutoyo">
+        <img src="assets/logos/sodexo.png" alt="Sodexo">
+        <img src="assets/logos/hikvision.svg" alt="Hikvision">
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 5: WAS WIR LIEFERN -->
+  <div style="background:var(--sand);padding:90px 64px" id="leistung">
+    <div class="wrap">
+      <span class="eyebrow">Schritt 5 · Was wir liefern</span>
+      <h2 class="display" style="font-size:50px;margin-top:14px">Drei Säulen, ein <em>System</em></h2>
+      <p class="lede" style="max-width:64ch;margin-top:16px">Alles greift ineinander und wird von uns beiden gesteuert. Kein loser Werkzeugkasten, sondern ein Team, das ablefy nach vorne bringt.</p>
+      <div class="hubgrid" style="margin-top:36px">
+        <div class="hubcard" style="background:var(--paper-3)"><div class="body"><span class="steptag">Säule 1</span><h3 style="margin-top:10px">Personal Brand</h3><p>Özkan zur Stimme der Branche, mit drei Inhalten pro Tag auf YouTube, LinkedIn und Instagram.</p></div></div>
+        <div class="hubcard" style="background:var(--paper-3)"><div class="body"><span class="steptag">Säule 2</span><h3 style="margin-top:10px">Funnel und Performance</h3><p>Landingpages, Freebie-Funnel und bezahlte Anzeigen, jeder Euro auf Anfrage und Kunde rückverfolgbar.</p></div></div>
+        <div class="hubcard" style="background:var(--paper-3)"><div class="body"><span class="steptag">Säule 3</span><h3 style="margin-top:10px">Video und Events</h3><p>Eigene Crew vor Ort, Case-Study-Filme und ein Event pro Quartal als Hebel für deine Kunden.</p></div></div>
+      </div>
+      <div style="display:flex;gap:14px;margin-top:30px;flex-wrap:wrap">
+        <a href="ablefy_pitch_wachstumsallianz.html" target="_blank" class="btn btn-primary">Das vollständige Angebot ansehen <span class="ar">→</span></a>
+        <a href="ablefy_zukunft_kollaborationen.html" target="_blank" class="btn btn-ghost">Für später: das ganze Ökosystem <span class="ar">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div style="padding:30px 64px 110px" id="book">
+    <div class="wrap forestbox" style="text-align:center">
+      <div class="blob" style="width:420px;height:420px;background:var(--spring);opacity:.18;top:-140px;right:-80px;filter:blur(12px)"></div>
+      <span class="eyebrow" style="color:var(--spring);justify-content:center;position:relative">Schritt 6 · Dein nächster Schritt</span>
+      <h2 class="display" style="font-size:60px;color:var(--on-forest);margin-top:14px;position:relative">Lass uns 30 Minuten <em>sprechen</em></h2>
+      <p class="lede" style="color:var(--on-forest-mut);margin:18px auto 0;max-width:58ch;text-align:center;position:relative">Ein offenes Gespräch über deine Ziele und den schnellsten Weg dorthin, ganz ohne Verkaufsshow. Persönlich mit Alessandro und Leon.</p>
+      <div style="display:flex;gap:14px;justify-content:center;margin-top:30px;position:relative;flex-wrap:wrap">
+        <a href="#book" class="btn btn-spring btn-lg">Termin buchen <span class="ar">→</span></a>
+      </div>
+      <p style="color:var(--on-forest-mut);font-size:13.5px;margin-top:18px;position:relative">Alle Zahlen stehen im <a href="ablefy_pitch_wachstumsallianz.html" target="_blank" style="color:var(--spring);text-decoration:underline">vollständigen Angebot</a>. Ziel ist die Unterzeichnung bis zum 1. Juli 2026.</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="wrap">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center">
+        <img src="assets/ablefy-logo-white.svg" alt="ablefy" style="height:24px">
+        <span class="partners"><img class="sb" src="assets/sb-logo-wordmark-white.svg" alt="Social Brands"><span class="x">×</span><img class="at7" src="assets/at7-logo-white.png" alt="AT7 Media"></span>
+        <span style="color:var(--on-forest-mut);font-size:13.5px">Wachstumsallianz 2026 · Für Özkan Akkilic</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- sticky CTA -->
+  <div class="stickycta"><a href="#book" class="btn btn-spring btn-lg">Termin buchen <span class="ar">→</span></a></div>
+
+</div>
+
+<!-- ENGAGEMENT-TRACKING — GA4 Measurement-ID unten eintragen (G-XXXXXXXXXX). Danach laufen Scroll-, Verweildauer- und CTA-Events automatisch. -->
+<script>
+(function(){
+  var GA_ID = "G-XXXXXXXXXX"; /* <- hier eure GA4 Measurement-ID eintragen */
+  if (GA_ID && GA_ID.indexOf("XXXX") === -1) {
+    var s = document.createElement('script'); s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ dataLayer.push(arguments); };
+    gtag('js', new Date()); gtag('config', GA_ID);
+  }
+  function track(name, params){
+    params = params || {};
+    if (typeof window.gtag === 'function') { window.gtag('event', name, params); }
+    (window.dataLayer = window.dataLayer || []).push(Object.assign({ event: name }, params));
+    try { console.debug('[track]', name, params); } catch(e){}
+  }
+  var marks = [25,50,75,100], hit = {};
+  window.addEventListener('scroll', function(){
+    var h = document.documentElement;
+    var height = h.scrollHeight - h.clientHeight;
+    var pct = height > 0 ? Math.round(h.scrollTop / height * 100) : 0;
+    marks.forEach(function(m){ if (pct >= m && !hit[m]) { hit[m] = 1; track('scroll_depth', { percent: m }); } });
+  }, { passive: true });
+  var start = Date.now();
+  window.addEventListener('beforeunload', function(){
+    track('verweildauer', { sekunden: Math.round((Date.now() - start) / 1000) });
+  });
+  document.addEventListener('click', function(e){
+    var book = e.target.closest('a[href="#book"], a[href*="calendly"]');
+    if (book) { track('cta_termin_klick', { label: (book.textContent || '').trim() }); }
+    var ext = e.target.closest('a[target="_blank"]');
+    if (ext && ext.getAttribute('href')) { track('asset_geoeffnet', { ziel: ext.getAttribute('href') }); }
+  });
+})();
+</script>
+</body>
+</html>

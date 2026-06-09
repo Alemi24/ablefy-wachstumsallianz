@@ -1,0 +1,202 @@
+/* ============================================================
+   ABLEFY — DESIGN SYSTEM
+   Classical (Fraunces) × clean grotesque (Hanken) in signature green.
+   ============================================================ */
+
+:root{
+  /* ---- Brand palette : disciplined, high hygiene ---- */
+  --paper:      #F3F1E9;   /* warm paper canvas            */
+  --paper-2:    #FBFAF4;   /* lifted surfaces / cards      */
+  --paper-3:    #FFFFFF;   /* pure card top                */
+  --sand:       #E7E0D1;   /* warm neutral band           */
+  --ink:        #0B1813;   /* near-black, green-tinted     */
+  --forest:     #0A2A1E;   /* deep anchor green           */
+  --forest-2:   #0E3A29;   /* forest gradient stop        */
+  --spring:     #19E37C;   /* SIGNATURE spring green      */
+  --spring-deep:#0FC569;   /* pressed / hover             */
+  --mint:       #BFF3D6;   /* soft tint                   */
+  --mint-soft:  #E2F8EC;   /* faint wash                  */
+  --muted:      #56655C;   /* secondary text              */
+  --muted-2:    #8A968D;   /* tertiary text               */
+  --line:       rgba(11,24,19,.12);
+  --line-2:     rgba(11,24,19,.07);
+  --on-forest:  #EAF6EF;   /* text on dark green          */
+  --on-forest-mut: #9DBDAC;
+
+  /* ---- Type ---- */
+  --display: 'Fraunces', Georgia, serif;
+  --sans: 'Hanken Grotesk', system-ui, sans-serif;
+
+  /* ---- Radii / shadow ---- */
+  --r-sm: 10px;
+  --r-md: 16px;
+  --r-lg: 26px;
+  --r-xl: 36px;
+  --r-pill: 999px;
+  --shadow-sm: 0 2px 8px rgba(11,24,19,.06), 0 1px 2px rgba(11,24,19,.05);
+  --shadow-md: 0 18px 40px -18px rgba(11,24,19,.22), 0 6px 16px -10px rgba(11,24,19,.16);
+  --shadow-lg: 0 40px 90px -30px rgba(10,42,30,.40), 0 12px 30px -16px rgba(11,24,19,.20);
+}
+
+/* ============================================================
+   RESET (scoped-ish — applied within .ab root wrappers)
+   ============================================================ */
+.ab *,.ab *::before,.ab *::after{ box-sizing:border-box; }
+.ab{
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  line-height: 1.5;
+  font-size: 17px;
+}
+.ab p{ margin:0; }
+.ab h1,.ab h2,.ab h3,.ab h4{ margin:0; font-weight:400; }
+.ab a{ color:inherit; text-decoration:none; }
+.ab img{ display:block; max-width:100%; }
+.ab button{ font:inherit; cursor:pointer; }
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+.ab .display{
+  font-family: var(--display);
+  font-optical-sizing: auto;
+  font-variation-settings: 'SOFT' 0, 'WONK' 0;
+  letter-spacing: -0.018em;
+  line-height: 1.0;
+  font-weight: 460;
+  color: var(--ink);
+  text-wrap: balance;
+}
+.ab .display em{
+  font-style: italic;
+  font-variation-settings: 'SOFT' 40, 'WONK' 1;
+  color: var(--forest);
+}
+.ab .serif{ font-family: var(--display); font-optical-sizing:auto; }
+
+.ab .eyebrow{
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display:inline-flex; align-items:center; gap:10px;
+}
+.ab .eyebrow::before{
+  content:""; width:22px; height:2px; background:var(--spring); border-radius:2px;
+}
+.ab .eyebrow.center::before{ display:none; }
+
+.ab .lede{
+  font-size: 20px;
+  line-height: 1.55;
+  color: var(--muted);
+  font-weight: 420;
+  max-width: 30ch;
+}
+
+/* highlight underline mark, hand-painted feel */
+.ab .mark{ position:relative; white-space:nowrap; }
+.ab .mark::after{
+  content:""; position:absolute; left:-2%; right:-2%; bottom:.08em; height:.34em;
+  background: var(--spring); z-index:-1; border-radius:3px;
+  transform: skewX(-9deg) rotate(-.6deg);
+  opacity:.92;
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.ab .btn{
+  display:inline-flex; align-items:center; gap:10px;
+  font-weight:600; font-size:16px; letter-spacing:-.01em;
+  padding:15px 26px; border-radius: var(--r-pill);
+  border:1px solid transparent; transition: all .18s ease;
+  white-space:nowrap;
+}
+.ab .btn .ar{ transition: transform .2s ease; }
+.ab .btn:hover .ar{ transform: translateX(3px); }
+.ab .btn-primary{ background: var(--ink); color:#fff; }
+.ab .btn-primary:hover{ background:#000; }
+.ab .btn-spring{ background: var(--spring); color: var(--forest); box-shadow: 0 8px 22px -8px rgba(25,227,124,.6); }
+.ab .btn-spring:hover{ background: var(--spring-deep); }
+.ab .btn-ghost{ background:transparent; color:var(--ink); border-color: var(--line); }
+.ab .btn-ghost:hover{ border-color: var(--ink); }
+.ab .btn-onforest{ background: var(--spring); color: var(--forest); }
+.ab .btn-lg{ padding:18px 32px; font-size:17px; }
+
+/* ============================================================
+   LOGO
+   ============================================================ */
+.ab .logo{ display:inline-flex; align-items:center; gap:11px; font-weight:700; }
+.ab .logo .mark-ico{
+  width:30px; height:30px; border-radius:9px;
+  background: var(--spring); position:relative; overflow:hidden;
+  box-shadow: inset 0 0 0 1px rgba(10,42,30,.12);
+}
+.ab .logo .mark-ico::before{
+  content:""; position:absolute; inset:0;
+  background:
+    linear-gradient(135deg, transparent 42%, var(--forest) 42% 58%, transparent 58%);
+}
+.ab .logo .wm{ font-family: var(--sans); font-weight:700; font-size:23px; letter-spacing:-.03em; color:var(--ink); }
+.ab .logo.on-dark .wm{ color: var(--on-forest); }
+
+/* ============================================================
+   NAV
+   ============================================================ */
+.ab .nav{
+  display:flex; align-items:center; justify-content:space-between;
+  padding: 22px 64px;
+}
+.ab .nav-links{ display:flex; align-items:center; gap:34px; font-size:15px; font-weight:500; color:var(--ink); }
+.ab .nav-links a{ display:inline-flex; align-items:center; gap:5px; color:var(--muted); transition:color .15s; }
+.ab .nav-links a:hover{ color:var(--ink); }
+.ab .nav-right{ display:flex; align-items:center; gap:18px; font-size:15px; font-weight:500; }
+.ab .chev{ width:8px; height:8px; border-right:2px solid currentColor; border-bottom:2px solid currentColor; transform:rotate(45deg) translateY(-2px); opacity:.6; }
+
+/* ============================================================
+   PILL / CHIP / TAG
+   ============================================================ */
+.ab .chip{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:7px 14px; border-radius: var(--r-pill);
+  font-size:13px; font-weight:600; background: var(--paper-3); border:1px solid var(--line);
+}
+.ab .dot{ width:7px;height:7px;border-radius:50%; background:var(--spring); }
+
+/* ============================================================
+   CARD primitives
+   ============================================================ */
+.ab .card{
+  background: var(--paper-2); border:1px solid var(--line-2);
+  border-radius: var(--r-lg); box-shadow: var(--shadow-sm);
+}
+.ab .ui{ background:#fff; border-radius: var(--r-md); box-shadow: var(--shadow-md); border:1px solid var(--line-2); }
+
+/* ============================================================
+   ARTBOARD page frame
+   ============================================================ */
+.ab-page{ width:100%; background: var(--paper); overflow:hidden; }
+.ab .section{ padding: 110px 64px; }
+.ab .wrap{ max-width: 1180px; margin:0 auto; }
+
+/* mini scrollbar suppress inside mockups */
+.ab .ui::-webkit-scrollbar{ display:none; }
+
+/* fix: italic accent on dark/forest backgrounds must use spring green for contrast */
+.ab .forestbox .display em, .ab .dark .display em{ color: var(--spring); }
+
+/* orientation box — plain-language "Worum es hier geht" intro */
+.ab .orient{ background:var(--mint-soft); border:1px solid var(--mint); border-radius:var(--r-lg); padding:24px 28px; margin-top:30px; max-width:780px; }
+.ab .orient .ol{ font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--spring-deep); font-weight:700; margin-bottom:9px; display:flex; align-items:center; gap:8px; }
+.ab .orient .ol::before{ content:""; width:7px; height:7px; border-radius:50%; background:var(--spring); }
+.ab .orient p{ color:var(--forest); font-size:16.5px; line-height:1.6; }
+.ab .orient ul{ margin:12px 0 0; padding:0; list-style:none; display:grid; gap:7px; }
+.ab .orient li{ position:relative; padding-left:22px; color:var(--forest); font-size:14.5px; line-height:1.5; }
+.ab .orient li::before{ content:""; position:absolute; left:0; top:8px; width:6px; height:6px; border-radius:50%; background:var(--spring-deep); }
+.ab .orient li b{ font-weight:700; }

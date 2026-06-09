@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta name="description" content="Wo ablefy heute steht, die fünf Lücken, die Umsatz kosten, und der Plan in klaren Phasen.">
+<!-- OG: beim Deploy assets/og-image.jpg + og:url auf absolute URL (https://DOMAIN/...) umstellen -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Marketing-Standortbestimmung für ablefy">
+<meta property="og:description" content="Wo ablefy heute steht, die fünf Lücken, die Umsatz kosten, und der Plan in klaren Phasen.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Marketing-Standortbestimmung für ablefy">
+<meta name="twitter:description" content="Wo ablefy heute steht, die fünf Lücken, die Umsatz kosten, und der Plan in klaren Phasen.">
+<meta name="twitter:image" content="assets/og-image.jpg">
+<title>ablefy — Marketing-Standortbestimmung &amp; Wachstumsplan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Hanken+Grotesk:wght@300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/design-system/ablefy.css">
+<link rel="stylesheet" href="assets/design-system/ablefy-components.css">
+<style>
+  html,body{ margin:0; background:var(--paper); }
+  .ab .logo img{ height:30px; width:auto; display:block; }
+  .ab .partners{ display:inline-flex; align-items:center; gap:14px; }
+  .ab .partners img.sb{ height:24px; } .ab .partners img.at7{ height:38px; }
+  .ab .partners img.at7.dark{ filter:none; }
+  .ab .partners .x{ color:var(--muted-2); font-weight:300; }
+  .ab .meta{ display:flex; flex-wrap:wrap; gap:30px; margin-top:40px; }
+  .ab .meta .k{ font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted-2); font-weight:700; }
+  .ab .meta .v{ font-family:var(--display); font-weight:500; font-size:18px; margin-top:6px; }
+  .ab . pcard, .ab .pcard{ background:var(--paper-2); border:1px solid var(--line-2); border-radius:var(--r-lg); padding:28px; box-shadow:var(--shadow-sm); }
+  .ab .pcard .n{ width:36px;height:36px;border-radius:10px;background:var(--ink);color:var(--spring);display:grid;place-items:center;font-weight:800;margin-bottom:16px; }
+  .ab .pcard h3{ font-family:var(--display); font-weight:500; font-size:21px; margin-bottom:8px; }
+  .ab .pcard p{ color:var(--muted); font-size:15px; line-height:1.55; }
+  .ab .ba{ display:grid; grid-template-columns:1fr 1fr; border:1px solid var(--line); border-radius:var(--r-lg); overflow:hidden; margin-top:24px; }
+  .ab .ba .c{ padding:28px; } .ab .ba .before{ background:var(--paper-2); } .ab .ba .after{ background:var(--mint-soft); border-left:1px solid var(--line); }
+  .ab .ba .h{ font-size:12px; letter-spacing:.1em; text-transform:uppercase; font-weight:700; margin-bottom:14px; }
+  .ab .ba .before .h{ color:var(--muted-2); } .ab .ba .after .h{ color:var(--spring-deep); }
+  .ab .ba .l{ font-size:15px; padding:10px 0; border-top:1px solid var(--line); }
+  .ab .ba .before .l{ color:var(--muted); } .ab .ba .after .l{ color:var(--ink); font-weight:500; }
+  .ab .ba .after .l b{ color:var(--spring-deep); }
+  .ab .steps{ display:flex; flex-wrap:wrap; margin-top:36px; border:1px solid var(--line); border-radius:var(--r-lg); overflow:hidden; background:var(--paper-2); }
+  .ab .steps .st{ flex:1 1 0; min-width:180px; padding:26px 24px; border-right:1px solid var(--line); }
+  .ab .steps .st:last-child{ border-right:none; }
+  .ab .steps .s{ font-family:var(--display); font-weight:600; color:var(--spring-deep); font-size:15px; }
+  .ab .steps .t{ font-weight:700; margin:8px 0 6px; font-size:16px; }
+  .ab .steps .d{ color:var(--muted); font-size:14px; line-height:1.5; }
+  .ab .phase{ display:grid; grid-template-columns:150px 1fr; gap:24px; padding:28px 0; border-top:1px solid var(--line); }
+  .ab .phase:first-child{ border-top:none; }
+  .ab .phase .ph{ font-family:var(--display); font-weight:600; font-size:15px; color:var(--spring-deep); letter-spacing:.04em; }
+  .ab .phase h3{ font-family:var(--display); font-weight:500; font-size:23px; margin-bottom:8px; }
+  .ab .phase p{ color:var(--muted); font-size:15.5px; line-height:1.6; }
+  .ab .tagchip{ display:inline-block; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--spring-deep); background:var(--mint-soft); border:1px solid var(--mint); border-radius:var(--r-pill); padding:5px 12px; margin-bottom:12px; font-weight:700; }
+  .ab .forestbox{ background:radial-gradient(120% 140% at 0% 0%, var(--forest-2), var(--forest)); border-radius:var(--r-xl); padding:48px; color:var(--on-forest); position:relative; overflow:hidden; }
+  .ab .forestbox .display{ color:var(--on-forest); }
+  .ab .conf{ display:inline-block; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--spring-deep); border:1px solid var(--mint); background:var(--mint-soft); border-radius:6px; padding:5px 10px; font-weight:700; }
+  @media(max-width:980px){
+    .ab .section{ padding:60px 26px; } .ab .nav{ padding:18px 26px; }
+    .ab .ba, .ab .feat-grid{ grid-template-columns:1fr; }
+    .ab .phase{ grid-template-columns:1fr; gap:10px; }
+    .ab .steps .st{ flex:1 1 100%; border-right:none; border-bottom:1px solid var(--line); }
+    .ab h1.display{ font-size:48px !important; }
+  }
+</style>
+</head>
+<body>
+<div class="ab ab-page">
+
+  <div class="nav">
+    <div class="logo"><img src="assets/ablefy-logo.svg" alt="ablefy"></div>
+    <span class="conf">Marketing-Briefing · Vertraulich</span>
+  </div>
+
+  <!-- HERO -->
+  <div class="section" style="padding-bottom:50px">
+    <div class="wrap">
+      <span class="eyebrow">Standortbestimmung &amp; Wachstumsplan</span>
+      <h1 class="display" style="font-size:84px;max-width:15ch;margin-top:18px">Das beste Produkt im Markt. <em>Endlich</em> so vermarktet.</h1>
+      <p class="lede" style="max-width:62ch;margin-top:24px;font-size:20px">ablefy hat im deutschsprachigen Raum gewonnen, wenn es um Produkt, Plattform und Compliance geht. Dieses Briefing zeigt ehrlich, wo das Marketing heute steht, warum es das Produkt unter Wert verkauft und wie wir das in klaren Phasen drehen.</p>
+      <div class="meta">
+        <div><div class="k">Erstellt für</div><div class="v">Özkan Akkilic, CEO ablefy</div></div>
+        <div><div class="k">Erstellt von</div><div class="v partners"><img class="sb" src="assets/sb-logo-wordmark.svg" alt="Social Brands"><span class="x">×</span><img class="at7" src="assets/at7-logo-dark.png" alt="AT7 Media"></div></div>
+        <div><div class="k">Stand</div><div class="v">Juni 2026</div></div>
+        <div><div class="k">Fokus</div><div class="v">Sales Teams / Sales OS</div></div>
+      </div>
+      <div class="orient">
+        <div class="ol">So liest du dieses Briefing</div>
+        <p>In wenigen Minuten siehst du, wo ablefy heute steht und wie wir es Schritt für Schritt nach vorne bringen.</p>
+        <ul>
+          <li><b>Punkt A</b>, die ehrliche Lage heute</li>
+          <li><b>Die fünf Lücken</b>, die gerade Umsatz kosten</li>
+          <li><b>Der Plan</b> in klaren Phasen, von der Zusage bis zum laufenden Betrieb</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 01 PUNKT A -->
+  <div style="background:var(--sand);padding:90px 64px">
+    <div class="wrap">
+      <span class="eyebrow">01 · Punkt A, wo ablefy heute steht</span>
+      <h2 class="display" style="font-size:54px;margin-top:16px">Marktführer im Produkt. <em>Schlusslicht</em> im Marketing.</h2>
+      <p class="lede" style="margin-top:20px;max-width:60ch">Die Substanz ist da. Was fehlt, ist eine Vermarktung, die diese Substanz für den Markt sichtbar und fühlbar macht.</p>
+      <div class="stats" style="margin-top:40px">
+        <div class="stat"><div class="num">&gt;80<em>K</em></div><div class="lab">Käufer im Ökosystem</div></div>
+        <div class="stat"><div class="num">99<em>%</em></div><div class="lab">Kundenzufriedenheit</div></div>
+        <div class="stat"><div class="num">~5<em>K</em></div><div class="lab">Instagram-Follower</div></div>
+        <div class="stat"><div class="num">1</div><div class="lab">fehlende Rolle: Marketing-Advokat</div></div>
+      </div>
+      <div class="feat-grid" style="grid-template-columns:1fr 1fr;margin-top:40px">
+        <div class="pcard" style="background:var(--paper-3)"><h3>Was stark ist</h3><p>ablefy vereint das beste Produkt der Kategorie, die Marktführerschaft in Plattform und Compliance, einen riesigen Bestand an Käufern und Marktdaten und einen Gründer mit Bühne, Story und Haltung.</p></div>
+        <div class="pcard" style="background:var(--paper-3)"><h3>Was bremst</h3><p>Das Marketing wird heute mit einem zu kleinen und zu wenig spezialisierten Team gefahren. Das Ergebnis trägt nicht, der Markt sieht nicht, wie gut ablefy wirklich ist, und Özkans Person bleibt als Hebel ungenutzt.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 02 PROBLEME -->
+  <div class="section">
+    <div class="wrap">
+      <span class="eyebrow">02 · Die Probleme, klar benannt</span>
+      <h2 class="display" style="font-size:52px;margin-top:16px">Fünf Lücken, die <em>Umsatz</em> kosten</h2>
+      <div class="feat-grid" style="margin-top:36px">
+        <div class="pcard"><div class="n">1</div><h3>Wahrnehmungslücke</h3><p>Die Produktqualität ist deutlich höher als die Marketingqualität. Genau diese Differenz kostet täglich Vertrauen und Conversions.</p></div>
+        <div class="pcard"><div class="n">2</div><h3>Der fehlende Nachfrage-Motor</h3><p>Heute fehlt ein planbarer Lead-Fluss, und das Wachstum hängt am organischen Zufall statt an einem System, das verlässlich Kunden bringt.</p></div>
+        <div class="pcard"><div class="n">3</div><h3>Gründer-Hebel ungenutzt</h3><p>Özkan ist ein starker Speaker mit einer großen Story. Ohne eine Personal Brand bleibt der größte Multiplikator des Unternehmens liegen.</p></div>
+        <div class="pcard"><div class="n">4</div><h3>Eine Frage der Ausführung</h3><p>Im Team sind sich alle einig, was zu tun ist. Der Unterschied entscheidet sich allein in der Ausführung und in der Qualität.</p></div>
+        <div class="pcard"><div class="n">5</div><h3>Features statt Ergebnisse</h3><p>Die Seiten erklären, was die Software tut. Was der Unternehmer dadurch gewinnt, bleibt dabei ungesagt, und damit ist das Produkt nirgends sauber getextet.</p></div>
+        <div class="pcard" style="background:var(--mint-soft);border-color:var(--mint)"><div class="n" style="background:var(--spring);color:var(--forest)">→</div><h3>Die gute Nachricht</h3><p>Alle fünf sind Marketingprobleme und damit lösbar. Genau dafür sind wir da.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 03 KERNERKENNTNIS -->
+  <div class="section dark" style="padding-top:90px;padding-bottom:90px">
+    <div class="wrap">
+      <span class="eyebrow" style="color:var(--spring)">03 · Die Kernerkenntnis</span>
+      <h2 class="display" style="font-size:60px;margin-top:18px;color:var(--on-forest)">Der Markt kauft <em>Ergebnisse</em>.<br>Das Feature ist nur der Beweis.</h2>
+      <p class="lede" style="color:var(--on-forest-mut);margin-top:20px;max-width:64ch">ablefy löst in einem Business viele Probleme auf einmal, doch genau das steht nirgends in dieser Sprache. Deshalb drehen wir jede Aussage um, sodass das Ergebnis vorne steht und das Feature darunter zum Beweis wird. So entsteht beim Leser sofort der Gedanke, dass dies die beste Lösung für Sales Teams im Markt ist.</p>
+      <h3 class="serif" style="font-size:26px;color:var(--on-forest);margin:46px 0 4px">Beispiel: die Sales-Teams-Seite, heute und morgen</h3>
+      <p style="color:var(--on-forest-mut);margin-bottom:8px">Dieselbe Funktion, zwei völlig verschiedene Wirkungen.</p>
+      <div class="ba" style="border-color:rgba(255,255,255,.14)">
+        <div class="c before" style="background:rgba(255,255,255,.04)">
+          <div class="h" style="color:var(--on-forest-mut)">Heute · Feature-Sprache</div>
+          <div class="l" style="color:var(--on-forest-mut);border-color:rgba(255,255,255,.1)">„Multi-Tier-Provisionsmodelle und flexible Auszahlungen"</div>
+          <div class="l" style="color:var(--on-forest-mut);border-color:rgba(255,255,255,.1)">„Personalisierte Deals und Zahlungsabwicklung"</div>
+          <div class="l" style="color:var(--on-forest-mut);border-color:rgba(255,255,255,.1)">„Produkterstellung, Zahlung und Controlling in einer Software"</div>
+        </div>
+        <div class="c after" style="background:rgba(25,227,124,.08);border-left:1px solid rgba(255,255,255,.14)">
+          <div class="h" style="color:var(--spring)">Morgen · Ergebnis-Sprache</div>
+          <div class="l" style="color:var(--on-forest);border-color:rgba(255,255,255,.1)">Jeder Closer wird <b style="color:var(--spring)">automatisch korrekt bezahlt</b>, ohne eine einzige Tabelle.</div>
+          <div class="l" style="color:var(--on-forest);border-color:rgba(255,255,255,.1)">Ein <b style="color:var(--spring)">maßgeschneidertes Angebot in 60 Sekunden</b>, abgeschlossen, bevor der Kunde abkühlt.</div>
+          <div class="l" style="color:var(--on-forest);border-color:rgba(255,255,255,.1)"><b style="color:var(--spring)">Ein System statt fünf</b>, ohne Datenlücken und ohne Tool-Kosten von rund 800 € im Monat.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 04 DER WEG HIERHER -->
+  <div class="section">
+    <div class="wrap">
+      <span class="eyebrow">04 · Der Weg hierher</span>
+      <h2 class="display" style="font-size:52px;margin-top:16px">Wie wir an diesen Punkt <em>gekommen</em> sind</h2>
+      <p class="lede" style="max-width:64ch;margin-top:18px">Diese Zusammenarbeit ist über mehrere Gespräche gewachsen und steht heute auf einem klaren Fundament. Bevor es um die nächsten Schritte geht, lohnt der kurze Blick zurück.</p>
+      <div class="steps">
+        <div class="st"><div class="s">01</div><div class="t">Erste Gespräche</div><div class="d">ablefy hat zuerst getrennt mit Social Brands und mit AT7 Media gesprochen.</div></div>
+        <div class="st"><div class="s">02</div><div class="t">Gemeinsame Roadmap</div><div class="d">Alessandro und Leon haben sich abgestimmt und eine gemeinsame Roadmap erstellt.</div></div>
+        <div class="st"><div class="s">03</div><div class="t">Marbella</div><div class="d">In Marbella sind ablefy, AT7 Media und Social Brands zusammengekommen und haben die Richtung geschärft.</div></div>
+        <div class="st"><div class="s">04</div><div class="t">Drei Arbeitsproben</div><div class="d">Daraus sind drei konkrete Arbeitsproben entstanden, die gerade in Produktion sind.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 05 WAS WIR ZEIGEN -->
+  <div class="section" style="padding-top:0">
+    <div class="wrap">
+      <span class="eyebrow">05 · Was wir jetzt zeigen</span>
+      <h2 class="display" style="font-size:52px;margin-top:16px">Drei Arbeitsproben, die unsere <em>Vision</em> sichtbar machen</h2>
+      <p class="lede" style="max-width:64ch;margin-top:18px">Statt nur über Qualität zu sprechen, legen wir sie auf den Tisch. Diese drei Proben zeigen konkret, wie wir für ablefy arbeiten.</p>
+      <div class="feat-grid" style="margin-top:36px">
+        <div class="pcard"><span class="tagchip">in Produktion</span><h3>Content für Özkans Personal Brand</h3><p>Erste Inhalte für den organischen Aufbau von Özkan als Stimme der Branche, getragen von einer Content-Datenbank aus echten Schmerzen und Wünschen der Zielkunden.</p></div>
+        <div class="pcard"><span class="tagchip">in Arbeit</span><h3>Landingpage für Sales OS</h3><p>Die neu gedachte Sales-Seite, entlang der echten Schmerzpunkte beim Aufbau eines Sales Teams strukturiert, auf Ergebnisse getextet und im sauberen ablefy-Design.</p></div>
+        <div class="pcard"><span class="tagchip">in Vorbereitung</span><h3>Lead-Asset für bezahlten Traffic</h3><p>Ein eigenständiges Asset, das später Leads aus bezahltem Traffic gewinnt und so für einen planbaren Zustrom an Interessenten sorgt.</p></div>
+      </div>
+      <div class="forestbox" style="margin-top:34px;padding:40px">
+        <div class="blob" style="width:300px;height:300px;background:var(--spring);opacity:.14;top:-90px;right:-60px;filter:blur(10px)"></div>
+        <h3 class="display" style="font-size:28px;position:relative">Wie es jetzt weitergeht</h3>
+        <p class="lede" style="color:var(--on-forest-mut);margin-top:14px;max-width:68ch;position:relative">Wir geben ablefy alle Ideen, Ressourcen und Deliverables an die Hand, stimmen sie in einem gemeinsamen Termin ab und führen anschließend den Pitch. Genau diese Vision halten Sie gerade in der Hand.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 06 ABLAUF NACH ZUSAGE -->
+  <div style="background:var(--sand);padding:90px 64px">
+    <div class="wrap">
+      <span class="eyebrow">06 · Der Ablauf nach der Zusage</span>
+      <h2 class="display" style="font-size:52px;margin-top:16px">Was Schritt für Schritt passiert, sobald ablefy <em>zusagt</em></h2>
+      <p class="lede" style="max-width:64ch;margin:18px 0 8px">Traffic allein bringt nichts, solange das Fundament fehlt. Deshalb bauen wir zuerst die Basis und schalten Reichweite erst dazu, wenn sie trägt.</p>
+      <div class="phase"><div><div class="ph">FUNDAMENT</div><div style="font-size:13px;color:var(--muted-2);margin-top:4px">~14 Tage nach Vertrag</div></div><div><h3>Asset-Collection und Aufbau der Basis</h3><p>Nach der Zusage starten wir mit der Asset-Collection. Wir sammeln alle Marken-Informationen, alles über die Marke und alles über die Ziele, und produzieren parallel bereits Content. Rund 14 Tage nach Vertrag und Zahlung sind wir startklar für die Umsetzung.</p></div></div>
+      <div class="phase"><div><div class="ph">AUFBAU</div></div><div><h3>Fundament optimieren und für Ads vorbereiten</h3><p>Zuerst optimieren wir alle Social-Profile und alle Landingpages, die direkt mit der Leadgenerierung verbunden sind. Danach bauen wir die separaten Landingpages für den bezahlten Traffic. Diese Zeit nutzen wir, um Content und Messaging organisch zu validieren, damit die späteren Anzeigen von Anfang an auf echten Daten laufen.</p></div></div>
+      <div class="phase"><div><div class="ph">BETRIEB</div></div><div><h3>Ads, Content und Backend im festen Takt</h3><p>Sobald die Basis steht, starten die Ads. Ab dann läuft der Betrieb im festen Rhythmus mit drei Inhalten pro Tag, laufenden Anzeigen und einem Check-in mit ablefy alle zwei Wochen. Parallel optimieren wir das Backend wie die E-Mails, weil es direkt zum Marketing gehört.</p></div></div>
+      <div class="phase"><div><div class="ph">QUARTAL</div></div><div><h3>Quartals-Review und Ausblick</h3><p>Alle drei Monate ziehen wir ein Quartals-Review über alle erreichten Zahlen und legen einen Aktionsplan für das nächste Kapitel fest. Hier planen wir auch Events, mögliche Content-Drehs und neue Produkte, die anstehen.</p></div></div>
+      <p style="margin-top:24px;max-width:80ch;color:var(--muted)">Der laufende Betrieb ist standardisiert und bleibt zugleich beweglich, weil ablefy neue Produkte entwickelt und sich der Markt weiterbewegt. Genau darauf stellen wir uns flexibel ein.</p>
+    </div>
+  </div>
+
+  <!-- 07 KI-SYSTEM -->
+  <div class="section">
+    <div class="wrap">
+      <div class="forestbox">
+        <div class="blob" style="width:340px;height:340px;background:var(--spring);opacity:.16;top:-110px;right:-70px;filter:blur(10px)"></div>
+        <span class="eyebrow" style="color:var(--spring);position:relative">07 · Durchgängig im Hintergrund</span>
+        <h2 class="display" style="font-size:46px;margin-top:16px;position:relative">Ein KI-System, das <em>alles</em> zusammenhält</h2>
+        <p class="lede" style="color:var(--on-forest-mut);margin-top:18px;max-width:70ch;position:relative">Während wir diese Phasen umsetzen, bauen wir im Hintergrund ein vollständig KI-gestütztes System. Es hält alle Informationen, Marken-Assets und Produkte an einem Ort und macht das gesamte Marketing schlank und effizient. Dieses System nutzen wir bei Social Brands und AT7 Media, und wir geben ablefy Zugriff darauf. So kann ablefy auch in-house jederzeit auf unsere Expertise und unser System zugreifen und deutlich effizienter arbeiten.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 08 WAS DAS BEDEUTET -->
+  <div class="section" style="padding-top:0">
+    <div class="wrap">
+      <span class="eyebrow">08 · Was das für ablefy bedeutet</span>
+      <h2 class="display" style="font-size:54px;margin-top:16px">Aus dem besten Produkt wird die <em>stärkste</em> Marke</h2>
+      <div class="feat-grid" style="margin-top:36px">
+        <div class="feat"><h3 class="serif">Sichtbarkeit</h3><p>Der Markt sieht endlich, wie gut ablefy wirklich ist. Die Wahrnehmungslücke schließt sich.</p></div>
+        <div class="feat"><h3 class="serif">Planbarkeit</h3><p>Ein Nachfrage-Motor bringt verlässlich Leads und Kunden, statt das Wachstum dem organischen Zufall zu überlassen.</p></div>
+        <div class="feat"><h3 class="serif">Hebel</h3><p>Özkans Stimme trägt das Wachstum mit und bleibt als Wert, der ablefy gehört, auch langfristig erhalten.</p></div>
+      </div>
+      <div class="forestbox" style="margin-top:34px;text-align:center">
+        <div class="blob" style="width:340px;height:340px;background:var(--spring);opacity:.16;top:-120px;left:-60px;filter:blur(10px)"></div>
+        <h2 class="display" style="font-size:44px;position:relative">Nächster Schritt: <em>Phase 1 ansehen</em></h2>
+        <p class="lede" style="color:var(--on-forest-mut);margin:16px auto 0;max-width:64ch;text-align:center;position:relative">Wir zeigen die neue Sales-Teams-Seite als konkreten Beweis und stellen den Standard von heute neben den Standard, der mit uns möglich ist. Daran lässt sich in fünf Minuten entscheiden.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="wrap">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center">
+        <img src="assets/ablefy-logo-white.svg" alt="ablefy" style="height:24px">
+        <span class="partners"><img class="sb" src="assets/sb-logo-wordmark-white.svg" alt="Social Brands"><span class="x">×</span><img class="at7" src="assets/at7-logo-white.png" alt="AT7 Media"></span>
+        <span style="color:var(--on-forest-mut);font-size:13.5px">Wachstumsallianz 2026 · Vertraulich</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

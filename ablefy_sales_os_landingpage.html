@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta name="description" content="Angebote, Zahlungen und Provisionen in einem System, damit dein Vertriebsteam verkauft statt verwaltet.">
+<!-- OG: beim Deploy assets/og-image.jpg + og:url auf absolute URL (https://DOMAIN/...) umstellen -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sales OS von ablefy — Verkaufen statt verwalten">
+<meta property="og:description" content="Angebote, Zahlungen und Provisionen in einem System, damit dein Vertriebsteam verkauft statt verwaltet.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sales OS von ablefy — Verkaufen statt verwalten">
+<meta name="twitter:description" content="Angebote, Zahlungen und Provisionen in einem System, damit dein Vertriebsteam verkauft statt verwaltet.">
+<meta name="twitter:image" content="assets/og-image.jpg">
+<title>Sales OS von ablefy — Verkaufen statt verwalten</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Hanken+Grotesk:wght@300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/design-system/ablefy.css">
+<link rel="stylesheet" href="assets/design-system/ablefy-components.css">
+<style>
+  html,body{ margin:0; background:var(--paper); }
+  /* page-local helpers layered on the design system */
+  .ab .logo img{ height:30px; width:auto; display:block; }
+  .ab .section.tight{ padding-top:0; }
+  .ab .pain-card{ background:var(--paper-2); border:1px solid var(--line-2); border-radius:var(--r-lg); padding:30px; box-shadow:var(--shadow-sm); }
+  .ab .pain-card .k{ font-family:var(--display); font-weight:520; font-size:46px; color:var(--spring-deep); line-height:1; }
+  .ab .pain-card h3{ font-family:var(--display); font-weight:500; font-size:21px; margin:14px 0 8px; }
+  .ab .pain-card p{ color:var(--muted); font-size:15.5px; line-height:1.55; }
+  .ab .out-row{ display:flex; gap:14px; align-items:flex-start; padding:16px 0; border-top:1px solid var(--line); }
+  .ab .out-row:first-child{ border-top:none; }
+  .ab .out-ic{ width:30px;height:30px;border-radius:9px;background:var(--spring);color:var(--forest);display:grid;place-items:center;flex:0 0 auto;font-weight:800; }
+  .ab .out-row .ot{ font-weight:700; font-size:16.5px; margin-bottom:3px; }
+  .ab .out-row .os{ color:var(--muted); font-size:15px; line-height:1.5; }
+  .ab .field{ width:100%; padding:14px 16px; border-radius:12px; border:1px solid rgba(255,255,255,.18); background:rgba(255,255,255,.06); color:var(--on-forest); font:inherit; font-size:15px; }
+  .ab .field::placeholder{ color:var(--on-forest-mut); }
+  .ab .ph-note{ font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted-2); font-weight:700; }
+  @media(max-width:980px){
+    .ab .section{ padding:64px 28px; }
+    .ab .nav{ padding:18px 28px; }
+    .ab .split{ grid-template-columns:1fr; gap:34px; }
+    .ab .feat-grid{ grid-template-columns:1fr; }
+    .ab .stats{ flex-wrap:wrap; }
+    .ab .stat + .stat{ border-left:none; padding-left:0; }
+    .ab .nav-links{ display:none; }
+    .ab h1.display{ font-size:54px !important; }
+  }
+</style>
+</head>
+<body>
+<div class="ab ab-page">
+
+  <!-- ============ NAV ============ -->
+  <div style="border-bottom:1px solid var(--line);padding:11px 64px;background:var(--paper-2)"><a href="index.html" style="color:var(--muted);font-size:13.5px;font-weight:700;display:inline-flex;align-items:center;gap:7px">&#8592; Zurück zur Übersicht</a></div>
+  <div class="nav">
+    <div class="logo"><img src="assets/ablefy-logo.svg" alt="ablefy"></div>
+    <div class="nav-links">
+      <a href="#system">Produkt<span class="chev"></span></a>
+      <a href="#bruchstellen">Lösungen<span class="chev"></span></a>
+      <a href="#preise">Preise</a>
+      <a href="#demo">Demo</a>
+    </div>
+    <div class="nav-right"><a href="#" style="color:var(--muted)">Login</a><button class="btn btn-spring">Kostenlos testen</button></div>
+  </div>
+
+  <!-- ============ DISCLAIMER ============ -->
+  <div style="background:var(--mint-soft);border-bottom:1px solid var(--mint)">
+    <div class="wrap" style="display:flex;gap:12px;align-items:center;justify-content:center;padding:11px 24px;text-align:center;flex-wrap:wrap">
+      <span style="font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--spring-deep)">Entwurf</span>
+      <span style="font-size:13.5px;color:var(--forest)">Beispielseite mit noch grober Datenlage. Die finale Version entsteht mit den Detailinformationen aus dem ablefy-Team.</span>
+    </div>
+  </div>
+
+  <!-- ============ HERO (Direction B) ============ -->
+  <div style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:44px 64px 0">
+    <span class="chip" style="margin-bottom:26px"><span class="dot"></span>Sales OS von ablefy · für Vertriebsteams</span>
+    <h1 class="display" style="font-size:92px;max-width:14ch">Verkaufen <span class="mark">statt</span> <em>verwalten</em>.</h1>
+    <p class="lede" style="max-width:56ch;text-align:center;margin-top:28px;font-size:21px">Sales OS bringt Angebote, Zahlungen und Provisionen in ein System. Jeder Closer wird automatisch korrekt ausgezahlt, jedes Angebot ist in Sekunden raus und dein Team konzentriert sich auf den Abschluss.</p>
+    <div style="display:flex;gap:14px;margin-top:34px;flex-wrap:wrap;justify-content:center">
+      <button class="btn btn-primary btn-lg">Demo ansehen <span class="ar">→</span></button>
+      <button class="btn btn-ghost btn-lg">14 Tage kostenlos testen</button>
+    </div>
+    <div class="mock-row" style="gap:14px;margin-top:26px;color:var(--muted);font-size:14px;font-weight:600;flex-wrap:wrap;justify-content:center">
+      <span class="dot"></span>Keine Kreditkarte nötig<span class="dot"></span>Jederzeit kündbar<span class="dot"></span>In Minuten startklar
+    </div>
+
+    <div style="position:relative;width:100%;max-width:1040px;margin:56px auto 0">
+      <div class="blob" style="width:320px;height:320px;background:var(--spring);opacity:.13;top:-30px;left:50%;transform:translateX(-50%);filter:blur(8px)"></div>
+      <div class="float-pill" style="top:28px;left:-6px;z-index:3"><span class="dot"></span>1.240,00 € Provision ausgezahlt</div>
+      <div class="float-pill" style="top:92px;right:-8px;z-index:3">▲ 18,4 % Abschlussrate</div>
+      <div class="ui" style="padding:22px;display:grid;grid-template-columns:1.3fr 1fr;gap:18px;text-align:left;position:relative">
+        <div class="dash mock" style="max-width:360px">
+          <div class="dash-top">
+            <div>
+              <div class="mini" style="font-weight:700;letter-spacing:.04em;text-transform:uppercase">Umsatz · 30 Tage</div>
+              <div class="dash-kpi" style="margin-top:6px">322.556 €</div>
+            </div>
+            <span class="delta">▲ 18,4 %</span>
+          </div>
+          <div class="chart"><div class="bar" style="height:34%"></div><div class="bar" style="height:52%"></div><div class="bar" style="height:40%"></div><div class="bar" style="height:63%"></div><div class="bar" style="height:49%"></div><div class="bar" style="height:71%"></div><div class="bar" style="height:58%"></div><div class="bar" style="height:82%"></div><div class="bar" style="height:68%"></div><div class="bar hot" style="height:94%"></div><div class="bar" style="height:78%"></div></div>
+          <div class="axis"><span>KW 1</span><span>KW 2</span><span>KW 3</span><span>KW 4</span></div>
+        </div>
+        <div class="ui mock" style="padding:16px;max-width:300px;box-shadow:none;border:1px solid var(--line-2)">
+          <div class="mock-row" style="justify-content:space-between;margin-bottom:12px">
+            <span class="mock-h" style="font-size:14px">Neue Verkäufe</span><span class="mini">Live</span>
+          </div>
+          <div class="feed">
+            <div class="feed-item"><span class="feed-ic">€</span><div><div class="feed-t">Coaching-Programm · neuer Abschluss</div><div class="feed-s">Umsatz +2.400,00 € · vor 2 Min</div></div></div>
+            <div class="feed-item"><span class="feed-ic">€</span><div><div class="feed-t">Provision an Closer ausgezahlt</div><div class="feed-s">1.240,00 € · vor 14 Min</div></div></div>
+            <div class="feed-item"><span class="feed-ic">€</span><div><div class="feed-t">Ratenzahlung gestartet</div><div class="feed-s">+350,00 € · vor 1 Std</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ ORIENT ============ -->
+  <div class="section" style="padding-top:30px;padding-bottom:0"><div class="wrap" style="display:flex;justify-content:center">
+    <div class="orient" style="max-width:860px">
+      <div class="ol">Worum es hier geht</div>
+      <p>Diese Seite zeigt in einfachen Worten, wie Sales OS aus vielen Einzel-Tools ein System macht.</p>
+      <ul>
+        <li><b>Die drei Bruchstellen</b>, an denen dein Vertrieb heute hängt</li>
+        <li><b>Ein System statt fünf</b>, mit den Ergebnissen statt der Funktionen</li>
+        <li><b>Preise und Demo</b>, klar und ohne Kleingedrucktes</li>
+      </ul>
+    </div>
+  </div></div>
+
+  <!-- ============ SOCIAL PROOF STRIP ============ -->
+  <div class="section" style="padding-top:70px;padding-bottom:0">
+    <p style="text-align:center;color:var(--muted-2);font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:26px">Über 70.000 Coaches, Creator und Expert:innen arbeiten mit ablefy</p>
+    <div class="logos wrap">
+      <span class="logo-word">Classy Confidence</span><span class="logo-word">Baum Akademie</span><span class="logo-word">Mona Schön</span><span class="logo-word">Christian Bischoff</span><span class="logo-word">Nike Menzel</span><span class="logo-word">Pöppinghaus</span>
+    </div>
+  </div>
+
+  <!-- ============ STAT BAND ============ -->
+  <div style="background:var(--sand);padding:64px;margin-top:70px">
+    <div class="wrap stats">
+      <div class="stat"><div class="num">&gt;70<em>K</em></div><div class="lab">Nutzer auf ablefy</div></div>
+      <div class="stat"><div class="num">80<em>%</em></div><div class="lab">Abschlussrate im Call</div></div>
+      <div class="stat"><div class="num">5<em>→1</em></div><div class="lab">Tools in einem System</div></div>
+      <div class="stat"><div class="num">~800<em>€</em></div><div class="lab">Tool-Kosten gespart / Monat</div></div>
+    </div>
+  </div>
+
+  <!-- ============ PROBLEM: 3 Bruchstellen ============ -->
+  <div class="section" id="bruchstellen">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow center" style="justify-content:center">Das eigentliche Problem</span>
+        <h2 class="display" style="margin-top:14px">Dein Sales-Prozess hat drei <em>Bruchstellen</em></h2>
+        <p>Sie zeigen sich erst beim Skalieren. Genau dort verlierst du Zeit, Marge und Abschlüsse.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+        <div class="pain-card">
+          <div class="k">01</div>
+          <h3>Jedes Angebot von Hand</h3>
+          <p>Individuelle Preise, Rabatte und Konditionen bedeuten manuelle Arbeit. Das skaliert nicht, sobald mehr als ein paar Calls pro Woche zustande kommen.</p>
+        </div>
+        <div class="pain-card">
+          <div class="k">02</div>
+          <h3>Provisionen im Blindflug</h3>
+          <p>Ab drei Teammitgliedern werden Provisionen in Excel berechnet, Zuordnungen sind unklar und am Monatsende stapeln sich die Rechnungen der Setter und Closer.</p>
+        </div>
+        <div class="pain-card">
+          <div class="k">03</div>
+          <h3>Fünf Tools, die nicht reden</h3>
+          <p>Angebot, Checkout, Provisionen, Affiliate-Tracking und E-Signatur sammeln sich an. Das kostet rund 800 € im Monat und reißt Datenlücken ins Reporting.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ SYSTEM: outcome split ============ -->
+  <div class="section tight" id="system">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <span class="eyebrow">Ein System statt fünf</span>
+          <h2 class="display" style="font-size:54px;line-height:1.06;margin-top:16px">Aus chaotischen Einzelschritten wird <em>ein</em> Prozess</h2>
+          <p class="lede" style="max-width:42ch;margin-top:18px">Sales OS verbindet Angebot, Zahlung und Abrechnung. So bleibt dein Team beim Verkaufen, während das System den operativen Ballast übernimmt.</p>
+          <button class="btn btn-primary btn-lg" style="margin-top:30px">Demo ansehen <span class="ar">→</span></button>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:0;background:var(--paper-2);border:1px solid var(--line-2);border-radius:var(--r-lg);padding:14px 26px;box-shadow:var(--shadow-sm)">
+          <div class="out-row"><span class="out-ic">✓</span><div><div class="ot">Jeder Closer wird automatisch korrekt ausgezahlt</div><div class="os">Setter, Closer, Team-Leads und Affiliates, berechnet und ausgezahlt ohne eine einzige Tabelle.</div></div></div>
+          <div class="out-row"><span class="out-ic">✓</span><div><div class="ot">Ein maßgeschneidertes Angebot in 60 Sekunden</div><div class="os">Auf dem Call erstellt, als verbindliches Angebot verschickt und abgeschlossen, bevor der Kunde abkühlt.</div></div></div>
+          <div class="out-row"><span class="out-ic">✓</span><div><div class="ot">Zahlung, Rechnung und Ratenzahlung laufen automatisch</div><div class="os">Zehn Zahlarten inklusive Klarna, dazu Mahnwesen und Inkasso, alles direkt eingebaut.</div></div></div>
+          <div class="out-row"><span class="out-ic">✓</span><div><div class="ot">Eine Struktur, die bei 3, 10 oder 50 Verkäufern hält</div><div class="os">Mehr Leute im Team bedeuten mehr Umsatz und nicht mehr Verwaltung.</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FEATURE GRID ============ -->
+  <div class="section tight">
+    <div class="wrap">
+      <div class="feat-grid">
+        <div class="feat"><div class="feat-ico spring">◆</div><h3>Angebote in Sekunden</h3><p>Individuelle Angebote digital erstellt und verschickt, mit allen Zahlarten und Buy-now-pay-later direkt im Checkout.</p></div>
+        <div class="feat"><div class="feat-ico">€</div><h3>Automatische Provisionen</h3><p>Multi-Level-Provisionen für Setter, Closer und Affiliates, ausgezahlt über Gehalt oder automatisiert über ablefy.</p></div>
+        <div class="feat"><div class="feat-ico spring">↗</div><h3>Stabile Infrastruktur</h3><p>Ein Dashboard für Deals, Conversion und Provisionen statt fünf Tools, die Kosten und Datenlücken erzeugen.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ DARK: Zahlungen ============ -->
+  <div class="section dark">
+    <div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
+      <div>
+        <span class="eyebrow" style="color:var(--spring)">Checkout &amp; Zahlungen</span>
+        <h2 class="display" style="font-size:54px;line-height:1.08;margin-top:16px;color:var(--on-forest)">Jede Zahlart, die deine Kund:innen <em>erwarten</em></h2>
+        <p class="lede" style="color:var(--on-forest-mut);margin-top:20px">Klarna, PayPal, Karten, SEPA sowie Apple und Google Pay, akzeptiert ab Tag eins, in der Sprache und Währung deiner Kund:innen.</p>
+        <div style="display:flex;flex-direction:column;gap:14px;margin-top:30px">
+          <div style="display:flex;gap:12px;align-items:center"><span class="tick" style="background:rgba(25,227,124,.18)"><span style="color:var(--spring)">✓</span></span><span style="color:var(--on-forest)">Höhere Abschlussrate durch lokalisierte Ein-Klick-Zahlung</span></div>
+          <div style="display:flex;gap:12px;align-items:center"><span class="tick" style="background:rgba(25,227,124,.18)"><span style="color:var(--spring)">✓</span></span><span style="color:var(--on-forest)">Order-Bumps und Upsells, die den durchschnittlichen Bestellwert heben</span></div>
+          <div style="display:flex;gap:12px;align-items:center"><span class="tick" style="background:rgba(25,227,124,.18)"><span style="color:var(--spring)">✓</span></span><span style="color:var(--on-forest)">Verlorene Verkäufe automatisch über Mahnwesen zurückholen</span></div>
+        </div>
+        <button class="btn btn-spring btn-lg" style="margin-top:34px">Checkout entdecken <span class="ar">→</span></button>
+      </div>
+      <div style="display:flex;justify-content:center">
+        <div class="checkout mock" style="max-width:320px">
+          <div class="mock-row" style="justify-content:space-between;margin-bottom:14px">
+            <span class="mock-h" style="font-size:14px">Zahlart wählen</span><span class="mini">Sicher · SSL</span>
+          </div>
+          <div class="pm sel"><span class="pm-left"><span class="radio"></span>Klarna</span><span class="brand-tag" style="background:#FFB3C7;color:#0B1813">Klarna</span></div>
+          <div class="pm"><span class="pm-left"><span class="radio"></span>PayPal</span><span class="brand-tag" style="background:#E9F0FB;color:#003087">PayPal</span></div>
+          <div class="pm"><span class="pm-left"><span class="radio"></span>Visa · Mastercard</span><span class="brand-tag" style="background:#EEF0F4;color:#1A1F71">VISA</span></div>
+          <button class="btn btn-spring" style="width:100%;justify-content:center;margin-top:10px">Jetzt zahlen · 127,00 €</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ TESTIMONIAL (Platzhalter) ============ -->
+  <div class="section">
+    <div class="wrap" style="max-width:980px;text-align:center">
+      <div style="font-family:var(--display);font-size:40px;color:var(--spring-deep);line-height:0">“</div>
+      <p class="quote">Mit Sales OS verkauft mein Team wieder, statt am Monatsende Provisionen in Excel zu <em>rechnen</em>.</p>
+      <div style="display:flex;gap:14px;align-items:center;justify-content:center;margin-top:34px">
+        <div style="width:54px;height:54px;border-radius:50%;background:var(--mint);display:grid;place-items:center;font-weight:700;color:var(--forest)">○</div>
+        <div style="text-align:left"><div style="font-weight:700">Platzhalter für O-Ton</div><div class="mini" style="font-weight:600">echtes Kundenzitat von ablefy einsetzen</div></div>
+      </div>
+      <p class="ph-note" style="margin-top:18px">Platzhalter · kein erfundenes Zitat, wird durch echte Stimme ersetzt</p>
+    </div>
+  </div>
+
+  <!-- ============ PRICING ============ -->
+  <div class="section tight" id="preise">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="display">Sales OS ist in jedem ablefy-Plan <em>enthalten</em></h2>
+        <p>Starte mit 14 Tagen kostenlos. Keine Kreditkarte nötig.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;align-items:start">
+        <div class="price-card">
+          <div class="mock-h" style="font-size:14px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)">Essential</div>
+          <div class="price-amt" style="margin:12px 0 2px">39 €<span style="font-size:16px;font-family:var(--sans);color:var(--muted)">/Mon.</span></div>
+          <div class="mini" style="font-weight:600">netto</div>
+          <div style="display:flex;flex-direction:column;gap:9px;margin-top:18px;font-size:14px">
+            <div style="display:flex;gap:9px"><span class="tick"><span style="color:var(--spring-deep);font-size:12px">✓</span></span>1 Sales-OS-Nutzer</div>
+            <div style="display:flex;gap:9px"><span class="tick"><span style="color:var(--spring-deep);font-size:12px">✓</span></span>Alle Zahlungsoptionen inkl. Klarna</div>
+          </div>
+          <button class="btn btn-ghost" style="width:100%;justify-content:center;margin-top:22px">Kostenlos testen</button>
+        </div>
+        <div class="price-card">
+          <div class="mock-h" style="font-size:14px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)">Advanced</div>
+          <div class="price-amt" style="margin:12px 0 2px">69 €<span style="font-size:16px;font-family:var(--sans);color:var(--muted)">/Mon.</span></div>
+          <div class="mini" style="font-weight:600">netto</div>
+          <div style="display:flex;flex-direction:column;gap:9px;margin-top:18px;font-size:14px">
+            <div style="display:flex;gap:9px"><span class="tick"><span style="color:var(--spring-deep);font-size:12px">✓</span></span>3 Sales-OS-Nutzer</div>
+            <div style="display:flex;gap:9px"><span class="tick"><span style="color:var(--spring-deep);font-size:12px">✓</span></span>Provisionsberechnung</div>
+            <div style="display:flex;gap:9px"><span class="tick"><span style="color:var(--spring-deep);font-size:12px">✓</span></span>Mahnwesen und Inkasso inklusive</div>
+          </div>
+          <button class="btn btn-ghost" style="width:100%;justify-content:center;margin-top:22px">Kostenlos testen</button>
+        </div>
+        <div class="price-card feature">
+          <div class="chip" style="background:var(--spring);border:none;color:var(--forest)">Beliebtester Plan</div>
+          <div class="price-amt" style="margin:14px 0 2px;color:#fff">129 €<span style="font-size:16px;font-family:var(--sans);color:var(--on-forest-mut)">/Mon.</span></div>
+          <div class="mini" style="color:var(--on-forest-mut);font-weight:600">netto</div>
+          <div style="display:flex;flex-direction:column;gap:9px;margin-top:18px;font-size:14px;color:var(--on-forest)">
+            <div style="display:flex;gap:9px"><span class="tick" style="background:rgba(25,227,124,.18)"><span style="color:var(--spring);font-size:12px">✓</span></span>15 Sales-OS-Nutzer</div>
+            <div style="display:flex;gap:9px"><span class="tick" style="background:rgba(25,227,124,.18)"><span style="color:var(--spring);font-size:12px">✓</span></span>Provisionsberechnung</div>
+            <div style="display:flex;gap:9px"><span class="tick" style="background:rgba(25,227,124,.18)"><span style="color:var(--spring);font-size:12px">✓</span></span>Mahnwesen und Inkasso inklusive</div>
+          </div>
+          <button class="btn btn-spring" style="width:100%;justify-content:center;margin-top:22px">Kostenlos testen</button>
+        </div>
+        <div class="price-card">
+          <div class="mock-h" style="font-size:14px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)">Premium</div>
+          <div class="price-amt" style="margin:12px 0 2px">549 €<span style="font-size:16px;font-family:var(--sans);color:var(--muted)">/Mon.</span></div>
+          <div class="mini" style="font-weight:600">netto</div>
+          <div style="display:flex;flex-direction:column;gap:9px;margin-top:18px;font-size:14px">
+            <div style="display:flex;gap:9px"><span class="tick"><span style="color:var(--spring-deep);font-size:12px">✓</span></span>50 Sales-OS-Nutzer</div>
+            <div style="display:flex;gap:9px"><span class="tick"><span style="color:var(--spring-deep);font-size:12px">✓</span></span>Provisionsberechnung</div>
+            <div style="display:flex;gap:9px"><span class="tick"><span style="color:var(--spring-deep);font-size:12px">✓</span></span>Mahnwesen und Inkasso inklusive</div>
+          </div>
+          <button class="btn btn-ghost" style="width:100%;justify-content:center;margin-top:22px">Mit Vertrieb sprechen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ DEMO CTA ============ -->
+  <div style="padding:0 64px 100px" id="demo">
+    <div class="wrap" style="background:radial-gradient(120% 140% at 0% 0%, var(--forest-2), var(--forest));border-radius:var(--r-xl);padding:72px;position:relative;overflow:hidden">
+      <div class="blob" style="width:380px;height:380px;background:var(--spring);opacity:.16;top:-120px;right:-80px;filter:blur(10px)"></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;position:relative">
+        <div>
+          <h2 class="display" style="font-size:48px;color:var(--on-forest);line-height:1.08">Schau dir an, wie Sales OS aus deinem Setup <em style="color:var(--spring)">ein System</em> macht</h2>
+          <p class="lede" style="color:var(--on-forest-mut);margin-top:18px">Im Demo-Video siehst du in fünf Minuten den gesamten Prozess, von der Deal-Erstellung bis zur automatischen Provision.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <input class="field" placeholder="Vorname">
+          <input class="field" placeholder="Nachname">
+          <input class="field" placeholder="E-Mail" style="grid-column:span 2">
+          <input class="field" placeholder="Telefon" style="grid-column:span 2">
+          <input class="field" placeholder="Teamgröße" style="grid-column:span 2">
+          <input class="field" placeholder="Monatliches Umsatzziel" style="grid-column:span 2">
+          <button class="btn btn-spring btn-lg" style="grid-column:span 2;justify-content:center">Demo-Video ansehen <span class="ar">→</span></button>
+          <p style="grid-column:span 2;text-align:center;color:var(--on-forest-mut);font-size:13.5px;margin-top:2px">Du möchtest direkt sprechen? <a href="#" style="color:var(--spring);text-decoration:underline">Sichere dir einen Termin</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <div class="footer">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-col">
+          <div style="margin-bottom:16px"><img src="assets/ablefy-logo-white.svg" alt="ablefy" style="height:26px"></div>
+          <p style="color:var(--on-forest-mut);font-size:15px;max-width:32ch">Die Plattform für Vertriebsteams. Angebote, Zahlungen und Provisionen in einem System.</p>
+        </div>
+        <div class="foot-col"><h5>Produkt</h5><a href="#">Sales OS</a><a href="#">Checkout</a><a href="#">Provisionen</a><a href="#">Zahlungen</a></div>
+        <div class="foot-col"><h5>Unternehmen</h5><a href="#">Über uns</a><a href="#">Enterprise</a><a href="#">Success Stories</a><a href="#">Kontakt</a></div>
+        <div class="foot-col"><h5>Ressourcen</h5><a href="#">Hilfe-Center</a><a href="#">Preise</a><a href="#">Demo</a><a href="#">Status</a></div>
+      </div>
+      <div style="border-top:1px solid rgba(255,255,255,.12);margin-top:48px;padding-top:24px;display:flex;justify-content:space-between;color:var(--on-forest-mut);font-size:13.5px">
+        <span>© 2026 ablefy. Alle Rechte vorbehalten.</span><span>Impressum · Datenschutz · AGB</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

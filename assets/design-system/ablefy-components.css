@@ -1,0 +1,107 @@
+/* ============================================================
+   ABLEFY — COMPONENTS, MOCKUPS & SECTION STYLES
+   ============================================================ */
+
+/* ---------- Generic product-UI mockup chrome ---------- */
+.ab .mock{ font-family: var(--sans); }
+.ab .mock-row{ display:flex; align-items:center; gap:10px; }
+.ab .mock-h{ font-weight:700; letter-spacing:-.01em; }
+.ab .mini{ font-size:12px; color:var(--muted-2); }
+
+/* dashboard / analytics card */
+.ab .dash{
+  width:100%; background:#fff; border-radius: var(--r-md);
+  border:1px solid var(--line-2); box-shadow: var(--shadow-md);
+  padding:20px; overflow:hidden;
+}
+.ab .dash-top{ display:flex; align-items:center; justify-content:space-between; margin-bottom:4px; }
+.ab .dash-kpi{ font-family:var(--display); font-weight:520; font-size:34px; letter-spacing:-.02em; line-height:1; }
+.ab .delta{ display:inline-flex; align-items:center; gap:5px; font-size:12.5px; font-weight:700; color:#0d8a4e; background:var(--mint-soft); padding:4px 9px; border-radius:var(--r-pill); }
+
+/* css bar/area chart */
+.ab .chart{ display:flex; align-items:flex-end; gap:8px; height:96px; margin-top:14px; }
+.ab .bar{ flex:1; background:linear-gradient(180deg,var(--mint),#dff6e9); border-radius:6px 6px 4px 4px; position:relative; }
+.ab .bar.hot{ background:linear-gradient(180deg,var(--spring),var(--spring-deep)); }
+.ab .axis{ display:flex; justify-content:space-between; margin-top:8px; font-size:10.5px; color:var(--muted-2); }
+
+/* notification feed item */
+.ab .feed{ display:flex; flex-direction:column; gap:9px; }
+.ab .feed-item{ display:flex; gap:11px; align-items:flex-start; padding:11px 12px; border-radius:12px; background:var(--paper); border:1px solid var(--line-2); }
+.ab .feed-ic{ width:30px;height:30px;border-radius:8px;background:var(--spring);flex:0 0 auto; display:grid;place-items:center; color:var(--forest); }
+.ab .feed-t{ font-size:13px; font-weight:700; line-height:1.25; }
+.ab .feed-s{ font-size:11.5px; color:var(--muted); }
+
+/* checkout card */
+.ab .checkout{ width:100%; background:#fff; border-radius:var(--r-md); border:1px solid var(--line-2); box-shadow:var(--shadow-md); padding:18px; }
+.ab .pm{ display:flex; align-items:center; justify-content:space-between; padding:12px 13px; border:1px solid var(--line); border-radius:11px; margin-bottom:8px; }
+.ab .pm.sel{ border-color:var(--ink); background:var(--paper); }
+.ab .pm-left{ display:flex; align-items:center; gap:10px; font-size:13.5px; font-weight:600; }
+.ab .radio{ width:16px;height:16px;border-radius:50%;border:2px solid var(--line); }
+.ab .pm.sel .radio{ border-color:var(--ink); background:radial-gradient(circle at center, var(--ink) 0 4px, #fff 5px); }
+.ab .brand-tag{ font-size:11px; font-weight:800; padding:3px 8px; border-radius:6px; letter-spacing:.02em; }
+
+/* floating little pills used around hero art */
+.ab .float-pill{ position:absolute; display:inline-flex; align-items:center; gap:8px; padding:10px 15px; border-radius:var(--r-pill); background:#fff; box-shadow:var(--shadow-md); font-size:13.5px; font-weight:700; border:1px solid var(--line-2); }
+
+/* decorative blobs */
+.ab .blob{ position:absolute; border-radius:40% 60% 55% 45%/55% 45% 60% 40%; }
+
+/* ============================================================
+   STAT BAND
+   ============================================================ */
+.ab .stats{ display:flex; gap:0; align-items:stretch; }
+.ab .stat{ flex:1; text-align:left; padding:8px 0; }
+.ab .stat + .stat{ border-left:1px solid var(--line); padding-left:42px; }
+.ab .stat .num{ font-family:var(--display); font-weight:480; font-size:64px; line-height:.92; letter-spacing:-.03em; }
+.ab .stat .num em{ font-style:italic; color:var(--spring-deep); font-variation-settings:'SOFT' 30,'WONK' 1; }
+.ab .stat .lab{ margin-top:8px; font-size:14px; font-weight:600; color:var(--muted); letter-spacing:.04em; text-transform:uppercase; }
+
+/* ============================================================
+   FEATURE GRID
+   ============================================================ */
+.ab .feat-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.ab .feat{ padding:30px; border-radius:var(--r-lg); background:var(--paper-2); border:1px solid var(--line-2); transition:transform .2s ease, box-shadow .2s ease; }
+.ab .feat:hover{ transform:translateY(-4px); box-shadow:var(--shadow-md); }
+.ab .feat-ico{ width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:var(--ink);color:var(--spring);margin-bottom:18px; }
+.ab .feat-ico.spring{ background:var(--spring); color:var(--forest); }
+.ab .feat h3{ font-family:var(--display); font-weight:500; font-size:24px; letter-spacing:-.01em; margin-bottom:9px; }
+.ab .feat p{ color:var(--muted); font-size:15.5px; line-height:1.55; }
+
+/* big split feature */
+.ab .split{ display:grid; grid-template-columns:1.05fr 1fr; gap:64px; align-items:center; }
+
+/* logo strip */
+.ab .logos{ display:flex; align-items:center; justify-content:space-between; gap:30px; flex-wrap:wrap; opacity:.78; }
+.ab .logo-word{ font-family:var(--display); font-weight:500; font-size:24px; color:var(--muted); letter-spacing:-.01em; }
+
+/* testimonial */
+.ab .quote{ font-family:var(--display); font-weight:420; font-size:40px; line-height:1.22; letter-spacing:-.015em; text-wrap:balance; }
+.ab .quote em{ font-style:italic; color:var(--spring-deep); font-variation-settings:'SOFT' 40,'WONK' 1; }
+
+/* pricing teaser */
+.ab .price-card{ background:#fff; border:1px solid var(--line); border-radius:var(--r-lg); padding:34px; box-shadow:var(--shadow-sm); }
+.ab .price-card.feature{ background:var(--forest); color:var(--on-forest); border-color:transparent; box-shadow:var(--shadow-lg); }
+.ab .price-amt{ font-family:var(--display); font-weight:500; font-size:54px; letter-spacing:-.02em; }
+.ab .tick{ width:20px;height:20px;border-radius:50%;background:var(--mint-soft);display:grid;place-items:center;flex:0 0 auto; }
+.ab .price-card.feature .tick{ background:rgba(25,227,124,.18); }
+
+/* footer */
+.ab .footer{ background:var(--ink); color:var(--on-forest); padding:80px 64px 44px; }
+.ab .foot-grid{ display:grid; grid-template-columns:1.4fr repeat(3,1fr); gap:40px; }
+.ab .foot-col h5{ font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--on-forest-mut); margin-bottom:16px; font-weight:700; }
+.ab .foot-col a{ display:block; color:#c9d8cf; font-size:15px; margin-bottom:11px; }
+.ab .foot-col a:hover{ color:#fff; }
+
+/* section header helper */
+.ab .sec-head{ text-align:center; max-width:760px; margin:0 auto 56px; }
+.ab .sec-head .display{ font-size:clamp(40px,4.4vw,62px); line-height:1.06; }
+.ab .sec-head p{ color:var(--muted); font-size:18px; margin-top:16px; }
+
+/* dark section */
+.ab .dark{ background:var(--forest); color:var(--on-forest); }
+.ab .dark .display{ color:var(--on-forest); }
+.ab .dark .lede{ color:var(--on-forest-mut); }
+.ab .dark .display em{ color:var(--spring); }
+
+/* fix: white mock cards keep dark text even inside dark sections */
+.ab .dash, .ab .checkout{ color: var(--ink); }

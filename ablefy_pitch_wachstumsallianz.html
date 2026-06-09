@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta name="description" content="Das Paket, die Erfolgsbeteiligung und der Fahrplan über zwölf Monate für ablefy.">
+<!-- OG: beim Deploy assets/og-image.jpg + og:url auf absolute URL (https://DOMAIN/...) umstellen -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Wachstumsallianz 2026 — Das Angebot">
+<meta property="og:description" content="Das Paket, die Erfolgsbeteiligung und der Fahrplan über zwölf Monate für ablefy.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wachstumsallianz 2026 — Das Angebot">
+<meta name="twitter:description" content="Das Paket, die Erfolgsbeteiligung und der Fahrplan über zwölf Monate für ablefy.">
+<meta name="twitter:image" content="assets/og-image.jpg">
+<title>Wachstumsallianz 2026 — AT7 Media × Social Brands × ablefy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Hanken+Grotesk:wght@300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/design-system/ablefy.css">
+<link rel="stylesheet" href="assets/design-system/ablefy-components.css">
+<style>
+  html,body{ margin:0; background:var(--paper); }
+  .ab .logo img{ height:30px; width:auto; display:block; }
+  .ab .partners{ display:inline-flex; align-items:center; gap:13px; }
+  .ab .partners img.sb{ height:24px; } .ab .partners img.at7{ height:38px; }
+  .ab .partners img.at7.dark{ filter:none; }
+  .ab .partners .x{ color:var(--muted-2); font-weight:300; }
+  .ab .meta{ display:grid; grid-template-columns:1fr 1fr; gap:18px 40px; margin-top:40px; max-width:880px; }
+  .ab .meta .row{ display:flex; gap:18px; align-items:baseline; border-top:1px solid var(--line); padding-top:14px; }
+  .ab .meta .k{ font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted-2); font-weight:700; width:120px; flex:0 0 auto; }
+  .ab .meta .v{ font-size:15.5px; color:var(--ink); font-weight:500; }
+  .ab .pcard{ background:var(--paper-2); border:1px solid var(--line-2); border-radius:var(--r-lg); padding:30px; box-shadow:var(--shadow-sm); }
+  .ab .pcard h3{ font-family:var(--display); font-weight:500; font-size:22px; margin-bottom:9px; }
+  .ab .pcard p{ color:var(--muted); font-size:15px; line-height:1.6; }
+  .ab .pcard .num{ width:30px;height:30px;border-radius:8px;background:var(--ink);color:var(--spring);display:grid;place-items:center;font-weight:800;font-size:13px;margin-bottom:14px; }
+  .ab .dealcard{ background:var(--forest); color:var(--on-forest); border-radius:var(--r-lg); padding:34px; box-shadow:var(--shadow-lg); }
+  .ab .dealcard .amt{ font-family:var(--display); font-weight:500; font-size:50px; color:#fff; line-height:1; }
+  .ab .tier-tbl{ width:100%; border-collapse:collapse; margin-top:6px; }
+  .ab .tier-tbl th,.ab .tier-tbl td{ text-align:left; padding:14px 0; border-bottom:1px solid var(--line); font-size:16px; }
+  .ab .tier-tbl th{ font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted-2); font-weight:700; }
+  .ab .tier-tbl td.amt{ font-family:var(--display); color:var(--spring-deep); font-weight:600; }
+  .ab .pkg{ width:100%; border-collapse:collapse; margin-top:24px; }
+  .ab .pkg td{ padding:14px 0; border-bottom:1px solid var(--line); font-size:15px; vertical-align:top; }
+  .ab .pkg td.who{ text-align:right; color:var(--muted); font-weight:600; white-space:nowrap; width:160px; }
+  .ab .pkg tr.total td{ border-bottom:none; padding-top:20px; font-weight:700; font-size:17px; }
+  .ab .compare{ width:100%; border-collapse:collapse; margin-top:8px; }
+  .ab .compare td{ padding:12px 0; border-bottom:1px solid var(--line); font-size:15px; }
+  .ab .compare td.eur{ text-align:right; font-family:var(--display); color:var(--ink); font-weight:500; white-space:nowrap; }
+  .ab .compare tr.sum td{ border-bottom:none; padding-top:18px; font-weight:700; }
+  .ab .road{ display:grid; grid-template-columns:140px 160px 1fr; gap:18px; padding:18px 0; border-top:1px solid var(--line); font-size:15px; }
+  .ab .road:first-of-type{ border-top:none; }
+  .ab .road .m{ font-family:var(--display); font-weight:600; color:var(--spring-deep); }
+  .ab .road .ph{ font-weight:700; } .ab .road .d{ color:var(--muted); }
+  .ab .forestbox{ background:radial-gradient(120% 140% at 0% 0%, var(--forest-2), var(--forest)); border-radius:var(--r-xl); padding:48px; color:var(--on-forest); position:relative; overflow:hidden; }
+  .ab .forestbox .display{ color:var(--on-forest); }
+  @media(max-width:980px){
+    .ab .section{ padding:58px 26px; } .ab .nav{ padding:18px 26px; } .ab .nav-right{ display:none; }
+    .ab .feat-grid{ grid-template-columns:1fr !important; } .ab .meta{ grid-template-columns:1fr; }
+    .ab .road{ grid-template-columns:1fr; gap:6px; } .ab .pkg td.who{ width:auto; }
+    .ab h1.display{ font-size:48px !important; }
+  }
+</style>
+</head>
+<body>
+<div class="ab ab-page">
+
+  <div style="border-bottom:1px solid var(--line);padding:11px 64px;background:var(--paper-2)"><a href="index.html" style="color:var(--muted);font-size:13.5px;font-weight:700;display:inline-flex;align-items:center;gap:7px">&#8592; Zurück zur Übersicht</a></div>
+  <div class="nav">
+    <div class="logo"><img src="assets/ablefy-logo.svg" alt="ablefy"></div>
+    <div class="nav-links"><a href="#allianz">Die Allianz</a><a href="#model">Das Paket</a><a href="#performance">Performance</a><a href="#roadmap">Roadmap</a></div>
+    <div class="nav-right partners"><img class="sb" src="assets/sb-logo-wordmark.svg" alt="Social Brands"><span class="x">×</span><img class="at7" src="assets/at7-logo-dark.png" alt="AT7 Media"></div>
+  </div>
+
+  <!-- COVER -->
+  <div class="section" style="padding-bottom:50px">
+    <div class="wrap">
+      <span class="eyebrow">AT7 Media × Social Brands × ablefy</span>
+      <h1 class="display" style="font-size:88px;max-width:13ch;margin-top:18px">Wachstums&shy;allianz <em>2026</em></h1>
+      <p class="lede" style="max-width:64ch;margin-top:24px;font-size:20px">Zwei spezialisierte Agenturen übernehmen gemeinsam das komplette Marketing von ablefy. Wir bauen die Marke, füllen den Vertrieb mit Anfragen und machen Özkan sichtbar, alles aus einer Hand.</p>
+      <div class="meta">
+        <div class="row"><div class="k">Erstellt für</div><div class="v">Özkan Akkilic, CEO ablefy</div></div>
+        <div class="row"><div class="k">Erstellt von</div><div class="v">Leon Scheinecker &amp; Alessandro Minneci</div></div>
+        <div class="row"><div class="k">Umfang</div><div class="v">Personal Brand · Funnel · Performance · Video · Events</div></div>
+        <div class="row"><div class="k">Retainer</div><div class="v">70.000 € netto / Monat · ein Paket, ein Vertrag</div></div>
+        <div class="row"><div class="k">Laufzeit</div><div class="v">24 Monate · automatische Verlängerung</div></div>
+        <div class="row"><div class="k">Stand</div><div class="v">Juni 2026 · Version 4</div></div>
+      </div>
+      <div class="orient">
+        <div class="ol">Worum es hier geht</div>
+        <p>Das ist unser konkretes Angebot für die Zusammenarbeit. Du siehst auf einen Blick, was wir liefern, wer dahintersteht und was es kostet.</p>
+        <ul>
+          <li><b>Die Allianz und das Team</b>, also wer was übernimmt</li>
+          <li><b>Das Paket und der Preis</b>, alles in einem monatlichen Betrag</li>
+          <li><b>Die Erfolgsbeteiligung</b>, mit der wir nur mitverdienen, wenn ablefy wächst</li>
+          <li><b>Der Fahrplan</b> für die ersten Monate</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ALLIANZ -->
+  <div style="background:var(--sand);padding:90px 64px" id="allianz">
+    <div class="wrap">
+      <span class="eyebrow">Die Allianz</span>
+      <h2 class="display" style="font-size:54px;margin-top:16px">Zwei Marken-Experten. Eine <em>Wachstumsmaschine</em></h2>
+      <p class="lede" style="max-width:70ch;margin-top:18px">ablefy ist heute die erfolgreichste Business-Software für Coaches und digitale Unternehmer im deutschsprachigen Raum, mit über 80.000 Käufern. Der nächste Schritt ist einfach: Wir bringen die Marke und den Vertrieb auf ein Niveau, das Özkan zu einer der bekanntesten Stimmen der Branche macht.</p>
+      <div class="stats" style="margin-top:40px">
+        <div class="stat"><div class="num">2</div><div class="lab">Marken-Experten im Cockpit</div></div>
+        <div class="stat"><div class="num">3</div><div class="lab">Säulen: Brand, Funnel, Video</div></div>
+        <div class="stat"><div class="num">90</div><div class="lab">Organic Clips pro Monat</div></div>
+        <div class="stat"><div class="num">70<em>k</em></div><div class="lab">€ netto Retainer / Monat</div></div>
+      </div>
+      <div class="feat-grid" style="margin-top:40px">
+        <div class="pcard" style="background:var(--paper-3)"><div class="num">1</div><h3>Personal Brand &amp; Organic</h3><p>Social Brands baut Özkan zur führenden Founder-Stimme im DACH-Coaching-Markt auf, mit drei Short-Form-Inhalten pro Tag, YouTube-Skalierung und psychologisch fundiertem Storytelling.</p></div>
+        <div class="pcard" style="background:var(--paper-3)"><div class="num">2</div><h3>Sales-Funnel &amp; Performance</h3><p>AT7 Media liefert die planbare Pipeline aus Landingpages, Freebie-Funnel, Email-Sequenzen und Performance auf Meta, Google, LinkedIn und YouTube.</p></div>
+        <div class="pcard" style="background:var(--paper-3)"><div class="num">3</div><h3>Video, Case-Studies &amp; Events</h3><p>Eigene Video-Crew vor Ort, Founders-Summit-Drehtage und Quartals-Events als kuratierter Hebel zur Kundenaktivierung.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CEOs -->
+  <div class="section">
+    <div class="wrap">
+      <span class="eyebrow">Zwei CEOs und ein Senior-Sales-Advisor</span>
+      <h2 class="display" style="font-size:50px;margin-top:16px">Klare Rollen. Klare <em>Verantwortung</em></h2>
+      <div class="feat-grid" style="grid-template-columns:1fr 1fr;margin-top:36px">
+        <div class="pcard">
+          <div style="margin-bottom:8px"><img src="assets/sb-logo-wordmark.svg" alt="Social Brands" style="height:18px"></div>
+          <h3>Alessandro Minneci</h3>
+          <p style="margin-bottom:14px"><b style="color:var(--ink)">CEO Social Brands</b> · Personal Brand und Organic. Track Record aus 2 Mrd. generierten Views, 5 Mio. aufgebauten Followern und über 100 Mio. € Kundenumsatz.</p>
+        </div>
+        <div class="pcard">
+          <div style="margin-bottom:8px"><img src="assets/at7-logo-dark.png" alt="AT7 Media" style="height:24px"></div>
+          <h3>Leon Scheinecker</h3>
+          <p style="margin-bottom:14px"><b style="color:var(--ink)">CEO AT7 Media</b> · Sales-Funnel, Performance und Videoproduktion mit eigenem Studio und Crew sowie das Finance-Ökosystem Datatrack.</p>
+        </div>
+      </div>
+      <div class="forestbox" style="margin-top:22px;padding:34px">
+        <div style="display:flex;gap:18px;align-items:flex-start;position:relative">
+          <div class="feat-ico spring" style="margin:0;flex:0 0 auto">+</div>
+          <div><h3 class="serif" style="color:var(--on-forest);font-size:22px;margin-bottom:6px">Claus Mitterböck · Senior-Sales-Advisor, im Paket</h3><p class="lede" style="color:var(--on-forest-mut);max-width:none;font-size:16px">Ehemaliger CEO von Libro Österreich, 20 Jahre im Top-Management von Metro Österreich und im Vorstand bei Interspar, mit Führungsverantwortung für bis zu 5.000 Mitarbeiter. Er auditiert CRM und Vertrieb bei ablefy und coacht das Team auf höhere Abschlussraten.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OPERATING MODEL -->
+  <div style="background:var(--sand);padding:90px 64px" id="model">
+    <div class="wrap">
+      <span class="eyebrow">Das Paket</span>
+      <h2 class="display" style="font-size:52px;margin-top:16px">70.000 € netto. Ein Paket. Eine <em>Verantwortung</em></h2>
+      <p class="lede" style="max-width:70ch;margin-top:18px">Die Allianz wird als ein integriertes Leistungspaket geliefert. Alle Bausteine sind im monatlichen Retainer enthalten und greifen ab Tag eins ineinander, gesteuert von beiden CEOs gemeinsam.</p>
+      <div class="card" style="margin-top:30px;padding:32px;background:var(--paper-3)">
+        <table class="pkg">
+          <tr><td>Personal Brand Özkan, drei Inhalte pro Tag, Schnitt und Distribution</td><td class="who">Social Brands</td></tr>
+          <tr><td>Organic Reach auf YouTube, LinkedIn und Instagram</td><td class="who">Social Brands</td></tr>
+          <tr><td>Sales-Funnel, Landingpages, Freebie-Funnel und Email-Sequenzen</td><td class="who">AT7 Media</td></tr>
+          <tr><td>Performance-Marketing auf Meta, Google, LinkedIn und YouTube</td><td class="who">AT7 Media</td></tr>
+          <tr><td>Videoproduktion vor Ort, Founders-Summit und Case-Study-Filme</td><td class="who">AT7 Media</td></tr>
+          <tr><td>CRM- und Vertriebs-Audit sowie Coaching durch Claus Mitterböck</td><td class="who">AT7 Media</td></tr>
+          <tr><td>CEO-Dashboard, Daten-Dashboard und KI-gestützte Wissensbank</td><td class="who">Allianz</td></tr>
+          <tr><td>Wochen-Reporting, Zwei-Wochen-Sync und zwei CEOs als Account-Leads</td><td class="who">Allianz</td></tr>
+          <tr class="total"><td>Wachstumsallianz · monatlicher Retainer · alles inkludiert</td><td class="who" style="color:var(--spring-deep)">70.000 € netto</td></tr>
+        </table>
+      </div>
+      <p style="color:var(--muted);font-size:14px;margin-top:16px">Alle Beträge zuzüglich Umsatzsteuer. Ad-Spend, Reisen für Außendrehs und externe Tools werden direkt durchgereicht. Laufzeit 24 Monate als Festlaufzeit mit automatischer Verlängerung.</p>
+    </div>
+  </div>
+
+  <!-- FEATURE DROPS & EVENTS -->
+  <div class="section">
+    <div class="wrap">
+      <span class="eyebrow">Feature-Drops und Events</span>
+      <h2 class="display" style="font-size:50px;margin-top:16px">Die Extras, die du bei <em>Bedarf</em> dazunimmst</h2>
+      <div class="feat-grid" style="grid-template-columns:1fr 1fr;margin-top:36px">
+        <div class="pcard"><h3>Feature-Drops</h3><p>Jedes neue ablefy-Feature wird zu einer eigenen Marketing-Welle aus Strategie, Landingpage, Hero-Video, Performance-Push und Organic-Sequenz, mit messbarer Conversion auf bestehende Käufer und neue Leads.</p><p style="color:var(--spring-deep);font-weight:600;margin-top:12px">pauschal 30.000 bis 40.000 € pro Welle</p></div>
+        <div class="pcard"><h3>Quartals-Events</h3><p>Pro Quartal ein kuratiertes Event, von der intimen Mastermind mit 30 bis 50 Foundern bis zum Summit-Format. Konzept, Casting, Produktion, Logistik, Bühne und Activation kommen vollständig aus einer Hand.</p><p style="color:var(--spring-deep);font-weight:600;margin-top:12px">rund 50.000 bis 70.000 € pro Event</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PERFORMANCE -->
+  <div class="section dark" id="performance" style="padding-top:90px;padding-bottom:90px">
+    <div class="wrap">
+      <span class="eyebrow" style="color:var(--spring)">Performance-Komponente</span>
+      <h2 class="display" style="font-size:54px;margin-top:16px;color:var(--on-forest)">Wir verdienen mit, wenn ablefy <em>wächst</em></h2>
+      <p class="lede" style="color:var(--on-forest-mut);margin-top:18px;max-width:70ch">Einfach gesagt: Wir messen gemeinsam den zusätzlichen Umsatz, den wir an neuen Kunden bringen. Ab vereinbarten Schwellen erhalten wir davon einen Anteil. So verdienen wir nur dann mehr, wenn auch ablefy mehr verdient.</p>
+      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-lg);padding:30px;margin-top:28px">
+        <table class="tier-tbl">
+          <tr><th style="color:var(--on-forest-mut)">Stufe</th><th style="color:var(--on-forest-mut)">Zusätzlicher Neukundenumsatz / Jahr</th><th style="color:var(--on-forest-mut)">Beteiligung</th></tr>
+          <tr style="border-color:rgba(255,255,255,.1)"><td style="color:var(--on-forest)">Stufe 1 · Proof</td><td style="color:var(--on-forest-mut)">+ 1.000.000 €</td><td class="amt">5,0 % · 50.000 €</td></tr>
+          <tr style="border-color:rgba(255,255,255,.1)"><td style="color:var(--on-forest)">Stufe 2 · Scale</td><td style="color:var(--on-forest-mut)">+ 5.000.000 €</td><td class="amt">4,0 % · 200.000 €</td></tr>
+          <tr style="border:none"><td style="color:var(--on-forest)">Stufe 3 · Champion</td><td style="color:var(--on-forest-mut)">+ 10.000.000 €</td><td class="amt">3,5 % · 350.000 €</td></tr>
+        </table>
+      </div>
+      <h3 class="serif" style="color:var(--on-forest);font-size:24px;margin:44px 0 18px">Was das für ablefy bedeutet</h3>
+      <div class="stats">
+        <div class="stat"><div class="num" style="color:var(--spring)">840k <em>€</em></div><div class="lab" style="color:var(--on-forest-mut)">Retainer 12 Monate</div></div>
+        <div class="stat" style="border-color:rgba(255,255,255,.14)"><div class="num" style="color:var(--spring)">160k <em>€</em></div><div class="lab" style="color:var(--on-forest-mut)">4 Feature-Drops</div></div>
+        <div class="stat" style="border-color:rgba(255,255,255,.14)"><div class="num" style="color:var(--spring)">240k <em>€</em></div><div class="lab" style="color:var(--on-forest-mut)">4 Quartals-Events</div></div>
+        <div class="stat" style="border-color:rgba(255,255,255,.14)"><div class="num" style="color:var(--spring)">~1,24 <em>Mio</em></div><div class="lab" style="color:var(--on-forest-mut)">Gesamtwert pro Jahr</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VISION & VERGLEICH -->
+  <div class="section">
+    <div class="wrap">
+      <span class="eyebrow">Vision und Vergleich</span>
+      <h2 class="display" style="font-size:52px;margin-top:16px">Vom Founder im Hintergrund zur <em>Stimme</em> der Branche</h2>
+      <p class="lede" style="max-width:70ch;margin-top:18px">Unsere Vision ist der Sprung von Plattform zu Marke. Von aktuell rund 5.000 Followern auf Instagram in zwölf Monaten Richtung 100.000 und mehr, von ein paar Hundert organischen Views auf Millionen Views.</p>
+      <div class="card" style="margin-top:30px;padding:34px;background:var(--paper-2)">
+        <h3 class="serif" style="font-size:22px;margin-bottom:8px">Allianz · 840.000 € / Jahr gegenüber eigener Inhouse-Abteilung</h3>
+        <table class="compare">
+          <tr><td>Head of Marketing</td><td class="eur">130.000 €</td></tr>
+          <tr><td>Performance Marketing Manager</td><td class="eur">90.000 €</td></tr>
+          <tr><td>Social Media Manager</td><td class="eur">70.000 €</td></tr>
+          <tr><td>Videograf</td><td class="eur">75.000 €</td></tr>
+          <tr><td>Cutter, Motion Designer und Grafiker</td><td class="eur">140.000 €</td></tr>
+          <tr><td>LinkedIn-Sales-Manager</td><td class="eur">80.000 €</td></tr>
+          <tr><td>Event-Manager</td><td class="eur">75.000 €</td></tr>
+          <tr><td>Senior Sales-Advisor</td><td class="eur">120.000 €</td></tr>
+          <tr><td>Equipment, Studio, Tools und Recruiting</td><td class="eur">170.000 €</td></tr>
+          <tr class="sum"><td>Eigene Inhouse-Abteilung gesamt p.a.</td><td class="eur">≈ 950.000 €</td></tr>
+        </table>
+        <p style="color:var(--muted);font-size:14.5px;margin-top:16px">Rund 950.000 € im Jahr inhouse plus sechs bis zwölf Monate Aufbau und Recruiting-Risiko, gegenüber 840.000 € im Jahr mit zwei CEOs und einem Senior-Sales-Advisor ab Tag eins. Wir führen aus.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROADMAP -->
+  <div style="background:var(--sand);padding:90px 64px" id="roadmap">
+    <div class="wrap">
+      <span class="eyebrow">Roadmap und nächste Schritte</span>
+      <h2 class="display" style="font-size:50px;margin-top:16px">Von Term Sheet zur ersten Welle in vier <em>Wochen</em></h2>
+      <div style="margin-top:30px">
+        <div class="road"><div class="m">M1 · Jul 2026</div><div class="ph">Setup &amp; Foundation</div><div class="d">Wissensbank, Tracking, Brand-Audit, Funnel-Architektur und erstes Personal-Brand-Shooting.</div></div>
+        <div class="road"><div class="m">M2 · Aug 2026</div><div class="ph">Launch DACH</div><div class="d">Performance-Welle live, erste Inhalte, Sales-Funnel produktiv und erster Drehtag beim Kunden.</div></div>
+        <div class="road"><div class="m">M3 · Sep 2026</div><div class="ph">Scale &amp; First Drop</div><div class="d">Wöchentliche Performance-Iteration, erster Feature-Drop und erste Quartals-Event-Planung.</div></div>
+        <div class="road"><div class="m">M4 · Okt 2026</div><div class="ph">Quartal &amp; Brand</div><div class="d">Erstes Event mit ablefy, Aftermovie und Activation-Sequenz sowie Brand-Health-Check.</div></div>
+        <div class="road"><div class="m">M5 · Nov 2026</div><div class="ph">Doppelung</div><div class="d">Performance-Budget verdoppeln, LinkedIn-Sales hochfahren und zweiter Feature-Drop live.</div></div>
+        <div class="road"><div class="m">M6 · Dez 2026</div><div class="ph">Review &amp; Forecast</div><div class="d">Jahres-Rückblick, Auswertung der Kundengruppen und Prognose für den Europa-Start.</div></div>
+      </div>
+
+      <div class="forestbox" style="margin-top:40px;text-align:center">
+        <div class="blob" style="width:340px;height:340px;background:var(--spring);opacity:.16;top:-120px;left:-60px;filter:blur(10px)"></div>
+        <h2 class="display" style="font-size:46px;position:relative">Wir helfen dir. Du hilfst <em>uns</em></h2>
+        <p class="lede" style="color:var(--on-forest-mut);margin:16px auto 0;max-width:60ch;text-align:center;position:relative">Eine integrierte Wachstumsallianz auf Founder-Level statt einer klassischen Performance-Agentur oder eines isolierten Personal-Brand-Service. Ziel ist die Unterzeichnung bis zum 1. Juli 2026.</p>
+        <div style="display:flex;gap:14px;justify-content:center;margin-top:28px;position:relative;flex-wrap:wrap">
+          <button class="btn btn-spring btn-lg">Term Sheet anfordern <span class="ar">→</span></button>
+        </div>
+      </div>
+
+      <div class="feat-grid" style="margin-top:32px">
+        <div class="pcard" style="background:var(--paper-3)"><h3 style="font-size:19px">AT7 Media GmbH</h3><p>Leon Scheinecker<br>l.scheinecker@at7media.com<br>+43 699 107 10 220</p></div>
+        <div class="pcard" style="background:var(--paper-3)"><h3 style="font-size:19px">Social Brands</h3><p>Alessandro Minneci<br>socialbrands.io<br>Personal Brand DACH</p></div>
+        <div class="pcard" style="background:var(--paper-3)"><h3 style="font-size:19px">Empfangende Seite</h3><p>Özkan Akkilic<br>CEO ablefy<br>ablefy.io</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="wrap">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center">
+        <img src="assets/ablefy-logo-white.svg" alt="ablefy" style="height:24px">
+        <span class="partners"><img class="sb" src="assets/sb-logo-wordmark-white.svg" alt="Social Brands"><span class="x">×</span><img class="at7" src="assets/at7-logo-white.png" alt="AT7 Media"></span>
+        <span style="color:var(--on-forest-mut);font-size:13.5px">Wachstumsallianz 2026 · Juni 2026 · Vertraulich</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
