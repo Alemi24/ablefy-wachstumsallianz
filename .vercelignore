@@ -1,0 +1,13 @@
+# Large raw media — never deploy
+*.m4a
+*.mp4
+*.wav
+
+# Raw transcript dumps
+*_raw.json
+
+# Local QA + tooling
+_qa/
+node_modules/
+.DS_Store
+/_*.png

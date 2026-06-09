@@ -55,11 +55,25 @@
   .ab .road .ph{ font-weight:700; } .ab .road .d{ color:var(--muted); }
   .ab .forestbox{ background:radial-gradient(120% 140% at 0% 0%, var(--forest-2), var(--forest)); border-radius:var(--r-xl); padding:48px; color:var(--on-forest); position:relative; overflow:hidden; }
   .ab .forestbox .display{ color:var(--on-forest); }
+  /* ---- Eventpartner / Offline-Event section ---- */
+  .ab .evt-hero{ position:relative; border-radius:var(--r-lg); overflow:hidden; box-shadow:var(--shadow-md); aspect-ratio:16/7; }
+  .ab .evt-hero img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .ab .evt-cap{ position:absolute; left:20px; bottom:18px; display:inline-flex; align-items:center; gap:9px; background:rgba(10,42,30,.74); color:var(--on-forest); padding:9px 16px; border-radius:var(--r-pill); font-size:13.5px; font-weight:600; backdrop-filter:blur(6px); }
+  .ab .evt-facts{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:18px; }
+  .ab .evt-chip{ background:var(--paper-2); border:1px solid var(--line-2); border-radius:var(--r-md); padding:16px 18px; box-shadow:var(--shadow-sm); }
+  .ab .evt-chip .ek{ font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted-2); font-weight:700; }
+  .ab .evt-chip .ev{ font-family:var(--display); font-weight:520; font-size:20px; color:var(--ink); margin-top:6px; line-height:1.1; }
+  .ab .evt-grid{ display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:18px; }
+  .ab .evt-shot{ margin:0; border-radius:var(--r-lg); overflow:hidden; border:1px solid var(--line-2); background:var(--paper-2); box-shadow:var(--shadow-sm); }
+  .ab .evt-shot img{ width:100%; height:300px; object-fit:cover; display:block; }
+  .ab .evt-shot figcaption{ padding:14px 18px; color:var(--muted); font-size:14px; line-height:1.5; }
   @media(max-width:980px){
     .ab .section{ padding:58px 26px; } .ab .nav{ padding:18px 26px; } .ab .nav-right{ display:none; }
     .ab .feat-grid{ grid-template-columns:1fr !important; } .ab .meta{ grid-template-columns:1fr; }
     .ab .road{ grid-template-columns:1fr; gap:6px; } .ab .pkg td.who{ width:auto; }
     .ab h1.display{ font-size:48px !important; }
+    .ab .evt-facts{ grid-template-columns:1fr 1fr; } .ab .evt-grid{ grid-template-columns:1fr; }
+    .ab .evt-shot img{ height:220px; }
   }
 </style>
 </head>
@@ -69,7 +83,7 @@
   <div style="border-bottom:1px solid var(--line);padding:11px 64px;background:var(--paper-2)"><a href="index.html" style="color:var(--muted);font-size:13.5px;font-weight:700;display:inline-flex;align-items:center;gap:7px">&#8592; Zurück zur Übersicht</a></div>
   <div class="nav">
     <div class="logo"><img src="assets/ablefy-logo.svg" alt="ablefy"></div>
-    <div class="nav-links"><a href="#allianz">Die Allianz</a><a href="#model">Das Paket</a><a href="#performance">Performance</a><a href="#roadmap">Roadmap</a></div>
+    <div class="nav-links"><a href="#allianz">Die Allianz</a><a href="#model">Das Paket</a><a href="#event">Event</a><a href="#performance">Performance</a><a href="#roadmap">Roadmap</a></div>
     <div class="nav-right partners"><img class="sb" src="assets/sb-logo-wordmark.svg" alt="Social Brands"><span class="x">×</span><img class="at7" src="assets/at7-logo-dark.png" alt="AT7 Media"></div>
   </div>
 
@@ -178,6 +192,39 @@
         <div class="pcard"><h3>Feature-Drops</h3><p>Jedes neue ablefy-Feature wird zu einer eigenen Marketing-Welle aus Strategie, Landingpage, Hero-Video, Performance-Push und Organic-Sequenz, mit messbarer Conversion auf bestehende Käufer und neue Leads.</p><p style="color:var(--spring-deep);font-weight:600;margin-top:12px">pauschal 30.000 bis 40.000 € pro Welle</p></div>
         <div class="pcard"><h3>Quartals-Events</h3><p>Pro Quartal ein kuratiertes Event, von der intimen Mastermind mit 30 bis 50 Foundern bis zum Summit-Format. Konzept, Casting, Produktion, Logistik, Bühne und Activation kommen vollständig aus einer Hand.</p><p style="color:var(--spring-deep);font-weight:600;margin-top:12px">rund 50.000 bis 70.000 € pro Event</p></div>
       </div>
+    </div>
+  </div>
+
+  <!-- EVENTPARTNER / OFFLINE-EVENT -->
+  <div class="section" id="event">
+    <div class="wrap">
+      <span class="eyebrow">Eventpartner · bereits fixiert</span>
+      <h2 class="display" style="font-size:52px;margin-top:16px">ablefy als Hauptsponsor beim <em>Datatrack AI Summit 2027</em></h2>
+      <p class="lede" style="max-width:74ch;margin-top:18px">Im März 2027 steht ablefy als Hauptsponsor im Future Dome von Fill in Gurten, einer der modernsten Event-Locations Österreichs. Ein deutscher Zahlungsanbieter, sichtbar mittendrin beim österreichischen Maschinenbau-Weltmarktführer, mit eigenem Gäste-Kontingent und direktem Zugang zu Kunden und Geschäftspartnern.</p>
+
+      <div class="evt-hero" style="margin-top:34px">
+        <img src="assets/event/fill_futuredome_og.jpg" alt="Future Dome von Fill Maschinenbau in Gurten, Oberösterreich">
+        <div class="evt-cap"><span class="dot"></span>Future Dome · Gurten, Oberösterreich</div>
+      </div>
+
+      <div class="evt-facts">
+        <div class="evt-chip"><div class="ek">Wann</div><div class="ev">März 2027</div></div>
+        <div class="evt-chip"><div class="ek">Wo</div><div class="ev">Future Dome, Gurten</div></div>
+        <div class="evt-chip"><div class="ek">Rolle ablefy</div><div class="ev">Hauptsponsor</div></div>
+        <div class="evt-chip"><div class="ek">Status</div><div class="ev">Genehmigt und fixiert</div></div>
+      </div>
+
+      <div class="evt-grid">
+        <figure class="evt-shot"><img src="assets/event/event_innodays.jpg" alt="Geladene Gäste aus Industrie und Wirtschaft beim Summit im Future Dome"><figcaption>Geladene Gäste aus Industrie und Wirtschaft beim Summit-Format im Future Dome.</figcaption></figure>
+        <figure class="evt-shot"><img src="assets/event/futuredome_interior.jpg" alt="Innenraum des Future Dome"><figcaption>Premium-Eventfläche für Vorträge, Demos und persönliche Gespräche.</figcaption></figure>
+      </div>
+
+      <div class="card" style="margin-top:24px;padding:30px 34px;background:var(--paper-2)">
+        <h3 class="serif" style="font-size:22px;margin-bottom:10px">Der Gastgeber: Fill Maschinenbau</h3>
+        <p style="color:var(--muted);font-size:15.5px;line-height:1.65;max-width:82ch">Fill aus Gurten im Innviertel ist Österreichs innovativstes Unternehmen 2026, ein Maschinenbau-Spezialist für Automotive und Aerospace mit über 1.000 Mitarbeitenden und Industriekunden im Umfeld von BMW und Lufthansa. Gastgeber Andreas Fill öffnet mit dem Future Dome die Türen, ablefy steht als Hauptsponsor mittendrin. Das ist keine gebuchte Bühne, sondern eine bereits bestehende Beziehung und damit ein direkter Draht in den industriellen Mittelstand.</p>
+      </div>
+
+      <p style="color:var(--muted-2);font-size:12.5px;margin-top:16px">Fotos: Fill Maschinenbau und Future Dome (fill.co.at, futuredome.at)</p>
     </div>
   </div>
 

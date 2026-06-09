@@ -31,3 +31,4 @@ _qa/
 
 # Raw transcript dumps (intermediate; cleaned .md versions are tracked)
 *_raw.json
+.vercel
