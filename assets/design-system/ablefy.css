@@ -200,3 +200,6 @@
 .ab .orient li{ position:relative; padding-left:22px; color:var(--forest); font-size:14.5px; line-height:1.5; }
 .ab .orient li::before{ content:""; position:absolute; left:0; top:8px; width:6px; height:6px; border-radius:50%; background:var(--spring-deep); }
 .ab .orient li b{ font-weight:700; }
+
+/* blurred commercial figures — revealed in the personal follow-up meeting */
+.ab .bp{ display:inline-block; filter:blur(0.4em); -webkit-filter:blur(0.4em); user-select:none; -webkit-user-select:none; pointer-events:none; }
