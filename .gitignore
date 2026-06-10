@@ -28,6 +28,8 @@ _qa/
 *.m4a
 *.mp4
 *.wav
+# but DO track the web-optimized showcase reels
+!assets/reels/*.mp4
 
 # Raw transcript dumps (intermediate; cleaned .md versions are tracked)
 *_raw.json

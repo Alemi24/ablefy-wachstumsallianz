@@ -83,11 +83,33 @@
   .ab .disc p{ color:var(--forest); font-size:13.5px; line-height:1.6; }
   /* step tag on gallery cards */
   .ab .steptag{ display:inline-block; font-size:10.5px; letter-spacing:.09em; text-transform:uppercase; color:var(--spring-deep); background:var(--mint-soft); border:1px solid var(--mint); border-radius:var(--r-pill); padding:4px 11px; font-weight:700; }
+  /* delivery-first showcase */
+  .ab .show-sub{ font-size:12.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted-2); font-weight:700; margin:48px 0 18px; display:flex; align-items:center; gap:10px; }
+  .ab .show-sub::before{ content:""; width:20px; height:2px; background:var(--spring); border-radius:2px; }
+  .ab .reelrow{ display:grid; grid-template-columns:repeat(2,minmax(0,290px)) 1fr; gap:24px; align-items:center; }
+  .ab .reel{ margin:0; }
+  .ab .reel video{ width:100%; aspect-ratio:9/16; border-radius:var(--r-lg); display:block; background:#000; box-shadow:var(--shadow-lg); border:1px solid var(--line-2); }
+  .ab .reel figcaption{ margin-top:12px; font-size:13px; font-weight:600; color:var(--muted); display:flex; align-items:center; gap:8px; }
+  .ab .reel figcaption::before{ content:""; width:6px; height:6px; border-radius:50%; background:var(--spring); }
+  .ab .reel-note h4{ font-family:var(--display); font-weight:500; font-size:27px; line-height:1.15; margin:0 0 12px; }
+  .ab .reel-note p{ color:var(--muted); font-size:15.5px; line-height:1.6; max-width:38ch; }
+  .ab .reel-note .rstat{ display:flex; gap:26px; margin-top:20px; }
+  .ab .reel-note .rstat .n{ font-family:var(--display); font-size:26px; color:var(--spring-deep); line-height:1; }
+  .ab .reel-note .rstat .l{ font-size:12px; color:var(--muted); font-weight:600; margin-top:5px; }
+  .ab .builtgrid{ display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+  .ab .builtcard{ display:block; border-radius:var(--r-lg); overflow:hidden; border:1px solid var(--line-2); background:var(--paper-2); box-shadow:var(--shadow-sm); transition:transform .2s ease, box-shadow .2s ease; }
+  .ab .builtcard:hover{ transform:translateY(-4px); box-shadow:var(--shadow-md); }
+  .ab .builtcard img{ width:100%; display:block; aspect-ratio:16/10; object-fit:cover; object-position:top center; border-bottom:1px solid var(--line-2); }
+  .ab .builtcard .bl{ padding:14px 16px; display:flex; justify-content:space-between; align-items:center; gap:8px; }
+  .ab .builtcard .bt{ font-weight:700; font-size:14.5px; color:var(--ink); line-height:1.2; }
+  .ab .builtcard .bar{ color:var(--spring-deep); font-weight:700; flex:0 0 auto; }
   @media(max-width:980px){
     .ab .section{ padding:54px 24px; } .ab .nav{ padding:18px 24px; } .ab .nav-links{ display:none; }
     .ab .hubgrid{ grid-template-columns:1fr; } .ab .proofwrap{ grid-template-columns:1fr; gap:28px; }
     .ab .flow .st{ flex:1 1 100%; border-right:none; border-bottom:1px solid var(--line); }
     .ab h1.display{ font-size:46px !important; } .ab .forestbox{ padding:34px; }
+    .ab .reelrow{ grid-template-columns:1fr 1fr; } .ab .reel-note{ grid-column:1 / -1; }
+    .ab .builtgrid{ grid-template-columns:1fr 1fr; }
   }
   @media(min-width:981px) and (max-width:1240px){ .ab .hubgrid{ grid-template-columns:repeat(2,1fr); } }
 </style>
@@ -220,6 +242,39 @@
       <div class="disc">
         <span class="di">Hinweis</span>
         <p>Diese Seite ist ein erster Entwurf mit noch grober Datenlage und nicht die fertige Live-Version. Für die finale Seite brauchen wir die Detailinformationen aus deinem Team oder von dir direkt. Sie zeigt die Richtung und die Qualität, nicht den Endstand.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- DELIVERY FIRST SHOWCASE -->
+  <div class="section" id="gebaut" style="padding-top:24px">
+    <div class="wrap">
+      <span class="eyebrow">Delivery First</span>
+      <h2 class="display" style="font-size:52px;margin-top:16px">Wir reden nicht über Marketing. Wir haben schon <em>geliefert</em></h2>
+      <p class="lede" style="max-width:72ch;margin-top:18px">Andere schicken Konzepte. Wir legen fertige Assets auf den Tisch, bevor ein Vertrag steht. Reels, Landingpages und Funnel, gebaut in deiner Marke. Das ist unser Standard: erst liefern, dann reden.</p>
+
+      <div class="show-sub">Sample-Reels für ablefy</div>
+      <div class="reelrow">
+        <figure class="reel">
+          <video src="assets/reels/robin_oezkan_black.mp4" poster="assets/reels/robin_oezkan_black.jpg" controls loop muted playsinline preload="none"></video>
+          <figcaption>ablefy · Robin × Özkan, Black Cut</figcaption>
+        </figure>
+        <figure class="reel">
+          <video src="assets/reels/robin_oezkan_white.mp4" poster="assets/reels/robin_oezkan_white.jpg" controls loop muted playsinline preload="none"></video>
+          <figcaption>ablefy · Robin × Özkan, White Cut</figcaption>
+        </figure>
+        <div class="reel-note">
+          <h4>Ein Reel, zwei Looks</h4>
+          <p>Kinoreife Produktion mit deutschen Hooks, sauberem Schnitt und ablefy-Branding. Dieselbe Story in zwei Looks, fertig zum Posten auf Instagram, TikTok und YouTube.</p>
+        </div>
+      </div>
+
+      <div class="show-sub">Schon gebaute Seiten</div>
+      <div class="builtgrid">
+        <a href="ablefy_sales_os_landingpage.html" target="_blank" class="builtcard"><img src="assets/thumbs/ablefy_sales_os_landingpage.jpg" alt="Sales OS Landingpage"><div class="bl"><span class="bt">Sales OS Landingpage</span><span class="bar">→</span></div></a>
+        <a href="ablefy_freebie_funnel.html" target="_blank" class="builtcard"><img src="assets/thumbs/ablefy_freebie_funnel.jpg" alt="Freebie Funnel"><div class="bl"><span class="bt">Freebie Funnel</span><span class="bar">→</span></div></a>
+        <a href="ablefy_deal_hub.html" target="_blank" class="builtcard"><img src="assets/thumbs/ablefy_deal_hub.jpg" alt="Deal Hub"><div class="bl"><span class="bt">Deal Hub</span><span class="bar">→</span></div></a>
+        <a href="ablefy_zukunft_kollaborationen.html" target="_blank" class="builtcard"><img src="assets/thumbs/ablefy_zukunft_kollaborationen.jpg" alt="Zukunft und Kollaborationen"><div class="bl"><span class="bt">Zukunft &amp; Kollaborationen</span><span class="bar">→</span></div></a>
       </div>
     </div>
   </div>

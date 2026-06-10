@@ -2,6 +2,8 @@
 *.m4a
 *.mp4
 *.wav
+# except the web-optimized showcase reels
+!assets/reels/*.mp4
 
 # Raw transcript dumps
 *_raw.json
