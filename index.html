@@ -85,6 +85,7 @@
   .ab .show-sub{ font-size:12.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted-2); font-weight:700; margin:48px 0 18px; display:flex; align-items:center; gap:10px; }
   .ab .show-sub::before{ content:""; width:20px; height:2px; background:var(--spring); border-radius:2px; }
   .ab .reelrow{ display:grid; grid-template-columns:repeat(2,minmax(0,290px)) 1fr; gap:24px; align-items:center; }
+  .ab .reelgrid{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; max-width:900px; }
   .ab .reel{ margin:0; }
   .ab .reel video{ width:100%; aspect-ratio:9/16; border-radius:var(--r-lg); display:block; background:#000; box-shadow:var(--shadow-lg); border:1px solid var(--line-2); }
   .ab .reel figcaption{ margin-top:12px; font-size:13px; font-weight:600; color:var(--muted); display:flex; align-items:center; gap:8px; }
@@ -107,6 +108,7 @@
     .ab .flow .st{ flex:1 1 100%; border-right:none; border-bottom:1px solid var(--line); }
     .ab h1.display{ font-size:46px !important; } .ab .forestbox{ padding:34px; }
     .ab .reelrow{ grid-template-columns:1fr 1fr; } .ab .reel-note{ grid-column:1 / -1; }
+    .ab .reelgrid{ grid-template-columns:1fr 1fr; }
     .ab .builtgrid{ grid-template-columns:1fr 1fr; }
   }
   @media(min-width:981px) and (max-width:1240px){ .ab .hubgrid{ grid-template-columns:repeat(2,1fr); } }
@@ -247,19 +249,14 @@
       <p class="lede" style="max-width:72ch;margin-top:18px">Andere schicken Konzepte. Wir legen fertige Assets auf den Tisch, bevor ein Vertrag steht. Reels, Landingpages und Funnel, gebaut in deiner Marke. Das ist unser Standard: erst liefern, dann reden.</p>
 
       <div class="show-sub">Sample-Reels für ablefy</div>
-      <div class="reelrow">
-        <figure class="reel">
-          <video src="assets/reels/robin_oezkan_black.mp4" poster="assets/reels/robin_oezkan_black.jpg" controls loop muted playsinline preload="none"></video>
-          <figcaption>ablefy · Robin × Özkan, Black Cut</figcaption>
-        </figure>
-        <figure class="reel">
-          <video src="assets/reels/robin_oezkan_white.mp4" poster="assets/reels/robin_oezkan_white.jpg" controls loop muted playsinline preload="none"></video>
-          <figcaption>ablefy · Robin × Özkan, White Cut</figcaption>
-        </figure>
-        <div class="reel-note">
-          <h4>Ein Reel, zwei Looks</h4>
-          <p>Kinoreife Produktion mit deutschen Hooks, sauberem Schnitt und ablefy-Branding. Dieselbe Story in zwei Looks, fertig zum Posten auf Instagram, TikTok und YouTube.</p>
-        </div>
+      <p class="lede" style="max-width:66ch;margin:-2px 0 18px">Drei produzierte Reels für ablefy, jeweils als Black- und White-Cut. Kinoreife Produktion mit deutschen Hooks, sauberem Schnitt und ablefy-Branding, fertig zum Posten auf Instagram, TikTok und YouTube.</p>
+      <div class="reelgrid">
+        <figure class="reel"><video src="assets/reels/robin_oezkan_black.mp4" poster="assets/reels/robin_oezkan_black.jpg" controls loop muted playsinline preload="none"></video><figcaption>Robin × Özkan #1 · Black Cut</figcaption></figure>
+        <figure class="reel"><video src="assets/reels/robin_oezkan_2_black.mp4" poster="assets/reels/robin_oezkan_2_black.jpg" controls loop muted playsinline preload="none"></video><figcaption>Robin × Özkan #2 · Black Cut</figcaption></figure>
+        <figure class="reel"><video src="assets/reels/robin_oezkan_3_black.mp4" poster="assets/reels/robin_oezkan_3_black.jpg" controls loop muted playsinline preload="none"></video><figcaption>Robin × Özkan #3 · Black Cut</figcaption></figure>
+        <figure class="reel"><video src="assets/reels/robin_oezkan_white.mp4" poster="assets/reels/robin_oezkan_white.jpg" controls loop muted playsinline preload="none"></video><figcaption>Robin × Özkan #1 · White Cut</figcaption></figure>
+        <figure class="reel"><video src="assets/reels/robin_oezkan_2_white.mp4" poster="assets/reels/robin_oezkan_2_white.jpg" controls loop muted playsinline preload="none"></video><figcaption>Robin × Özkan #2 · White Cut</figcaption></figure>
+        <figure class="reel"><video src="assets/reels/robin_oezkan_3_white.mp4" poster="assets/reels/robin_oezkan_3_white.jpg" controls loop muted playsinline preload="none"></video><figcaption>Robin × Özkan #3 · White Cut</figcaption></figure>
       </div>
 
       <div class="show-sub">Schon gebaute Seiten</div>
