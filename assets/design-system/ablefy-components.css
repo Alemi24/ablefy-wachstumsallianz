@@ -105,3 +105,43 @@
 
 /* fix: white mock cards keep dark text even inside dark sections */
 .ab .dash, .ab .checkout{ color: var(--ink); }
+
+/* ============================================================
+   GLOBAL MOBILE RESPONSIVENESS (phones)
+   Uses `html .ab` + !important to override inline styles und
+   per-page media rules across every page at once.
+   ============================================================ */
+@media(max-width:600px){
+  /* --- spacing: tame the 64px side paddings everywhere --- */
+  html .ab .section{ padding-left:18px !important; padding-right:18px !important; }
+  html .ab .footer{ padding-left:20px !important; padding-right:20px !important; }
+  html .ab [style*="64px"]{ padding-left:18px !important; padding-right:18px !important; }
+  html .ab [style*="padding:72px"]{ padding:32px 20px !important; }
+  html .ab .forestbox{ padding:30px 22px !important; }
+
+  /* --- collapse every inline multi-column grid to one column --- */
+  html .ab [style*="grid-template-columns"]{ grid-template-columns:1fr !important; }
+  html .ab .split, html .ab .feat-grid, html .ab .foot-grid,
+  html .ab .founders, html .ab .vgoals{ grid-template-columns:1fr !important; }
+
+  /* --- headings + lede scale down --- */
+  html .ab h1.display{ font-size:clamp(30px,8.2vw,42px) !important; }
+  html .ab h2.display{ font-size:clamp(25px,6.8vw,34px) !important; }
+  html .ab .quote{ font-size:26px !important; line-height:1.32; }
+  html .ab .lede{ font-size:17px !important; }
+
+  /* --- stat bands wrap two-up, no dividers --- */
+  html .ab .stats{ flex-wrap:wrap; row-gap:22px; }
+  html .ab .stat{ flex:1 1 44%; }
+  html .ab .stat + .stat{ border-left:none !important; padding-left:0 !important; }
+  html .ab .stat .num{ font-size:46px !important; }
+
+  /* --- tables tighten + allow wrap --- */
+  html .ab .pkg td, html .ab .compare td,
+  html .ab .tier-tbl th, html .ab .tier-tbl td{ font-size:13px; padding:10px 0; }
+  html .ab .pkg td.who, html .ab .compare td.eur{ white-space:normal; width:auto; }
+
+  /* --- misc --- */
+  html .ab .logos{ gap:16px 22px; justify-content:flex-start; }
+  html .ab .nav{ padding-left:18px !important; padding-right:18px !important; }
+}
