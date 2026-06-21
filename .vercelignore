@@ -8,6 +8,13 @@
 # Raw transcript dumps
 *_raw.json
 
+# Confidential meeting material — never deploy
+*.mp3
+transcript_meeting_*.md
+transcript_audio_fill_event.md
+ARVORIN_*.pdf
+document_pdf.pdf
+
 # Local QA + tooling
 _qa/
 node_modules/
