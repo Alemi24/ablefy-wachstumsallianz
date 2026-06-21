@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta name="description" content="Zusammenfassung unseres Gesprächs und der klare nächste Schritt für die Zusammenarbeit mit ablefy.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Zusammenfassung & nächster Schritt — ablefy × Social Brands × AT7">
+<meta property="og:description" content="Ein Kopf, ein Team, ein klarer nächster Schritt.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<title>Zusammenfassung & nächster Schritt — für Özkan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Hanken+Grotesk:wght@300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/design-system/ablefy.css">
+<link rel="stylesheet" href="assets/design-system/ablefy-components.css">
+<style>
+  html,body{ margin:0; background:var(--paper); scroll-behavior:smooth; }
+  .ab .logo img{ height:30px; width:auto; display:block; }
+  .ab .partners{ display:inline-flex; align-items:center; gap:13px; }
+  .ab .partners img.sb{ height:22px; } .ab .partners img.at7{ height:34px; }
+  .ab .partners .x{ color:var(--muted-2); font-weight:300; }
+  /* two-card "ist / ist nicht" */
+  .ab .duo{ display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:30px; }
+  .ab .rcard{ background:var(--paper-2); border:1px solid var(--line-2); border-radius:var(--r-lg); padding:28px 30px; box-shadow:var(--shadow-sm); }
+  .ab .rcard.good{ border-color:var(--mint); background:var(--mint-soft); }
+  .ab .rcard .rh{ font-family:var(--display); font-weight:500; font-size:21px; margin-bottom:14px; display:flex; align-items:center; gap:10px; }
+  .ab .rcard ul{ margin:0; padding:0; list-style:none; display:grid; gap:11px; }
+  .ab .rcard li{ position:relative; padding-left:26px; color:var(--muted); font-size:15.5px; line-height:1.5; }
+  .ab .rcard li::before{ content:"✓"; position:absolute; left:0; top:0; color:var(--spring-deep); font-weight:800; }
+  .ab .rcard.muted li::before{ content:"–"; color:var(--muted-2); }
+  /* cadence rows */
+  .ab .cad{ display:grid; gap:0; margin-top:30px; border:1px solid var(--line); border-radius:var(--r-lg); overflow:hidden; background:var(--paper-2); }
+  .ab .cad .row{ display:grid; grid-template-columns:200px 1fr; gap:24px; padding:20px 28px; border-top:1px solid var(--line); }
+  .ab .cad .row:first-child{ border-top:none; }
+  .ab .cad .k{ font-weight:700; font-size:15.5px; color:var(--ink); }
+  .ab .cad .v{ color:var(--muted); font-size:15px; line-height:1.55; }
+  /* scope grid */
+  .ab .scope{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:30px; }
+  .ab .scell{ background:var(--paper-2); border:1px solid var(--line-2); border-radius:var(--r-lg); padding:22px 24px; box-shadow:var(--shadow-sm); }
+  .ab .scell .si{ width:34px;height:34px;border-radius:10px;background:var(--ink);color:var(--spring);display:grid;place-items:center;font-weight:800;margin-bottom:13px; }
+  .ab .scell h4{ font-size:16px; font-weight:700; margin:0 0 5px; }
+  .ab .scell p{ color:var(--muted); font-size:14px; line-height:1.5; margin:0; }
+  /* deal */
+  .ab .dealgrid{ display:grid; grid-template-columns:1.05fr 1fr; gap:20px; margin-top:28px; }
+  .ab .dealcard{ background:var(--paper-2); border:1px solid var(--line-2); border-radius:var(--r-lg); padding:30px 32px; }
+  .ab .dealcard.hero-card{ background:var(--forest); color:var(--on-forest); border:none; box-shadow:var(--shadow-lg); }
+  .ab .dealcard .sub{ font-size:13.5px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; color:var(--on-forest-mut); }
+  .ab .dealcard .amt{ font-family:var(--display); font-weight:500; font-size:50px; letter-spacing:-.02em; line-height:1; color:#fff; margin-top:8px; }
+  .ab .dealcard .amt span{ font-family:var(--sans); font-size:17px; color:var(--on-forest-mut); }
+  .ab .dealcard .note{ color:var(--on-forest-mut); font-size:14.5px; line-height:1.55; margin-top:14px; }
+  .ab .substack{ display:grid; gap:14px; }
+  .ab .scard{ background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.12); border-radius:var(--r-md); padding:18px 22px; }
+  .ab .scard .st{ font-weight:700; font-size:15.5px; color:var(--on-forest); display:flex; justify-content:space-between; gap:12px; align-items:baseline; }
+  .ab .scard .sv{ color:var(--spring); font-weight:700; white-space:nowrap; }
+  .ab .scard p{ color:var(--on-forest-mut); font-size:14px; line-height:1.5; margin:6px 0 0; }
+  /* steps */
+  .ab .steps{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:30px; }
+  .ab .step{ background:var(--paper-2); border:1px solid var(--line-2); border-radius:var(--r-lg); padding:26px 28px; box-shadow:var(--shadow-sm); }
+  .ab .step .n{ font-family:var(--display); font-weight:500; font-size:30px; color:var(--spring-deep); line-height:1; }
+  .ab .step h4{ font-size:17px; margin:12px 0 6px; }
+  .ab .step p{ color:var(--muted); font-size:14.5px; line-height:1.55; margin:0; }
+  .ab .footer{ background:var(--ink); color:var(--on-forest); padding:54px 64px; }
+  @media(max-width:600px){
+    .ab .duo, .ab .scope, .ab .dealgrid, .ab .steps{ grid-template-columns:1fr; }
+    .ab .cad .row{ grid-template-columns:1fr; gap:5px; padding:16px 20px; }
+    .ab .scard .st{ flex-direction:column; gap:2px; }
+  }
+</style>
+</head>
+<body>
+<div class="ab ab-page">
+
+  <div style="border-bottom:1px solid var(--line);padding:11px 64px;background:var(--paper-2)"><a href="index.html" style="color:var(--muted);font-size:13.5px;font-weight:700;display:inline-flex;align-items:center;gap:7px">&#8592; Zurück zur Übersicht</a></div>
+  <div class="nav">
+    <div class="logo"><img src="assets/ablefy-logo.svg" alt="ablefy"></div>
+    <div class="nav-right partners"><img class="sb" src="assets/sb-logo-wordmark.svg" alt="Social Brands"><span class="x">×</span><img class="at7" src="assets/at7-logo-dark.png" alt="AT7 Media"></div>
+  </div>
+
+  <!-- HERO -->
+  <div class="section" style="padding-bottom:30px">
+    <div class="wrap" style="max-width:1000px">
+      <span class="chip" style="margin-bottom:22px"><span class="dot"></span>Zusammenfassung unseres Gesprächs · für Özkan · vertraulich</span>
+      <h1 class="display" style="font-size:72px;max-width:18ch">Ein Kopf. Ein Team. Ein klarer <em>nächster Schritt</em>.</h1>
+      <p class="lede" style="max-width:64ch;margin-top:24px;font-size:21px">Diese Seite fasst zusammen, worauf wir uns geeinigt haben und wie wir gemeinsam loslegen. Kein neues Konzept, sondern unser Gespräch schwarz auf weiß, damit alle dasselbe Bild haben.</p>
+    </div>
+  </div>
+
+  <!-- ORIENT -->
+  <div class="section" style="padding-top:0;padding-bottom:0"><div class="wrap" style="display:flex;justify-content:center">
+    <div class="orient" style="max-width:900px">
+      <div class="ol">Worum es hier geht</div>
+      <p>Vier Punkte, die wir gemeinsam festgehalten haben.</p>
+      <ul>
+        <li><b>Der Kern</b>, warum eine Zusammenarbeit den größten Engpass löst</li>
+        <li><b>Die Rolle</b>, Alessandro als Head of Marketing, extern und ohne Ballast</li>
+        <li><b>Die Zusammenarbeit</b>, wie wir kommunizieren und liefern</li>
+        <li><b>Der Deal und die nächsten Schritte</b>, klar und ohne Kleingedrucktes</li>
+      </ul>
+    </div>
+  </div></div>
+
+  <!-- KERN -->
+  <div class="section">
+    <div class="wrap">
+      <span class="eyebrow">Der Kern</span>
+      <h2 class="display" style="font-size:48px;margin-top:14px;max-width:20ch">Du kaufst kein Tool und keine Agentur. Du löst deinen größten <em>Engpass</em></h2>
+      <p class="lede" style="max-width:74ch;margin-top:18px">Das eigentliche Problem ist nicht fehlendes Marketing, sondern die Kommunikation. Vier Agenturen sind genau an diesem Punkt gescheitert, weil immer eine Person dazwischen saß, die Informationen blockiert hat. Wir drehen das um: ein Kopf, der das Marketing End-to-End verantwortet, mit direktem Zugriff auf Produkt und Daten und einer eingespielten Maschine im Hintergrund.</p>
+    </div>
+  </div>
+
+  <!-- ROLLE -->
+  <div class="section" style="padding-top:0">
+    <div class="wrap">
+      <span class="eyebrow">Die Rolle</span>
+      <h2 class="display" style="font-size:46px;margin-top:14px">Head of Marketing, <em>extern</em> und ohne Ballast</h2>
+      <p class="lede" style="max-width:72ch;margin-top:16px">Es gibt einen Head of Marketing, Alessandro, als zentrale Ansprechperson. Im Hintergrund arbeiten Alessandro und Leon mit ihren Teams gemeinsam an den Projekten.</p>
+      <div class="duo">
+        <div class="rcard good">
+          <div class="rh"><span class="dot"></span>Was es ist</div>
+          <ul>
+            <li>Deine zentrale Ansprechperson für alles, was Marketing betrifft</li>
+            <li>Entscheidungs- und Steuerungshoheit, damit Wege kurz bleiben</li>
+            <li>Direkter Zugriff auf dein Produkt- und Datenteam, ohne Umweg</li>
+            <li>Reportet direkt an dich, mit voller Datentransparenz</li>
+          </ul>
+        </div>
+        <div class="rcard muted">
+          <div class="rh">Was es nicht ist</div>
+          <ul>
+            <li>Keine interne Vollzeitstelle und keine Präsenz von fünf Tagen pro Woche</li>
+            <li>Kein weiterer Mitarbeiter, den du führen und einarbeiten musst</li>
+            <li>Kein klassischer Dienstleister mit einem Filter dazwischen</li>
+            <li>Kein Aufbau über Monate, wir liefern ab Tag eins</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ZUSAMMENARBEIT -->
+  <div style="background:var(--sand);padding:90px 64px">
+    <div class="wrap">
+      <span class="eyebrow">So arbeiten wir zusammen</span>
+      <h2 class="display" style="font-size:46px;margin-top:14px">Du gibst Richtung an einem Punkt rein, wir <em>liefern</em></h2>
+      <p class="lede" style="max-width:74ch;margin-top:16px">Die Maschine läuft intern zwischen Social Brands und AT7. Du musst nie wieder mehrere Dienstleister koordinieren. Mit dir stimmen wir uns an festen Punkten ab.</p>
+      <div class="cad">
+        <div class="row"><div class="k">Wöchentliche Abstimmung</div><div class="v">Ein fester Call pro Woche zu Status, Prioritäten und Entscheidungen, am Anfang gerne öfter.</div></div>
+        <div class="row"><div class="k">Monatliches Strategie-Meeting</div><div class="v">Der Blick aus der Vogelperspektive auf Ziele, Performance und die nächsten Wellen.</div></div>
+        <div class="row"><div class="k">Live CEO-Dashboard</div><div class="v">Alle Zahlen in Echtzeit an einem Ort, von Views über Leads bis Abschlüsse. Du siehst jederzeit, wo wir stehen.</div></div>
+        <div class="row"><div class="k">Präsenz in Berlin</div><div class="v">Nach Plan, je Quartal für Strategie sowie zu den Drehtagen und Events. Reisekosten trägt ablefy.</div></div>
+        <div class="row"><div class="k">Direkte Linie</div><div class="v">Wenn es brennt, erreichst du den Kopf direkt, ohne Umweg über eine dritte Person.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEISTUNGEN -->
+  <div class="section">
+    <div class="wrap">
+      <span class="eyebrow">Was im Paket steckt</span>
+      <h2 class="display" style="font-size:46px;margin-top:14px">Ein Paket, ein Vertrag, ein <em>Ansprechpartner</em></h2>
+      <p class="lede" style="max-width:74ch;margin-top:16px">Social Brands und AT7 Media liefern gemeinsam als ein Team. Wie wir das intern aufteilen, musst du nicht managen.</p>
+      <div class="scope">
+        <div class="scell"><div class="si">◆</div><h4>Personal Brand Özkan</h4><p>Drei Inhalte pro Tag, Schnitt und Distribution, damit du zur Stimme der Branche wirst.</p></div>
+        <div class="scell"><div class="si">↗</div><h4>Organic Reach</h4><p>YouTube, LinkedIn und Instagram als Hauptkanäle, gestützt durch eine Content-Pipeline.</p></div>
+        <div class="scell"><div class="si">€</div><h4>Performance und Paid</h4><p>Meta, Google, LinkedIn und YouTube, jeder Euro auf Lead und Kunde rückverfolgbar.</p></div>
+        <div class="scell"><div class="si">▤</div><h4>Funnel und Landingpages</h4><p>Sales-Funnel, Landingpages und Freebie-Funnel, sauber getrackt und auf Conversion gebaut.</p></div>
+        <div class="scell"><div class="si">▶</div><h4>Video und Events</h4><p>Eigenes Kamerateam vor Ort, Founders Summit, Case Studies und Quartals-Events aus einer Hand.</p></div>
+        <div class="scell"><div class="si">✓</div><h4>Vertriebs-Audit</h4><p>CRM- und Vertriebs-Audit durch Claus Mitterböck, damit aus Leads auch Abschlüsse werden.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ZUSAMMENARBEIT / BUDGET -->
+  <div class="section dark" style="padding-top:90px;padding-bottom:90px">
+    <div class="wrap">
+      <span class="eyebrow" style="color:var(--spring)">Die Zusammenarbeit</span>
+      <h2 class="display" style="font-size:50px;margin-top:14px;color:var(--on-forest)">Ein Paket. Ein Vertrag. <em>Eine</em> Verantwortung.</h2>
+      <p class="lede" style="color:var(--on-forest-mut);margin-top:16px;max-width:76ch">Social Brands und AT7 Media liefern als ein Team, in einem gemeinsamen Vertrag. Den genauen Umfang und das Budget legen wir gemeinsam fest, je nach Content- und Drehfrequenz.</p>
+      <div class="dealgrid">
+        <div class="dealcard hero-card">
+          <div class="sub">Unser Ansatz</div>
+          <div style="font-family:var(--display);font-weight:500;font-size:clamp(27px,4.6vw,34px);line-height:1.14;color:#fff;margin-top:12px">Wir wollen mit dir wachsen, nicht einfach eine Rechnung mehr sein.</div>
+          <div class="note">Wir haben uns das genau überlegt. Bei der Head-of-Marketing-Rolle geht es uns nicht darum, einfach eine weitere Position auf deine Rechnung zu setzen. Sag uns, welches Dienstleistungsbudget neben dem Werbebudget für dich realistisch ist, und wir schneiden ein nachhaltiges Paket darauf zu, das für beide Seiten Sinn macht.</div>
+        </div>
+        <div class="substack">
+          <div class="scard"><div class="st"><span>Dienstleistungsbudget</span><span class="sv">du gibst den Rahmen</span></div><p>Sag uns, was neben dem Werbebudget für dich realistisch ist. Wir bieten dir eine Spanne, je nach Umfang an Content und Drehtagen.</p></div>
+          <div class="scard"><div class="st"><span>Werbebudget</span><span class="sv">du bestimmst</span></div><p>Dein Budget, separat und direkt durchgereicht. Den Startbetrag legst du fest, wir skalieren mit dem Ergebnis.</p></div>
+          <div class="scard"><div class="st"><span>Erfolgskomponente</span><span class="sv">wir wachsen mit</span></div><p>Sobald wir messbar mehr neuen Umsatz bringen, profitieren wir mit. Wir verdienen nur dann mehr, wenn auch du mehr verdienst.</p></div>
+          <div class="scard"><div class="st"><span>Langfristige Beteiligung</span><span class="sv">im Gespräch</span></div><p>Eine Beteiligung am langfristigen Erfolg, die zu deiner Struktur passt. Details besprechen wir persönlich.</p></div>
+        </div>
+      </div>
+      <p style="color:var(--on-forest-mut);font-size:14.5px;margin-top:20px">Events, Reisen und neue Produktbauten laufen nach Aufwand, Reisekosten werden direkt durchgereicht. Den finalen Umfang und das Budget legen wir gemeinsam im nächsten Termin fest.</p>
+    </div>
+  </div>
+
+  <!-- ECOSYSTEM -->
+  <div class="section">
+    <div class="wrap" style="max-width:900px">
+      <span class="eyebrow">Über den Deal hinaus</span>
+      <h2 class="display" style="font-size:42px;margin-top:14px">Gemeinsam im <em>ablefy-Ökosystem</em> wachsen</h2>
+      <p class="lede" style="max-width:74ch;margin-top:16px">Neben dem Marketing bauen wir mit dir Produkte, die direkt auf deiner Plattform laufen und die wir gemeinsam vermarkten. So entsteht Wert, der über die reine Dienstleistung hinausgeht und für beide Seiten wächst.</p>
+    </div>
+  </div>
+
+  <!-- NÄCHSTE SCHRITTE -->
+  <div style="padding:0 64px 100px" id="next">
+    <div class="wrap" style="background:radial-gradient(120% 140% at 0% 0%, var(--forest-2), var(--forest));border-radius:var(--r-xl);padding:64px;color:var(--on-forest);position:relative;overflow:hidden">
+      <div class="blob" style="width:360px;height:360px;background:var(--spring);opacity:.16;top:-130px;right:-70px;filter:blur(12px);position:absolute;border-radius:50%"></div>
+      <div style="position:relative">
+        <span class="eyebrow" style="color:var(--spring)">Nächste Schritte</span>
+        <h2 class="display" style="font-size:46px;margin-top:14px;color:var(--on-forest)">Wir wollen sofort <em>starten</em></h2>
+        <div class="steps">
+          <div class="step"><div class="n">1</div><h4>Budget und Umfang eingrenzen</h4><p>Wir legen gemeinsam fest, was dir das Gesamtpaket wert ist, und schneiden den Umfang auf Content- und Drehfrequenz zu.</p></div>
+          <div class="step"><div class="n">2</div><h4>Sofort loslegen</h4><p>Ein Kickoff in den ersten 30 Tagen mit Zugängen, Audit und ersten Assets, die direkt live gehen.</p></div>
+          <div class="step"><div class="n">3</div><h4>Ein Vertrag, eine Unterschrift</h4><p>Social Brands und AT7 in einem gemeinsamen Dokument. Du hast einen Ansprechpartner und ein Team.</p></div>
+        </div>
+        <div style="display:flex;gap:14px;margin-top:34px;flex-wrap:wrap;align-items:center">
+          <a href="https://calendly.com/socialbrandsio/marketing-strategy-session" target="_blank" rel="noopener" class="btn btn-spring btn-lg">Termin buchen <span class="ar">→</span></a>
+          <span style="color:var(--on-forest-mut);font-size:14.5px">Ein Kopf, ein Team, ein klarer Weg nach vorne.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="wrap">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:22px;align-items:center">
+        <img src="assets/ablefy-logo-white.svg" alt="ablefy" style="height:24px">
+        <span class="partners"><img class="sb" src="assets/sb-logo-wordmark-white.svg" alt="Social Brands" style="height:22px"><span class="x" style="color:var(--on-forest-mut)">×</span><img class="at7" src="assets/at7-logo-white.png" alt="AT7 Media" style="height:34px"></span>
+        <span style="color:var(--on-forest-mut);font-size:13.5px">Zusammenfassung &amp; nächster Schritt · für Özkan Akkilic</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

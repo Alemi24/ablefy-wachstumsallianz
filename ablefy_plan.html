@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta name="description" content="Der Wachstumsplan für ablefy. Vom Ziel über die Hebel bis zur Maschine, die Umsatz bringt.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Der Wachstumsplan — ablefy × Social Brands × AT7">
+<meta property="og:description" content="Erst der Plan, dann das Budget. Vom Ziel zur Maschine, die Umsatz bringt.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<title>Der Wachstumsplan — für Özkan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Hanken+Grotesk:wght@300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/design-system/ablefy.css">
+<link rel="stylesheet" href="assets/design-system/ablefy-components.css">
+<style>
+  html,body{ margin:0; background:var(--paper); scroll-behavior:smooth; }
+  .ab .logo img{ height:30px; width:auto; display:block; }
+  .ab .partners{ display:inline-flex; align-items:center; gap:13px; }
+  .ab .partners img.sb{ height:22px; } .ab .partners img.at7{ height:34px; }
+  .ab .partners .x{ color:var(--muted-2); font-weight:300; }
+  /* section number */
+  .ab .secn{ font-family:var(--display); font-weight:500; font-size:15px; color:var(--spring-deep); letter-spacing:.02em; }
+  /* goal cards */
+  .ab .goals{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:30px; }
+  .ab .goal{ background:var(--paper-2); border:1px solid var(--line-2); border-radius:var(--r-lg); padding:24px 26px; box-shadow:var(--shadow-sm); }
+  .ab .goal .gk{ font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted-2); font-weight:700; }
+  .ab .goal .gv{ font-family:var(--display); font-weight:500; font-size:34px; color:var(--ink); line-height:1; margin:10px 0 6px; }
+  .ab .goal .gv em{ font-style:italic; color:var(--spring-deep); }
+  .ab .goal p{ color:var(--muted); font-size:13.5px; line-height:1.5; margin:0; }
+  /* model / data */
+  .ab .model{ display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin-top:28px; border:1px solid rgba(255,255,255,.12); border-radius:var(--r-lg); overflow:hidden; }
+  .ab .model .m{ padding:22px 24px; border-right:1px solid rgba(255,255,255,.12); }
+  .ab .model .m:last-child{ border-right:none; }
+  .ab .model .mv{ font-family:var(--display); font-weight:500; font-size:30px; color:var(--spring); line-height:1; }
+  .ab .model .ml{ color:var(--on-forest-mut); font-size:13px; margin-top:8px; line-height:1.45; }
+  .ab .scen{ width:100%; border-collapse:collapse; margin-top:24px; }
+  .ab .scen th,.ab .scen td{ text-align:left; padding:14px 16px; border-bottom:1px solid rgba(255,255,255,.12); font-size:15px; color:var(--on-forest); }
+  .ab .scen th{ font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--on-forest-mut); font-weight:700; }
+  .ab .scen td.hi{ font-family:var(--display); color:var(--spring); font-weight:600; }
+  /* levers */
+  .ab .levers{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:30px; }
+  .ab .lever{ background:var(--paper-2); border:1px solid var(--line-2); border-radius:var(--r-lg); padding:28px 30px; box-shadow:var(--shadow-sm); }
+  .ab .lever .ln{ width:34px;height:34px;border-radius:10px;background:var(--ink);color:var(--spring);display:grid;place-items:center;font-weight:800;margin-bottom:14px; }
+  .ab .lever h3{ font-family:var(--display); font-weight:500; font-size:22px; margin:0 0 6px; }
+  .ab .lever .sub{ color:var(--spring-deep); font-weight:700; font-size:13.5px; margin-bottom:12px; }
+  .ab .lever ul{ margin:0; padding:0; list-style:none; display:grid; gap:9px; }
+  .ab .lever li{ position:relative; padding-left:20px; color:var(--muted); font-size:14.5px; line-height:1.5; }
+  .ab .lever li::before{ content:""; position:absolute; left:0; top:9px; width:6px; height:6px; border-radius:50%; background:var(--spring-deep); }
+  /* machine grid */
+  .ab .mgrid{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:28px; }
+  .ab .mcell{ background:var(--paper-2); border:1px solid var(--line-2); border-radius:var(--r-md); padding:18px 20px; }
+  .ab .mcell h4{ font-size:15.5px; margin:0 0 5px; }
+  .ab .mcell p{ color:var(--muted); font-size:13.5px; line-height:1.5; margin:0; }
+  .ab .pipe{ display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-top:24px; }
+  .ab .pipe span{ background:var(--mint-soft); border:1px solid var(--mint); color:var(--spring-deep); font-weight:700; font-size:13px; padding:8px 14px; border-radius:var(--r-pill); }
+  .ab .pipe .ar{ color:var(--muted-2); font-weight:700; }
+  /* roles */
+  .ab .roles{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:30px; }
+  .ab .role{ display:flex; gap:16px; align-items:flex-start; background:var(--paper-2); border:1px solid var(--line-2); border-radius:var(--r-lg); padding:22px 24px; }
+  .ab .role .rt{ font-weight:700; font-size:16px; }
+  .ab .role .rr{ color:var(--spring-deep); font-weight:700; font-size:12.5px; letter-spacing:.04em; text-transform:uppercase; margin:3px 0 7px; }
+  .ab .role p{ color:var(--muted); font-size:14px; line-height:1.5; margin:0; }
+  .ab .role .lead{ border-color:var(--mint); background:var(--mint-soft); }
+  /* phases */
+  .ab .phase{ display:grid; grid-template-columns:170px 1fr; gap:24px; padding:22px 0; border-top:1px solid var(--line); }
+  .ab .phase:first-of-type{ border-top:none; }
+  .ab .phase .pm{ font-family:var(--display); font-weight:600; color:var(--spring-deep); font-size:18px; }
+  .ab .phase .pt{ font-weight:700; margin-bottom:8px; }
+  .ab .phase ul{ margin:0; padding:0; list-style:none; display:grid; gap:7px; }
+  .ab .phase li{ position:relative; padding-left:20px; color:var(--muted); font-size:14.5px; line-height:1.5; }
+  .ab .phase li::before{ content:"→"; position:absolute; left:0; top:0; color:var(--spring-deep); font-weight:700; }
+  /* budget */
+  .ab .budget{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:28px; }
+  .ab .bcard{ background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.12); border-radius:var(--r-md); padding:22px 24px; }
+  .ab .bcard .bt{ font-weight:700; font-size:16px; color:var(--on-forest); display:flex; justify-content:space-between; gap:12px; align-items:baseline; }
+  .ab .bcard .bv{ color:var(--spring); font-weight:700; white-space:nowrap; font-size:13.5px; }
+  .ab .bcard p{ color:var(--on-forest-mut); font-size:14px; line-height:1.55; margin:8px 0 0; }
+  /* steps */
+  .ab .steps{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:30px; }
+  .ab .step{ background:var(--paper-2); border:1px solid var(--line-2); border-radius:var(--r-lg); padding:26px 28px; box-shadow:var(--shadow-sm); }
+  .ab .step .n{ font-family:var(--display); font-weight:500; font-size:30px; color:var(--spring-deep); line-height:1; }
+  .ab .step h4{ font-size:17px; margin:12px 0 6px; }
+  .ab .step p{ color:var(--muted); font-size:14.5px; line-height:1.55; margin:0; }
+  .ab .footer{ background:var(--ink); color:var(--on-forest); padding:54px 64px; }
+  @media(max-width:600px){
+    .ab .goals, .ab .model, .ab .levers, .ab .mgrid, .ab .roles, .ab .budget, .ab .steps{ grid-template-columns:1fr; }
+    .ab .model .m{ border-right:none; border-bottom:1px solid rgba(255,255,255,.12); }
+    .ab .phase{ grid-template-columns:1fr; gap:8px; }
+    .ab .scen th,.ab .scen td{ padding:10px 10px; font-size:13px; }
+  }
+</style>
+</head>
+<body>
+<div class="ab ab-page">
+
+  <div style="border-bottom:1px solid var(--line);padding:11px 64px;background:var(--paper-2)"><a href="index.html" style="color:var(--muted);font-size:13.5px;font-weight:700;display:inline-flex;align-items:center;gap:7px">&#8592; Zurück zur Übersicht</a></div>
+  <div class="nav">
+    <div class="logo"><img src="assets/ablefy-logo.svg" alt="ablefy"></div>
+    <div class="nav-right partners"><img class="sb" src="assets/sb-logo-wordmark.svg" alt="Social Brands"><span class="x">×</span><img class="at7" src="assets/at7-logo-dark.png" alt="AT7 Media"></div>
+  </div>
+
+  <!-- HERO -->
+  <div class="section" style="padding-bottom:30px">
+    <div class="wrap" style="max-width:1000px">
+      <span class="chip" style="margin-bottom:22px"><span class="dot"></span>Der Wachstumsplan · für Özkan · vertraulich</span>
+      <h1 class="display" style="font-size:70px;max-width:17ch">Erst der Plan. Dann fällt das <em>Budget</em> von selbst.</h1>
+      <p class="lede" style="max-width:66ch;margin-top:24px;font-size:21px">Du hast es im Call auf den Punkt gebracht: kein Extrabudget aus der Luft, sondern ein Plan, aus dem sich Aufwand, Ergebnis und Budget logisch ergeben. Genau den legen wir hier vor. Erstellt aus der Sicht, die du brauchst, der eines Head of Marketing.</p>
+      <p style="color:var(--muted-2);font-size:13.5px;margin-top:20px">Erstellt von Alessandro Minneci (Head of Marketing) und Leon Scheinecker · Social Brands × AT7 Media</p>
+    </div>
+  </div>
+
+  <!-- ORIENT -->
+  <div class="section" style="padding-top:0;padding-bottom:0"><div class="wrap" style="display:flex;justify-content:center">
+    <div class="orient" style="max-width:920px">
+      <div class="ol">Worum es hier geht</div>
+      <p>Sechs Schritte, vom Ziel bis zum Start.</p>
+      <ul>
+        <li><b>Das Ziel</b>, was bis Jahresende stehen soll</li>
+        <li><b>Wo der Hebel liegt</b>, dein Modell in Zahlen</li>
+        <li><b>Die drei Hebel</b>, mehr rein, besser konvertieren, mehr pro Kunde</li>
+        <li><b>Die Maschine und wer sie bedient</b>, inklusive Robin, Emilio und Aura</li>
+        <li><b>Der Fahrplan</b>, was wann passiert</li>
+        <li><b>Das Budget folgt dem Plan</b>, mit einem klaren nächsten Schritt</li>
+      </ul>
+    </div>
+  </div></div>
+
+  <!-- 1 ZIEL -->
+  <div class="section">
+    <div class="wrap">
+      <div class="secn">01</div>
+      <h2 class="display" style="font-size:46px;margin-top:8px">Das <em>Ziel</em></h2>
+      <p class="lede" style="max-width:74ch;margin-top:14px">Was du selbst gesagt hast, in Zahlen gegossen. Daran messen wir uns.</p>
+      <div class="goals">
+        <div class="goal"><div class="gk">Neuer Umsatz</div><div class="gv"><em>2×</em></div><p>Den neuen Umsatz bis Jahresende verdoppeln. Das oberste Ziel.</p></div>
+        <div class="goal"><div class="gk">Conversion</div><div class="gv">25 → <em>35 %</em></div><p>Aus Registrierungen mehr zahlende Kunden machen.</p></div>
+        <div class="goal"><div class="gk">Sichtbarkeit ablefy</div><div class="gv">5k → <em>15k+</em></div><p>Follower-Wachstum, Richtung 50k für die nächste Investorenrunde.</p></div>
+        <div class="goal"><div class="gk">Personal Brand</div><div class="gv">1,6k → <em>10k</em></div><p>Özkan als Stimme der Branche sichtbar machen.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2 WO DER HEBEL LIEGT -->
+  <div class="section dark" style="padding-top:80px;padding-bottom:80px">
+    <div class="wrap">
+      <div class="secn" style="color:var(--spring)">02</div>
+      <h2 class="display" style="font-size:46px;margin-top:8px;color:var(--on-forest)">Wo der <em>Hebel</em> liegt</h2>
+      <p class="lede" style="color:var(--on-forest-mut);max-width:78ch;margin-top:14px">Dein Modell aus den Zahlen, die du geteilt hast. Die Erkenntnis ist eindeutig: der Funnel konvertiert und wächst schon heute von allein, fast ohne Akquisekosten. Wir drehen nicht an einem kaputten System, wir erhöhen die Schlagzahl an einem funktionierenden.</p>
+      <div class="model">
+        <div class="m"><div class="mv">~800</div><div class="ml">Registrierungen pro Monat, fast ausschließlich organisch</div></div>
+        <div class="m"><div class="mv">~25 %</div><div class="ml">davon werden zahlende Kunden, rund 200 neue pro Monat</div></div>
+        <div class="m"><div class="mv">~0 €</div><div class="ml">Akquisekosten, nur SEO und Events laufen aktuell</div></div>
+        <div class="m"><div class="mv">+15 %</div><div class="ml">Umsatzwachstum pro Monat, rein organisch, ohne Marketing</div></div>
+      </div>
+      <p class="lede" style="color:var(--on-forest-mut);max-width:78ch;margin-top:26px">Jeder neue zahlende Kunde bringt wiederkehrend rund 50 € SaaS plus den Transaktionsanteil und stapelt sich Monat für Monat auf die Basis. Heute lassen wir genau hier Potenzial liegen. Wenn wir die Schlagzahl oben erhöhen und gleichzeitig besser konvertieren, wächst der wiederkehrende Umsatz nicht linear, sondern exponentiell.</p>
+      <table class="scen">
+        <tr><th>Modellrechnung · Annahme</th><th>Heute</th><th>2× Schlagzahl</th><th>3× Schlagzahl</th></tr>
+        <tr><td>Neue zahlende Kunden / Monat</td><td>~200</td><td class="hi">~400</td><td class="hi">~600</td></tr>
+        <tr><td>Neuer wiederkehrender SaaS-Umsatz / Monat</td><td>~10k €</td><td class="hi">~20k €</td><td class="hi">~30k €</td></tr>
+        <tr><td style="border:none">und das stapelt sich jeden Monat weiter, plus Transaktionsanteil und höhere Conversion</td><td style="border:none"></td><td style="border:none"></td><td style="border:none"></td></tr>
+      </table>
+      <p style="color:var(--on-forest-mut);font-size:13px;margin-top:14px">Vereinfachte Modellrechnung auf Basis deiner Zahlen, ohne Transaktionsanteil und ohne Conversion-Uplift gerechnet. Die echten Annahmen schärfen wir gemeinsam.</p>
+    </div>
+  </div>
+
+  <!-- 3 DIE DREI HEBEL -->
+  <div class="section">
+    <div class="wrap">
+      <div class="secn">03</div>
+      <h2 class="display" style="font-size:46px;margin-top:8px">Die drei <em>Hebel</em></h2>
+      <p class="lede" style="max-width:74ch;margin-top:14px">Drei Hebel, die ineinandergreifen. An jedem davon dreht Marketing direkt.</p>
+      <div class="levers">
+        <div class="lever">
+          <div class="ln">1</div>
+          <h3>Mehr oben rein</h3>
+          <div class="sub">Lead-Gen und Reichweite</div>
+          <ul>
+            <li>Paid auf Meta, Google, LinkedIn und YouTube, sauber getrackt</li>
+            <li>Organic und Personal Brand als Motor für günstige Kontakte</li>
+            <li>Events und Webinare als Lead-Magneten</li>
+            <li>Partnerschaften als Verteiler, etwa Aura mit Darren</li>
+          </ul>
+        </div>
+        <div class="lever">
+          <div class="ln">2</div>
+          <h3>Besser konvertieren</h3>
+          <div class="sub">aus Klick wird Kunde</div>
+          <ul>
+            <li>Landingpages, die wir laufend split-testen, in deinem Takt</li>
+            <li>Funnel, E-Mail-Strecken und Retargeting für mehrere Touchpoints</li>
+            <li>13 Kontaktpunkte als Ziel, bevor jemand kauft</li>
+            <li>Lead-Qualifizierung und klare Übergabe an den Vertrieb</li>
+          </ul>
+        </div>
+        <div class="lever">
+          <div class="ln">3</div>
+          <h3>Mehr pro Kunde</h3>
+          <div class="sub">Transaction Business und LTV</div>
+          <ul>
+            <li>Kunden helfen, erfolgreich zu werden, damit sie mehr transagieren</li>
+            <li>Education-, Ambassador- und Use-Case-Content</li>
+            <li>Bessere Onboarding-, Schulungs- und Upsell-Prozesse</li>
+            <li>Höhere Bindung, weil aktive Kunden bleiben</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4 DIE MASCHINE -->
+  <div style="background:var(--sand);padding:90px 64px">
+    <div class="wrap">
+      <div class="secn">04</div>
+      <h2 class="display" style="font-size:46px;margin-top:8px">Die <em>Maschine</em>, die das liefert</h2>
+      <p class="lede" style="max-width:78ch;margin-top:14px">Dein größter Schmerz war, dass Gebautes nicht auf der Straße ist. Genau das löst die Maschine. Immer wiederkehrende Bausteine, die zu jedem Produkt, Event und Launch laufen.</p>
+      <div class="mgrid">
+        <div class="mcell"><h4>Product Marketing</h4><p>Jeder Launch begleitet, davor, währenddessen und danach. Viel Content, der das Produkt verkauft.</p></div>
+        <div class="mcell"><h4>Ambassador Content</h4><p>Die besten Nutzer erzählen, wie sie ablefy nutzen. Vertrauen, das nichts kostet.</p></div>
+        <div class="mcell"><h4>Use Cases</h4><p>Produktbezogen und business-orientiert. Was geht damit und was bringt es konkret.</p></div>
+        <div class="mcell"><h4>Case Studies</h4><p>Echte Ergebnisse von Kunden, gedreht vor Ort mit eigenem Kamerateam.</p></div>
+        <div class="mcell"><h4>Testimonials</h4><p>Stimmen aus dem Bestand, als eigenständiger Marketing-Baustein nutzbar.</p></div>
+        <div class="mcell"><h4>Funnel und Landingpages</h4><p>Gebaut, getrackt und laufend optimiert. Das Geheimnis steckt im Content.</p></div>
+      </div>
+      <p style="font-weight:700;margin:30px 0 4px">Eine saubere Pipeline statt verstreuter Drive-Ordner</p>
+      <div class="pipe">
+        <span>Drehtag vor Ort</span><span class="ar">→</span><span>Material noch am selben Tag hochgeladen</span><span class="ar">→</span><span>Schnitt</span><span class="ar">→</span><span>Veröffentlichung</span><span class="ar">→</span><span>Messung im CEO-Dashboard</span><span class="ar">→</span><span>Optimierung</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5 WER MACHT WAS -->
+  <div class="section">
+    <div class="wrap">
+      <div class="secn">05</div>
+      <h2 class="display" style="font-size:46px;margin-top:8px">Wer <em>was</em> macht</h2>
+      <p class="lede" style="max-width:76ch;margin-top:14px">Ein Kopf, ein klarer Rahmen. Alle starken Partner, die du im Aufbau hast, laufen unter diesem Plan zusammen, statt nebeneinander.</p>
+      <div class="roles">
+        <div class="role lead"><div><div class="rt">Alessandro Minneci</div><div class="rr">Head of Marketing</div><p>Strategie, Steuerung und Organic. Deine zentrale Ansprechperson, reportet direkt an dich, führt das Team und den Plan.</p></div></div>
+        <div class="role"><div><div class="rt">Leon Scheinecker · AT7 Media</div><div class="rr">Video, Performance, Events</div><p>Eigenes Kamerateam, Drehtage vor Ort, Paid und Events. Arbeitet eng mit Alessandro, reportet mit an dich.</p></div></div>
+        <div class="role"><div><div class="rt">Patricia · Projektleitung</div><div class="rr">Delivery</div><p>Verteilt die Arbeit an Videografen, Editoren und Entwickler im Hintergrund. Du musst das nicht managen.</p></div></div>
+        <div class="role"><div><div class="rt">Robin und Team</div><div class="rr">Partner im Plan</div><p>Ergänzt klar abgegrenzt, wo es Sinn macht. Wer was liefert, regelt der Plan, nicht der Zufall.</p></div></div>
+        <div class="role"><div><div class="rt">Emilio · Trackleads</div><div class="rr">Tracking und Attribution</div><p>Sauberes Tracking, damit jeder Euro auf Lead und Kunde rückverfolgbar ist. Grundlage für alle Entscheidungen.</p></div></div>
+        <div class="role"><div><div class="rt">Aura · Darren Lee</div><div class="rr">Distribution</div><p>Reichweite als Verteiler. Dafür liefern wir den klaren Einzeiler, was ablefy ist und warum man es nutzt.</p></div></div>
+      </div>
+      <p style="color:var(--muted);font-size:14px;margin-top:18px">Den Vertriebs-Audit übernimmt Claus Mitterböck, damit aus den vielen neuen Leads auch Abschlüsse werden und nichts im Innendienst liegen bleibt.</p>
+    </div>
+  </div>
+
+  <!-- 6 FAHRPLAN -->
+  <div class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="secn">06</div>
+      <h2 class="display" style="font-size:46px;margin-top:8px">Der <em>Fahrplan</em></h2>
+      <p class="lede" style="max-width:74ch;margin-top:14px">Sofort die schnellen Erfolge, dann die Maschine, dann skalieren. Der Markt schläft nicht.</p>
+      <div style="margin-top:24px">
+        <div class="phase"><div class="pm">Sofort · Woche 1–2</div><div><div class="pt">Auf die Straße bringen</div><ul>
+          <li>Sales-OS-Landingpage live und erster Split-Test</li>
+          <li>Einzeiler, was ablefy ist, für Aura und die eigene Kommunikation</li>
+          <li>Erste Reels live, Tracking-Setup mit Emilio</li>
+          <li>Erster Drehtag vor Ort geplant</li>
+        </ul></div></div>
+        <div class="phase"><div class="pm">Monat 1–3</div><div><div class="pt">Die Maschine läuft</div><ul>
+          <li>Content-Kadenz fix, Personal Brand und ablefy täglich</li>
+          <li>Paid live und auf Datenbasis hochgefahren</li>
+          <li>Funnel, Freebie und E-Mail-Strecken aufgebaut</li>
+          <li>Lead-Qualifizierung mit dem Vertrieb abgestimmt</li>
+        </ul></div></div>
+        <div class="phase"><div class="pm">Monat 3–6</div><div><div class="pt">Skalieren und selbst tragen</div><ul>
+          <li>Was funktioniert, bekommt mehr Budget aus dem Mehrumsatz</li>
+          <li>Product Marketing für die nächsten Launches, etwa das Webinar-Produkt</li>
+          <li>Events und Ambassador-Content als Verstärker</li>
+          <li>Ab hier trägt sich die Maschine zunehmend selbst</li>
+        </ul></div></div>
+        <div class="phase"><div class="pm">Monat 6–12</div><div><div class="pt">Verdoppeln und Runde vorbereiten</div><ul>
+          <li>Neuer Umsatz verdoppelt, Conversion sichtbar gestiegen</li>
+          <li>Sichtbarkeit und Personal Brand auf Niveau der nächsten Investorenrunde</li>
+          <li>Klare Zahlen, die du jederzeit zeigen kannst</li>
+        </ul></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7 BUDGET FOLGT DEM PLAN -->
+  <div class="section dark" style="padding-top:90px;padding-bottom:90px">
+    <div class="wrap">
+      <div class="secn" style="color:var(--spring)">07</div>
+      <h2 class="display" style="font-size:46px;margin-top:8px;color:var(--on-forest)">Das <em>Budget</em> folgt dem Plan</h2>
+      <p class="lede" style="color:var(--on-forest-mut);max-width:80ch;margin-top:14px">Genau dein Ansatz: kein Extratopf, sondern eine P&L, die sich ausgleicht. Der Mehrumsatz finanziert die Maschine. Unser Honorar ist nach einer überschaubaren Anlaufzeit gedeckt, danach wird reinvestiert und weiter vergrößert.</p>
+      <div class="budget">
+        <div class="bcard"><div class="bt"><span>Werbebudget</span><span class="bv">du bestimmst</span></div><p>Dein Budget, separat und direkt durchgereicht. Du hast im Call gesagt, du gehst bewusst Risiken ein, wenn die Daten passen. Wir starten kontrolliert und skalieren mit dem nachgewiesenen Return.</p></div>
+        <div class="bcard"><div class="bt"><span>Dienstleistung</span><span class="bv">aus dem Plan abgeleitet</span></div><p>Ergibt sich aus dem Umfang oben, Content-Kadenz, Drehtage und Team. Als Gesamtpaket Social Brands und AT7, nicht als weitere Position auf deiner Rechnung. Den konkreten Rahmen legen wir gemeinsam fest.</p></div>
+        <div class="bcard"><div class="bt"><span>Erfolgskomponente</span><span class="bv">wir wachsen mit</span></div><p>Wir teilen am Mehrumsatz, den wir über die organische Basis hinaus bringen. So verdienen wir nur dann mehr, wenn auch du mehr verdienst.</p></div>
+        <div class="bcard"><div class="bt"><span>Langfristige Beteiligung</span><span class="bv">im Gespräch</span></div><p>Wir bauen das Asset, das deine nächste Runde und deinen langfristigen Wert hebt. Eine Beteiligung, die dazu passt, besprechen wir persönlich.</p></div>
+      </div>
+      <p style="color:var(--on-forest-mut);font-size:14.5px;margin-top:20px">Wir gehen die Anlaufzeit bewusst in Vorleistung mit. Heißt: erst liefern und Daten schaffen, dann gemeinsam aufdrehen. Alle Beträge zuzüglich Umsatzsteuer.</p>
+    </div>
+  </div>
+
+  <!-- 8 NÄCHSTER SCHRITT -->
+  <div style="padding:0 64px 100px" id="next">
+    <div class="wrap" style="background:radial-gradient(120% 140% at 0% 0%, var(--forest-2), var(--forest));border-radius:var(--r-xl);padding:64px;color:var(--on-forest);position:relative;overflow:hidden">
+      <div class="blob" style="width:360px;height:360px;background:var(--spring);opacity:.16;top:-130px;right:-70px;filter:blur(12px);position:absolute;border-radius:50%"></div>
+      <div style="position:relative">
+        <div class="secn" style="color:var(--spring)">08</div>
+        <h2 class="display" style="font-size:46px;margin-top:8px;color:var(--on-forest)">Was wir zum <em>Start</em> brauchen</h2>
+        <p class="lede" style="color:var(--on-forest-mut);max-width:70ch;margin-top:14px">Der Plan steht. Jetzt brauchen wir von dir drei Dinge, dann legen wir diese Woche los.</p>
+        <div class="steps">
+          <div class="step"><div class="n">1</div><h4>Plan freigeben</h4><p>Dein Ja zu Zielen, Hebeln und Fahrplan. Den Umfang für den Start grenzen wir gemeinsam ein.</p></div>
+          <div class="step"><div class="n">2</div><h4>Zugänge geben</h4><p>Produkt, Daten, Tracking und das Team. Alessandro als Head of Marketing direkt angebunden, ohne Filter dazwischen.</p></div>
+          <div class="step"><div class="n">3</div><h4>Ein Vertrag</h4><p>Social Brands und AT7 in einem gemeinsamen Dokument, eine Unterschrift, ein Ansprechpartner.</p></div>
+        </div>
+        <div style="display:flex;gap:14px;margin-top:34px;flex-wrap:wrap;align-items:center">
+          <a href="https://calendly.com/socialbrandsio/marketing-strategy-session" target="_blank" rel="noopener" class="btn btn-spring btn-lg">Termin buchen <span class="ar">→</span></a>
+          <span style="color:var(--on-forest-mut);font-size:14.5px">Erst liefern, dann reden. Lass uns loslegen.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="wrap">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:22px;align-items:center">
+        <img src="assets/ablefy-logo-white.svg" alt="ablefy" style="height:24px">
+        <span class="partners"><img class="sb" src="assets/sb-logo-wordmark-white.svg" alt="Social Brands" style="height:22px"><span class="x" style="color:var(--on-forest-mut)">×</span><img class="at7" src="assets/at7-logo-white.png" alt="AT7 Media" style="height:34px"></span>
+        <span style="color:var(--on-forest-mut);font-size:13.5px">Der Wachstumsplan · für Özkan Akkilic</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

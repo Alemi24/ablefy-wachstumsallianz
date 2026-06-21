@@ -34,3 +34,11 @@ _qa/
 # Raw transcript dumps (intermediate; cleaned .md versions are tracked)
 *_raw.json
 .vercel
+
+# Confidential meeting material — never commit to the public repo
+*.mp3
+AUDIO-*.mp3
+transcript_meeting_*.md
+transcript_audio_fill_event.md
+ARVORIN_*.pdf
+document_pdf.pdf
